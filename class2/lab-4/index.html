@@ -1126,6 +1126,72 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#step-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        STEP 3. 새 하위 이슈 만들기
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        STEP 4. 하위 이슈 닫고 진행률 보기
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        STEP 5. #번호와 커밋 해시로 자동 링크 만들기
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        STEP 6. @멘션으로 다른 사람 부르기
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        성공하면
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        막히면
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2392,6 +2458,72 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#step-3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        STEP 3. 새 하위 이슈 만들기
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        STEP 4. 하위 이슈 닫고 진행률 보기
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        STEP 5. #번호와 커밋 해시로 자동 링크 만들기
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        STEP 6. @멘션으로 다른 사람 부르기
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        성공하면
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        막히면
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2480,16 +2612,28 @@
 <p>아닙니다. 에픽도 그냥 이슈 하나입니다. 하위 이슈를 거느린 큰 이슈를 사람들이 에픽이라고 부를 뿐입니다. 오후 팀 실습에서는 <code>에픽</code> 라벨을 따로 만들어 구분합니다.</p>
 </div>
 <h2 id="step-2">STEP 2. 기존 이슈를 하위 이슈로 연결하기<a class="headerlink" href="#step-2" title="Permanent link">&para;</a></h2>
-<p>실습 2-2에서 만든 #1, #2는 사실 "메뉴 추천"을 쪼갠 조각입니다. 에픽 아래로 연결합니다.</p>
+<p>지금 이슈 목록에는 이슈가 따로따로 놓여 있습니다. 그런데 2-2에서 만든 "예산으로 메뉴 거르기"(#1)와 "가까운 메뉴만 보기"(#2)는 사실 방금 만든 큰 일 "메뉴 추천"(#4)의 <strong>일부분</strong>입니다. 이번 STEP에서는 이 관계를 GitHub에 알려 줍니다. 폴더 안에 파일을 넣듯, #4 아래에 #1과 #2를 넣는다고 생각하면 됩니다.</p>
+<pre class="mermaid"><code>flowchart TD
+    E["#4 메뉴 추천&lt;br/&gt;(에픽, 큰 일)"] --&gt; A["#1 예산으로 메뉴 거르기"]
+    E --&gt; B["#2 가까운 메뉴만 보기"]</code></pre>
+<p>이렇게 묶어 두면 #4 하나만 열어도 "메뉴 추천을 위해 할 일이 몇 개이고, 그중 몇 개가 끝났는지"를 한눈에 볼 수 있습니다.</p>
 <ol>
-<li>
-<h1 id="4-create-sub-issue">4 이슈 화면에서 본문 바로 아래를 봅니다. <strong>Create sub-issue</strong>(하위 이슈 만들기) 버튼과 그 옆 아래 화살표(▼)가 있습니다.<a class="headerlink" href="#4-create-sub-issue" title="Permanent link">&para;</a></h1>
+<li>STEP 1을 마치면 방금 만든 <strong>#4 메뉴 추천</strong> 이슈 화면이 열려 있습니다. (닫았다면 <strong>Issues</strong> 탭 → <strong>메뉴 추천</strong> 클릭)</li>
+<li>화면을 조금 내려 <strong>본문(에픽 설명) 바로 아래</strong>, 댓글 칸보다 위를 봅니다. 회색 테두리 버튼 <strong>Create sub-issue</strong>(하위 이슈 만들기)가 있고, 그 오른쪽 끝에 작은 아래 화살표 <strong>▼</strong>가 붙어 있습니다.<ul>
+<li>버튼 글자 부분을 누르면 하위 이슈를 <strong>새로 만듭니다</strong>. (STEP 3에서 씁니다)</li>
+<li>오른쪽 <strong>▼</strong>를 누르면 <strong>이미 있는 이슈를 골라 넣는</strong> 메뉴가 나옵니다. (지금 씁니다)</li>
+</ul>
 </li>
-<li>아래 화살표(▼)를 클릭하고 <strong>Add existing issue</strong>(기존 이슈 추가)를 클릭합니다.</li>
-<li>검색칸이 열리고 이 리포지토리의 이슈 목록이 나옵니다. <strong>#1 예산으로 메뉴 거르기</strong>를 클릭합니다.</li>
-<li>다시 ▼ → <strong>Add existing issue</strong>를 클릭하고 <strong>#2 가까운 메뉴만 보기</strong>를 클릭합니다.</li>
+<li>오른쪽 <strong>▼</strong>를 클릭합니다. 펼쳐진 메뉴에서 <strong>Add existing issue</strong>(기존 이슈 추가)를 클릭합니다.</li>
+<li>작은 검색 창이 열리고 이 리포지토리의 이슈 목록이 보입니다. 목록에서 <strong>예산으로 메뉴 거르기 #1</strong>을 클릭합니다. 안 보이면 검색 칸에 <code>예산</code>을 입력합니다.</li>
+<li>창이 닫히고 본문 아래에 <strong>Sub-issues</strong> 영역이 새로 생깁니다. 그 안에 #1이 한 줄로 들어가 있습니다.</li>
+<li>같은 방법으로 #2를 넣습니다. Sub-issues 영역 아래(또는 위)의 <strong>Create sub-issue</strong> 옆 <strong>▼</strong> → <strong>Add existing issue</strong> → <strong>가까운 메뉴만 보기 #2</strong>를 클릭합니다.</li>
 </ol>
-<p>확인: 본문 아래에 <strong>Sub-issues</strong> 영역이 생기고, #1과 #2가 목록으로 보입니다. 영역 제목 옆에 진행률 <strong>0 of 2</strong>(2개 중 0개 완료)가 보입니다.</p>
+<p>확인: <strong>Sub-issues</strong> 영역에 #1과 #2 두 줄이 있고, 영역 제목 옆에 진행률 <strong>0 of 2</strong>(2개 중 0개 완료)가 보입니다. 둘 다 아직 열린 이슈라서 0입니다.</p>
+<div class="admonition tip">
+<p class="admonition-title">#1을 열어 보면</p>
+<p>Sub-issues 목록에서 <strong>예산으로 메뉴 거르기</strong>를 클릭해 #1을 열어 봅니다. 제목 위에 상위 이슈 <code>메뉴 추천 #4</code>가 표시됩니다. 위아래 양쪽에서 관계가 보입니다. 확인했으면 브라우저 뒤로 가기로 #4로 돌아옵니다.</p>
+</div>
 <h2 id="step-3">STEP 3. 새 하위 이슈 만들기<a class="headerlink" href="#step-3" title="Permanent link">&para;</a></h2>
 <p>아직 이슈가 없는 조각은 에픽 안에서 바로 만듭니다.</p>
 <ol>
@@ -2516,14 +2660,12 @@
 <p>확인: <strong>#5 랜덤으로 하나 뽑기</strong>가 만들어지고, #4의 Sub-issues 목록이 3개, 진행률이 <strong>0 of 3</strong>이 됩니다.</p>
 <div class="admonition tip">
 <p class="admonition-title">하위 이슈에도 라벨과 마일스톤을</p>
-<h1 id="5-labels-milestone-mvp-4">5를 클릭해 열고 오른쪽 사이드바에서 <strong>Labels</strong> <code>기능</code>, <code>우선순위-중</code>, <strong>Milestone</strong> <code>MVP</code>를 붙여 두면 다른 이슈들과 같은 기준으로 정리됩니다. 열어 보면 제목 위에 상위 이슈 <code>메뉴 추천 #4</code>가 표시되어 있는 것도 확인할 수 있습니다.<a class="headerlink" href="#5-labels-milestone-mvp-4" title="Permanent link">&para;</a></h1>
+<p>#5를 클릭해 열고 오른쪽 사이드바에서 <strong>Labels</strong> <code>기능</code>, <code>우선순위-중</code>, <strong>Milestone</strong> <code>MVP</code>를 붙여 두면 다른 이슈들과 같은 기준으로 정리됩니다. 열어 보면 제목 위에 상위 이슈 <code>메뉴 추천 #4</code>가 표시되어 있는 것도 확인할 수 있습니다.</p>
 </div>
 <h2 id="step-4">STEP 4. 하위 이슈 닫고 진행률 보기<a class="headerlink" href="#step-4" title="Permanent link">&para;</a></h2>
 <p>웹페이지에는 이미 <strong>아무거나 골라 줘</strong> 버튼이 있으니 #5는 완료된 것으로 처리합니다.</p>
 <ol>
-<li>
-<h1 id="4-sub-issues-5">4의 Sub-issues 목록에서 <strong>랜덤으로 하나 뽑기</strong>를 클릭해 #5를 엽니다.<a class="headerlink" href="#4-sub-issues-5" title="Permanent link">&para;</a></h1>
-</li>
+<li>#4의 Sub-issues 목록에서 <strong>랜덤으로 하나 뽑기</strong>를 클릭해 #5를 엽니다.</li>
 <li>
 <p>아래 댓글 칸에 입력합니다.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>웹페이지에 "아무거나 골라 줘" 버튼이 이미 있어 완료 처리합니다.
@@ -2538,7 +2680,7 @@
 <h2 id="step-5">STEP 5. #번호와 커밋 해시로 자동 링크 만들기<a class="headerlink" href="#step-5" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
-<h1 id="4-3">4 이슈 화면 맨 아래 댓글 칸에 아래 내용을 입력합니다. <code>#3</code>을 입력하는 순간 이슈 목록이 뜨는데, 무시하고 계속 입력하면 됩니다.<a class="headerlink" href="#4-3" title="Permanent link">&para;</a></h1>
+<p>#4 이슈 화면 맨 아래 댓글 칸에 아래 내용을 입력합니다. <code>#3</code>을 입력하는 순간 이슈 목록이 뜨는데, 무시하고 계속 입력하면 됩니다.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>혼밥 표시 요구 #3 도 이 에픽과 관련이 있습니다.
 </span></code></pre></div>
 </li>
@@ -2554,7 +2696,7 @@
 <ol>
 <li>새 탭에서 리포지토리 <strong>Code</strong> 탭 → 커밋 수(예: <strong>8 Commits</strong>) 클릭 → <code>사용자 스토리 이슈 템플릿 추가</code> 줄의 복사 아이콘을 클릭해 해시를 복사합니다.</li>
 <li>
-<h1 id="3">3 이슈로 돌아와 댓글 칸에 아래처럼 쓰고, <code>여기에붙여넣기</code> 자리에 복사한 해시를 붙여 넣습니다.<a class="headerlink" href="#3" title="Permanent link">&para;</a></h1>
+<p>#3 이슈로 돌아와 댓글 칸에 아래처럼 쓰고, <code>여기에붙여넣기</code> 자리에 복사한 해시를 붙여 넣습니다.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>이 스토리는 템플릿 커밋 여기에붙여넣기 이후 처음 만든 스토리입니다.
 </span></code></pre></div>
 </li>
@@ -2566,7 +2708,7 @@
 <h2 id="step-6">STEP 6. @멘션으로 다른 사람 부르기<a class="headerlink" href="#step-6" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
-<h1 id="4-github">4 이슈 맨 아래 댓글 칸에 아래 내용을 입력합니다. <code>옆자리아이디</code>를 <strong>옆자리 사람의 GitHub 아이디</strong>(혼자라면 강사가 화면에 띄운 강사 아이디)로 바꿉니다. <code>@</code> 다음에 아이디 앞부분을 치면 후보가 뜰 수 있는데, 안 떠도 아이디를 끝까지 정확히 치면 됩니다.<a class="headerlink" href="#4-github" title="Permanent link">&para;</a></h1>
+<p>#4 이슈 맨 아래 댓글 칸에 아래 내용을 입력합니다. <code>옆자리아이디</code>를 <strong>옆자리 사람의 GitHub 아이디</strong>(혼자라면 강사가 화면에 띄운 강사 아이디)로 바꿉니다. <code>@</code> 다음에 아이디 앞부분을 치면 후보가 뜰 수 있는데, 안 떠도 아이디를 끝까지 정확히 치면 됩니다.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>@옆자리아이디 메뉴 추천 에픽을 만들었습니다. 하위 이슈 나눈 것 한번 봐 주세요.
 </span></code></pre></div>
 </li>
@@ -2609,7 +2751,7 @@
 </details>
 <details class="failure">
 <summary>
-<h1 id="3_1">3 이 링크로 안 바뀝니다<a class="headerlink" href="#3_1" title="Permanent link">&para;</a></h1>
+<h1 id="3">3 이 링크로 안 바뀝니다<a class="headerlink" href="#3" title="Permanent link">&para;</a></h1>
 </summary>
 <p><code>#</code>과 숫자 사이에 띄어쓰기가 있거나, <code>#3</code>이 다른 글자에 붙어 있는 경우입니다(<code>요구#3</code>). <code>#3</code> 앞뒤에 띄어쓰기를 둡니다.</p>
 </details>
