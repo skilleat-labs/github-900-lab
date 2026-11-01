@@ -759,7 +759,7 @@
   <span class="md-ellipsis">
     
   
-    실습 1-1 내 연습 리포지토리 만들기
+    실습 1-1 내 첫 리포지토리 만들기
   
 
     
@@ -787,7 +787,7 @@
   <span class="md-ellipsis">
     
   
-    실습 1-2 웹에서 고치고 커밋하기
+    실습 1-2 템플릿으로 연습 리포지토리 만들기
   
 
     
@@ -815,7 +815,7 @@
   <span class="md-ellipsis">
     
   
-    실습 1-3 History로 이력 보기
+    실습 1-3 고치고 이력 보기
   
 
     
@@ -2494,7 +2494,7 @@
 <p class="admonition-title">목표</p>
 <ul>
 <li><code>site/menus.json</code>에 내가 좋아하는 메뉴 1개를 추가하고 커밋합니다.</li>
-<li>History에서 "가격을 바꾼 커밋"을 찾아 해시 7자리를 적습니다.</li>
+<li>menus.json 한 파일의 History에서 "가격을 바꾼 커밋"을 찾고, 새 파일 <code>docs/my-note.md</code>를 만들어 해시 7자리를 적습니다.</li>
 </ul>
 </div>
 <p>따라하기에서 한 일을 이번에는 안내 없이 해 봅니다. 막히면 아래 힌트를 1번부터 하나씩 열어 보세요.</p>
@@ -2550,19 +2550,24 @@
 </table>
 <h3 id="2">과제 2. 가격을 바꾼 커밋 찾기<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
 <ul>
-<li>리포지토리 전체 커밋 목록 또는 menus.json의 History에서 실습 1-2에서 김치찌개 가격을 바꾼 커밋을 찾습니다.</li>
-<li>그 커밋의 해시 7자리를 <code>docs/my-note.md</code>에 한 줄로 적고 커밋합니다.</li>
+<li>이번에는 리포지토리 전체가 아니라 <strong>menus.json 한 파일만의 History</strong>에서 실습 1-3에서 김치찌개 가격을 바꾼 커밋을 찾습니다.</li>
+<li><strong>Add file</strong> → <strong>Create new file</strong>로 <code>docs</code> 폴더 안에 새 파일 <code>docs/my-note.md</code>를 만들고, 그 커밋의 해시 7자리를 한 줄로 적어 커밋합니다.</li>
 </ul>
+<div class="admonition note">
+<p class="admonition-title">파일 하나의 History는 언제 쓰나요?</p>
+<p>리포지토리 전체 커밋 목록에는 모든 파일의 커밋이 섞여 나옵니다. 파일 화면 위쪽의 <strong>History</strong> 버튼을 누르면 그 파일을 바꾼 커밋만 나옵니다. "이 데이터 언제부터 이렇게 바뀌었지?"라는 질문이 생기면 이 화면을 엽니다. 6교시 이력 감사에서 Blame(줄별 이력)과 함께 다시 씁니다.</p>
+</div>
 <h3 id="_1">완료 조건<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>site/menus.json</code>에 메뉴가 7개 있습니다.</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 웹페이지에 내가 추가한 메뉴 카드가 보입니다. (메뉴가 하나도 안 보이면 쉼표 실수입니다)</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> 커밋 메시지가 <code>Update menus.json</code>이 아니라 무엇을 했는지 알 수 있는 문장입니다.</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>docs/my-note.md</code>에 가격을 바꾼 커밋의 해시 7자리가 적혀 있습니다.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> menus.json의 History에 커밋이 3개(<code>Initial commit</code>, 가격 수정, 내 메뉴 추가) 보입니다.</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled/><span class="task-list-indicator"></span></label> <code>docs/my-note.md</code> 파일이 있고, 가격을 바꾼 커밋의 해시 7자리가 적혀 있습니다.</li>
 </ul>
 <details class="tip">
 <summary>힌트 1</summary>
-<p><strong>site</strong> → <strong>menus.json</strong> → 연필 아이콘으로 편집합니다. 새 메뉴는 마지막 메뉴(<code>순두부찌개</code>) <strong>아래</strong>에 한 줄로 추가합니다. 해시는 menus.json 화면의 <strong>History</strong> 버튼에서 찾는 것이 가장 빠릅니다.</p>
+<p><strong>site</strong> → <strong>menus.json</strong> → 연필 아이콘으로 편집합니다. 새 메뉴는 마지막 메뉴(<code>순두부찌개</code>) <strong>아래</strong>에 한 줄로 추가합니다. 해시는 menus.json 화면 위쪽 오른편의 시계 아이콘 <strong>History</strong> 버튼에서 찾습니다. 새 파일은 리포지토리 첫 화면의 <strong>Add file</strong> → <strong>Create new file</strong>에서 만듭니다.</p>
 </details>
 <details class="tip">
 <summary>힌트 2</summary>
@@ -2580,6 +2585,7 @@
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">]</span>
 </span></code></pre></div>
 <p>해시는 History 목록에서 <code>김치찌개 가격 9500원으로 수정</code> 줄 오른쪽의 7자리입니다. 그 옆 복사 아이콘을 누르면 40자리 전체가 복사되니, 붙여 넣은 뒤 앞 7자리만 남깁니다.</p>
+<p>새 파일 이름 칸(<strong>Name your file...</strong>)에는 <code>docs/my-note.md</code>를 입력합니다. <code>docs/</code>까지 입력하는 순간 슬래시가 폴더 구분으로 바뀌어 <code>lunch-practice / docs /</code> 모양이 되고, 칸에는 <code>my-note.md</code>만 남습니다. GitHub 웹에서는 파일 이름 앞에 <code>폴더/</code>를 붙여 폴더 안에 파일을 만듭니다.</p>
 </details>
 <details class="success">
 <summary>정답 예시</summary>
@@ -2597,11 +2603,13 @@
 <p>커밋 메시지:</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>메뉴에 비빔밥 추가
 </span></code></pre></div>
-<p><strong>과제 2</strong> <code>docs/my-note.md</code>에 추가할 줄 (해시는 사람마다 다릅니다)</p>
-<div class="language-markdown highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">-</span><span class="w"> </span>김치찌개 가격을 바꾼 커밋: 3f9a1c2
+<p><strong>과제 2</strong> 새 파일 <code>docs/my-note.md</code> 내용 (해시는 사람마다 다릅니다)</p>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="gh"># 내 메모</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">-</span><span class="w"> </span>김치찌개 가격을 바꾼 커밋: 3f9a1c2
 </span></code></pre></div>
 <p>커밋 메시지:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>메모에 가격 수정 커밋 해시 기록
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>수업 메모 파일 추가
 </span></code></pre></div>
 </details>
 <details class="failure">
@@ -2696,11 +2704,11 @@
 </tr>
 <tr>
 <td>남겨 둘 이슈, PR</td>
-<td>이슈와 PR은 아직 없습니다. 1교시 커밋(README에 내 이름, <code>docs/my-note.md</code>, 김치찌개 가격 수정, 내 메뉴 추가, 해시 메모)은 지우지 않습니다</td>
+<td>이슈와 PR은 아직 없습니다. 1교시 커밋(김치찌개 가격 수정, 내 메뉴 추가, <code>docs/my-note.md</code>)은 지우지 않습니다. 실습 1-1의 <code>my-first-repo</code>는 이후 쓰지 않습니다</td>
 </tr>
 <tr>
 <td>데이터 상태</td>
-<td><code>site/menus.json</code> 메뉴 6개 또는 7개 (혼자 해보기에서 메뉴를 추가했으면 7개). 김치찌개 가격 9500 (실습 1-2를 건너뛰었다면 9000). 어느 쪽이든 그대로 둡니다</td>
+<td>README는 Starter 그대로입니다 (2교시에 꾸밉니다). <code>site/menus.json</code> 메뉴 6개 또는 7개 (혼자 해보기에서 메뉴를 추가했으면 7개). 김치찌개 가격 9500 (실습 1-3을 건너뛰었다면 9000). 어느 쪽이든 그대로 둡니다</td>
 </tr>
 <tr>
 <td>다음에 열 화면</td>
@@ -2745,7 +2753,7 @@
       <nav class="md-footer__inner md-grid" aria-label="하단/푸터" >
         
           
-          <a href="../lab-3/" class="md-footer__link md-footer__link--prev" aria-label="이전: 실습 1-3 History로 이력 보기">
+          <a href="../lab-3/" class="md-footer__link md-footer__link--prev" aria-label="이전: 실습 1-3 고치고 이력 보기">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -2755,7 +2763,7 @@
                 이전
               </span>
               <div class="md-ellipsis">
-                실습 1-3 History로 이력 보기
+                실습 1-3 고치고 이력 보기
               </div>
             </div>
           </a>
