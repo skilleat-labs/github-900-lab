@@ -2744,7 +2744,12 @@
 <h2 id="step-6">STEP 6. @멘션으로 다른 사람 부르기<a class="headerlink" href="#step-6" title="Permanent link">&para;</a></h2>
 <ol>
 <li>
-<p>#4 이슈 맨 아래 댓글 칸에 아래 내용을 입력합니다. <code>옆자리아이디</code>를 <strong>옆자리 사람의 GitHub 아이디</strong>(혼자라면 강사가 화면에 띄운 강사 아이디)로 바꿉니다. <code>@</code> 다음에 아이디 앞부분을 치면 후보가 뜰 수 있는데, 안 떠도 아이디를 끝까지 정확히 치면 됩니다.</p>
+<p>#4 이슈 맨 아래 댓글 칸에 아래 내용을 입력합니다. <code>옆자리아이디</code>를 <strong>옆자리 사람의 GitHub 아이디</strong>(혼자라면 강사가 화면에 띄운 강사 <strong>개인</strong> 아이디)로 바꿉니다.</p>
+<div class="admonition warning">
+<p class="admonition-title">후보 목록에 안 떠도 괜찮습니다</p>
+<p><code>@</code> 다음에 글자를 치면 아래에 후보 목록이 뜹니다. 그런데 이 목록에는 <strong>이 리포지토리와 관련 있는 사람</strong>(이슈에 글을 쓴 사람, 협력자 등)만 나옵니다. 옆자리 사람은 아직 내 리포지토리와 관련이 없어서 <strong>목록에 안 뜨는 것이 정상</strong>입니다. 목록은 무시하고 아이디를 <strong>끝까지 정확히</strong> 칩니다.</p>
+<p><code>skilleat-labs</code>처럼 <strong>조직(Organization) 이름은 사람이 아니라서 멘션 대상이 아닙니다.</strong> 멘션은 사람(또는 조직 안의 팀)에게 알림을 보내는 기능인데, 조직 이름만 쓰면 알림을 받을 사람이 없습니다. 반드시 사람의 개인 아이디를 씁니다.</p>
+</div>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>@옆자리아이디 메뉴 추천 에픽을 만들었습니다. 하위 이슈 나눈 것 한번 봐 주세요.
 </span></code></pre></div>
 </li>
@@ -2794,6 +2799,10 @@
 <details class="failure">
 <summary>@아이디 가 링크로 안 바뀌고 글자로만 보입니다</summary>
 <p>아이디 오타입니다. 상대방에게 오른쪽 위 프로필 사진을 눌러 정확한 아이디를 다시 확인받습니다. 댓글은 오른쪽 위 <strong>...</strong> → <strong>Edit</strong>로 고칠 수 있습니다. 단, 이미 보낸 댓글을 고쳐서 넣은 멘션은 알림이 가지 않을 수 있으니 새 댓글로 다시 멘션합니다.</p>
+</details>
+<details class="failure">
+<summary>@를 치고 아이디를 입력해도 후보 목록에 안 나옵니다</summary>
+<p>정상입니다. 후보 목록에는 이 리포지토리와 관련 있는 사람만 나옵니다. 아이디를 끝까지 정확히 치고 <strong>Preview</strong>에서 링크로 바뀌는지만 확인합니다. <code>skilleat-labs</code> 같은 조직 이름은 사람이 아니라서 써도 알림을 받을 사람이 없습니다. 강사나 옆자리 사람의 <strong>개인 아이디</strong>를 씁니다.</p>
 </details>
 <details class="failure">
 <summary>멘션을 받았는데 종 아이콘에 아무것도 없습니다</summary>
