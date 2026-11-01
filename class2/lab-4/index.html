@@ -2606,10 +2606,42 @@
 </li>
 <li><strong>Create</strong>를 클릭합니다.</li>
 </ol>
-<p>확인: <strong>#4 메뉴 추천</strong> 이슈가 만들어집니다.</p>
+<p>확인: <strong>메뉴 추천 #4</strong> 이슈 화면이 열립니다. <strong>지금 보고 있는 이 이슈가 바로 에픽입니다.</strong></p>
+<p><img alt="메뉴 추천 #4 이슈 화면. 1 제목, 2 Create sub-issue 버튼, 3 옆의 아래 화살표, 4 오른쪽 Relationships" src="../../images/class2/epic-issue.png" /></p>
+<table>
+<thead>
+<tr>
+<th>번호</th>
+<th>화면</th>
+<th>뜻</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①</td>
+<td><code>메뉴 추천 #4</code></td>
+<td>이 이슈 자체가 에픽입니다. 화면 어디에도 "에픽"이라는 글자는 나오지 않습니다</td>
+</tr>
+<tr>
+<td>②</td>
+<td><strong>Create sub-issue</strong></td>
+<td>이 에픽 아래에 하위 이슈를 <strong>새로</strong> 만드는 버튼 (STEP 3)</td>
+</tr>
+<tr>
+<td>③</td>
+<td>② 오른쪽 작은 <strong>▼</strong></td>
+<td><strong>이미 있는 이슈</strong>를 이 에픽 아래로 넣는 메뉴 (STEP 2)</td>
+</tr>
+<tr>
+<td>④</td>
+<td><strong>Relationships</strong></td>
+<td>상위, 하위 관계가 표시되는 곳. 지금은 <code>None yet</code>(아직 없음)</td>
+</tr>
+</tbody>
+</table>
 <div class="admonition note">
 <p class="admonition-title">에픽은 특별한 기능인가요?</p>
-<p>아닙니다. 에픽도 그냥 이슈 하나입니다. 하위 이슈를 거느린 큰 이슈를 사람들이 에픽이라고 부를 뿐입니다. 오후 팀 실습에서는 <code>에픽</code> 라벨을 따로 만들어 구분합니다.</p>
+<p>아닙니다. GitHub에 "에픽"이라는 기능이나 버튼은 없습니다. 에픽도 그냥 이슈 하나이고, <strong>하위 이슈를 거느린 큰 이슈</strong>를 사람들이 에픽이라고 부를 뿐입니다. 그래서 이슈 본문 제목을 <code>## 에픽 설명</code>으로 써서 표시했습니다. 오후 팀 실습에서는 <code>에픽</code> 라벨을 따로 만들어 한눈에 구분합니다.</p>
 </div>
 <h2 id="step-2">STEP 2. 기존 이슈를 하위 이슈로 연결하기<a class="headerlink" href="#step-2" title="Permanent link">&para;</a></h2>
 <p>지금 이슈 목록에는 이슈가 따로따로 놓여 있습니다. 그런데 2-2에서 만든 "예산으로 메뉴 거르기"(#1)와 "가까운 메뉴만 보기"(#2)는 사실 방금 만든 큰 일 "메뉴 추천"(#4)의 <strong>일부분</strong>입니다. 이번 STEP에서는 이 관계를 GitHub에 알려 줍니다. 폴더 안에 파일을 넣듯, #4 아래에 #1과 #2를 넣는다고 생각하면 됩니다.</p>
@@ -2619,7 +2651,7 @@
 <p>이렇게 묶어 두면 #4 하나만 열어도 "메뉴 추천을 위해 할 일이 몇 개이고, 그중 몇 개가 끝났는지"를 한눈에 볼 수 있습니다.</p>
 <ol>
 <li>STEP 1을 마치면 방금 만든 <strong>#4 메뉴 추천</strong> 이슈 화면이 열려 있습니다. (닫았다면 <strong>Issues</strong> 탭 → <strong>메뉴 추천</strong> 클릭)</li>
-<li>화면을 조금 내려 <strong>본문(에픽 설명) 바로 아래</strong>, 댓글 칸보다 위를 봅니다. 회색 테두리 버튼 <strong>Create sub-issue</strong>(하위 이슈 만들기)가 있고, 그 오른쪽 끝에 작은 아래 화살표 <strong>▼</strong>가 붙어 있습니다.<ul>
+<li>위 그림의 ②, ③을 찾습니다. <strong>본문(에픽 설명) 바로 아래</strong>, 댓글 칸보다 위에 회색 테두리 버튼 <strong>Create sub-issue</strong>(하위 이슈 만들기)가 있고, 그 오른쪽 끝에 작은 아래 화살표 <strong>▼</strong>가 붙어 있습니다.<ul>
 <li>버튼 글자 부분을 누르면 하위 이슈를 <strong>새로 만듭니다</strong>. (STEP 3에서 씁니다)</li>
 <li>오른쪽 <strong>▼</strong>를 누르면 <strong>이미 있는 이슈를 골라 넣는</strong> 메뉴가 나옵니다. (지금 씁니다)</li>
 </ul>
@@ -2632,7 +2664,7 @@
 <p>확인: <strong>Sub-issues</strong> 영역에 #1과 #2 두 줄이 있고, 영역 제목 옆에 진행률 <strong>0 of 2</strong>(2개 중 0개 완료)가 보입니다. 둘 다 아직 열린 이슈라서 0입니다.</p>
 <div class="admonition tip">
 <p class="admonition-title">#1을 열어 보면</p>
-<p>Sub-issues 목록에서 <strong>예산으로 메뉴 거르기</strong>를 클릭해 #1을 열어 봅니다. 제목 위에 상위 이슈 <code>메뉴 추천 #4</code>가 표시됩니다. 위아래 양쪽에서 관계가 보입니다. 확인했으면 브라우저 뒤로 가기로 #4로 돌아옵니다.</p>
+<p>Sub-issues 목록에서 <strong>예산으로 메뉴 거르기</strong>를 클릭해 #1을 열어 봅니다. 오른쪽 <strong>Relationships</strong>(그림 ④ 자리)에 상위 이슈(Parent) <code>메뉴 추천 #4</code>가 표시됩니다. 화면에 따라 제목 위에 보이기도 합니다. 위아래 양쪽에서 관계가 보입니다. 확인했으면 브라우저 뒤로 가기로 #4로 돌아옵니다.</p>
 </div>
 <h2 id="step-3">STEP 3. 새 하위 이슈 만들기<a class="headerlink" href="#step-3" title="Permanent link">&para;</a></h2>
 <p>아직 이슈가 없는 조각은 에픽 안에서 바로 만듭니다.</p>
@@ -2660,7 +2692,7 @@
 <p>확인: <strong>#5 랜덤으로 하나 뽑기</strong>가 만들어지고, #4의 Sub-issues 목록이 3개, 진행률이 <strong>0 of 3</strong>이 됩니다.</p>
 <div class="admonition tip">
 <p class="admonition-title">하위 이슈에도 라벨과 마일스톤을</p>
-<p>#5를 클릭해 열고 오른쪽 사이드바에서 <strong>Labels</strong> <code>기능</code>, <code>우선순위-중</code>, <strong>Milestone</strong> <code>MVP</code>를 붙여 두면 다른 이슈들과 같은 기준으로 정리됩니다. 열어 보면 제목 위에 상위 이슈 <code>메뉴 추천 #4</code>가 표시되어 있는 것도 확인할 수 있습니다.</p>
+<p>#5를 클릭해 열고 오른쪽 사이드바에서 <strong>Labels</strong> <code>기능</code>, <code>우선순위-중</code>, <strong>Milestone</strong> <code>MVP</code>를 붙여 두면 다른 이슈들과 같은 기준으로 정리됩니다. 열어 보면 오른쪽 <strong>Relationships</strong>(또는 제목 위)에 상위 이슈 <code>메뉴 추천 #4</code>가 표시되어 있는 것도 확인할 수 있습니다.</p>
 </div>
 <h2 id="step-4">STEP 4. 하위 이슈 닫고 진행률 보기<a class="headerlink" href="#step-4" title="Permanent link">&para;</a></h2>
 <p>웹페이지에는 이미 <strong>아무거나 골라 줘</strong> 버튼이 있으니 #5는 완료된 것으로 처리합니다.</p>
