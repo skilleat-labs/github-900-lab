@@ -1,0 +1,3284 @@
+
+<!doctype html>
+<html lang="ko" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="KT AX역량팀 GitHub 기초 과정 교안과 실습 가이드">
+      
+      
+        <meta name="author" content="스킬잇 김누리">
+      
+      
+        <link rel="canonical" href="https://skilleat-labs.github.io/gihub-900-lab/class5/mission-2/">
+      
+      
+        <link rel="prev" href="../mission-1/">
+      
+      
+        <link rel="next" href="../review/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>미션 5-2 MVP 확정과 v1.0 - GitHub 기초 실습 가이드 (GH-900)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans KR";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#5-2-mvp-v10" class="md-skip">
+          콘텐츠로 이동
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="상단/헤더">
+    <a href="../.." title="GitHub 기초 실습 가이드 (GH-900)" class="md-header__button md-logo" aria-label="GitHub 기초 실습 가이드 (GH-900)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GitHub 기초 실습 가이드 (GH-900)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              미션 5-2 MVP 확정과 v1.0
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="다크 모드로 전환"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="다크 모드로 전환" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="라이트 모드로 전환"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="라이트 모드로 전환" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="검색" placeholder="검색" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="검색">
+        
+        <button type="reset" class="md-search__icon md-icon" title="지우기" aria-label="지우기" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            검색 초기화
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/skilleat-labs/gihub-900-lab" title="저장소로 이동" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    skilleat-labs/gihub-900-lab
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="탭" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  홈
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../setup/1-account/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  시작 전 준비
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../class1/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  1교시 시작하기
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../class2/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  2교시 문서와 할 일
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../class3/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  3교시 변경 관리
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../class4/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  4교시 계획과 팀
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+    
+  
+  5교시 팀 실습 ①
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../class6/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  6교시 팀 실습 ②
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../class7/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  7교시 운영과 보안
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../appendix/starter-files/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  부록
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="네비게이션" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="GitHub 기초 실습 가이드 (GH-900)" class="md-nav__button md-logo" aria-label="GitHub 기초 실습 가이드 (GH-900)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    GitHub 기초 실습 가이드 (GH-900)
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/skilleat-labs/gihub-900-lab" title="저장소로 이동" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    skilleat-labs/gihub-900-lab
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    홈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    시작 전 준비
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    시작 전 준비
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/1-account/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. GitHub 계정과 로그인
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/2-screen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. GitHub 화면 둘러보기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/3-troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 막혔을 때
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../class1/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1교시 시작하기
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1교시 시작하기
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../class1/lab-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    실습 1-1 내 연습 리포지토리 만들기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../class1/lab-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    실습 1-2 웹에서 고치고 커밋하기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../class1/lab-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    실습 1-3 History로 이력 보기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../class1/practice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    혼자 해보기와 확인 퀴즈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../class2/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2교시 문서와 할 일
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2교시 문서와 할 일
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../class2/lab-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    실습 2-1 README 꾸미기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../class2/lab-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    실습 2-2 이슈 등록과 분류
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../class2/lab-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    실습 2-3 이슈 템플릿 만들기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../class2/lab-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    실습 2-4 하위 이슈와 멘션
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../class2/practice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    혼자 해보기와 확인 퀴즈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../class3/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3교시 변경 관리
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    3교시 변경 관리
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../class3/lab-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    실습 3-1 짝꿍 초대하기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../class3/lab-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    실습 3-2 분기 만들고 PR 열기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../class3/lab-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    실습 3-3 짝 리뷰와 병합
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../class3/lab-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    실습 3-4 충돌 만들고 해결하기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../class3/lab-5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    실습 3-5 Revert로 되돌리기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../class3/practice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    혼자 해보기와 확인 퀴즈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../class4/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4교시 계획과 팀
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    4교시 계획과 팀
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../class4/lab-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    실습 4-1 Projects 보드 만들기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../class4/lab-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    실습 4-2 필드, 보드 뷰, 자동화
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../class4/lab-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    실습 4-3 팀 구성과 그룹 리포지토리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../class4/practice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    확인 퀴즈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5교시 팀 실습 ①
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    5교시 팀 실습 ①
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mission-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    미션 5-1 요구 주고받기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    미션 5-2 MVP 확정과 v1.0
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    미션 5-2 MVP 확정과 v1.0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        준비
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        전체 흐름
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        역할별 할 일
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="역할별 할 일">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2-moscow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ② MoSCoW 정하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-1-readme-mvp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⑥-1 README에 MVP 범위 쓰기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-2-release-v10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⑥-2 Release v1.0 발행하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ① 팀 Projects에 스토리 담고 필드 만들기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⑤ 스프린트 배정과 보드 뷰 두 개 만들기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-must" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ③ Must 스토리에 인수 조건 쓰기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-must" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ④ Must 스토리 크기 정하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        완료 조건 (팀 단위)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        막히면
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        다음 교시로 넘어가기 전에
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../review/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    회고
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../class6/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6교시 팀 실습 ②
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    6교시 팀 실습 ②
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../class6/mission-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    미션 6-1 구현과 검토
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../class6/mission-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    미션 6-2 변경 요청 처리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../class6/mission-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    미션 6-3 이력 감사
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../class6/review/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    회고
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../../class7/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7교시 운영과 보안
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    7교시 운영과 보안
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../class7/lab-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    실습 7-1 터미널로 Git 다루기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../class7/lab-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    실습 7-2 분기 보호와 CODEOWNERS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../class7/lab-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    실습 7-3 2단계 인증 켜기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../class7/wrap-up/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    오늘의 정리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    부록
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    부록
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/starter-files/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Starter 파일 보기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    용어집
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../appendix/instructor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    강사용 진행 메모
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        준비
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        전체 흐름
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        역할별 할 일
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="역할별 할 일">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2-moscow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ② MoSCoW 정하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-1-readme-mvp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⑥-1 README에 MVP 범위 쓰기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-2-release-v10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⑥-2 Release v1.0 발행하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ① 팀 Projects에 스토리 담고 필드 만들기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⑤ 스프린트 배정과 보드 뷰 두 개 만들기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-must" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ③ Must 스토리에 인수 조건 쓰기
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-must" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ④ Must 스토리 크기 정하기
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        완료 조건 (팀 단위)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        막히면
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        다음 교시로 넘어가기 전에
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="5-2-mvp-v10">미션 5-2. MVP 확정과 v1.0<a class="headerlink" href="#5-2-mvp-v10" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">이번 미션에서 할 것</p>
+<ul>
+<li>팀 Projects에 스토리를 모으고 <code>MoSCoW</code>, <code>크기</code>, <code>스프린트</code>로 정리합니다.</li>
+<li>PO가 Must를 3개 이하로 골라 MVP를 확정하고, BA가 Must 스토리에 인수 조건을 씁니다. Must 중 대표 스토리 하나가 6교시에 실제로 구현할 스토리입니다.</li>
+<li>PM이 보드 뷰 두 개(<code>MVP 보드</code>, <code>진행 보드</code>)를 만듭니다.</li>
+<li>PO가 README에 MVP 범위(Must별 핵심 인수 조건과 결정 요약)를 쓰고 Release <code>v1.0</code>(요구사항 기준선)을 발행합니다.</li>
+</ul>
+</div>
+<p><strong>소요 시간</strong> 약 15분  <strong>실습 장소</strong> 팀 리포지토리 <code>lunch-picker-team&lt;번호&gt;</code>, 팀 Projects <code>점심 메뉴 추천 팀&lt;번호&gt;</code>  <strong>관련 교안</strong> <a href="../../class4/#mvp">MVP</a>, <a href="../#acceptance">인수 조건</a>, <a href="../#release">Release</a></p>
+<h2 id="_1">준비<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="../mission-1/">미션 5-1</a>의 완료 조건을 모두 채웠는지 확인합니다. 스토리 7개(마지막이 대표 스토리 <code>[스토리] 새 메뉴 2개를 추가해 선택지 늘리기</code>)와 PO 결정 댓글 2개가 있어야 합니다.</li>
+<li>팀 리포지토리 <strong>Projects</strong> 탭에서 <code>점심 메뉴 추천 팀&lt;번호&gt;</code>를 열어 둡니다.</li>
+<li>아래 예시 글은 그대로 써도 되고 팀 상황에 맞게 고쳐도 됩니다.</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">3인 팀</p>
+<p>3인 팀은 <strong>PO가 PM을 겸합니다.</strong> ①과 ⑤(PM)도 PO가 합니다.</p>
+</div>
+<h2 id="_2">전체 흐름<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>순서</th>
+<th>누가</th>
+<th>무엇을</th>
+<th>누구에게 넘김</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①</td>
+<td>PM</td>
+<td>팀 Projects에 스토리 전부 추가, 필드 <code>MoSCoW</code>, <code>크기</code>, <code>스프린트</code> 만들기</td>
+<td>PO (<code>@PO</code> 멘션)</td>
+</tr>
+<tr>
+<td>②</td>
+<td>PO</td>
+<td>스토리마다 MoSCoW 지정 (Must 최대 3개), Must 이유 댓글</td>
+<td>BA, 개발자 (<code>@</code> 멘션)</td>
+</tr>
+<tr>
+<td>③</td>
+<td>BA</td>
+<td>Must 스토리 본문 "인수 조건"에 Given-When-Then 2개 이상 (대표 스토리는 ①~④)</td>
+<td>개발자</td>
+</tr>
+<tr>
+<td>④</td>
+<td>개발자</td>
+<td>Must 스토리 크기 S, M, L 지정 (L이면 이유 댓글)</td>
+<td>PM</td>
+</tr>
+<tr>
+<td>⑤</td>
+<td>PM</td>
+<td>Must를 스프린트 1에 배정, 보드 뷰 두 개 만들기 (<code>MVP 보드</code>는 MoSCoW로, <code>진행 보드</code>는 Status로)</td>
+<td>PO</td>
+</tr>
+<tr>
+<td>⑥</td>
+<td>PO</td>
+<td>README에 "## MVP 범위"(Must별 핵심 인수 조건, 결정 요약) 추가 커밋, Release <code>v1.0</code> 발행</td>
+<td>팀 전체</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>flowchart LR
+    A["① PM&lt;br/&gt;Projects에 스토리 추가&lt;br/&gt;필드 3개"] --&gt; B["② PO&lt;br/&gt;MoSCoW 지정&lt;br/&gt;Must 3개 이하"]
+    B --&gt; C["③ BA&lt;br/&gt;Must에 인수 조건"]
+    B --&gt; D["④ 개발자&lt;br/&gt;Must에 크기"]
+    C --&gt; E["⑤ PM&lt;br/&gt;Must를 스프린트 1에&lt;br/&gt;MVP 보드, 진행 보드"]
+    D --&gt; E
+    E --&gt; F["⑥ PO&lt;br/&gt;README MVP 범위&lt;br/&gt;Release v1.0"]</code></pre>
+<p>③과 ④는 동시에 해도 됩니다.</p>
+<h2 id="_3">역할별 할 일<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">PO</label><label for="__tabbed_1_2">PM</label><label for="__tabbed_1_3">BA</label><label for="__tabbed_1_4">개발자</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<h3 id="2-moscow">② MoSCoW 정하기<a class="headerlink" href="#2-moscow" title="Permanent link">&para;</a></h3>
+<p>PM이 멘션하면 팀 Projects를 엽니다.</p>
+<ol>
+<li>표에서 스토리마다 <code>MoSCoW</code> 칸을 클릭해 값을 고릅니다. 에픽 이슈는 비워 둡니다.</li>
+<li><strong>Must는 최대 3개</strong>입니다. "이것이 없으면 정말 출시를 못 하나?"를 기준으로 고르세요.</li>
+<li>미션 5-1에서 결정한 대로 투표 스토리는 <code>Won't</code>로 둡니다.</li>
+</ol>
+<p>예시 (Must는 이 세 개로 맞춰 주세요. Should 아래는 팀마다 달라도 됩니다):</p>
+<table>
+<thead>
+<tr>
+<th>스토리</th>
+<th>MoSCoW</th>
+<th>이유</th>
+<th>6교시에 할 일</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>메뉴 목록을 카드로 보기</td>
+<td>Must</td>
+<td>메뉴가 안 보이면 서비스가 아님</td>
+<td>Starter에 이미 있음, 인수 조건으로 확인만</td>
+</tr>
+<tr>
+<td>예산으로 메뉴 거르기</td>
+<td>Must</td>
+<td>요청자가 가장 급하다고 한 2번</td>
+<td>Starter에 이미 있음, 인수 조건으로 확인만</td>
+</tr>
+<tr>
+<td>새 메뉴 2개를 추가해 선택지 늘리기 (대표 스토리)</td>
+<td>Must</td>
+<td>"또 김치찌개요?"를 줄이는 요구. 화면에 아직 없는 유일한 Must</td>
+<td><strong>6교시에 구현</strong></td>
+</tr>
+<tr>
+<td>버튼 하나로 메뉴 추천받기</td>
+<td>Should</td>
+<td>목적에 직접 연결되지만 Starter에 버튼이 이미 있음</td>
+<td>없음</td>
+</tr>
+<tr>
+<td>가까운 메뉴만 보기</td>
+<td>Should</td>
+<td>중요하지만 메뉴가 적어 당장은 눈으로 거를 수 있음</td>
+<td>없음</td>
+</tr>
+<tr>
+<td>혼밥 가능한 메뉴 표시 보기</td>
+<td>Could</td>
+<td>있으면 좋음</td>
+<td>없음</td>
+</tr>
+<tr>
+<td>후보 메뉴에 팀원이 투표하기</td>
+<td>Won't</td>
+<td>로그인이 필요해서 이번 범위 아님</td>
+<td>없음</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">이미 있는 기능도 Must로 정하나요?</p>
+<p>네. MoSCoW는 "만들 일"이 아니라 "출시에 꼭 있어야 하는 것"을 고르는 기준입니다. Starter에 이미 있는 기능이라도 Must로 정하고 인수 조건을 써 두면, 6교시에 다른 변경이 들어와도 이 기능이 깨지지 않았는지 확인하는 기준이 됩니다. 실제로 손대는 것은 대표 스토리 하나입니다.</p>
+</div>
+<ol>
+<li>
+<p>Must로 고른 스토리마다 이유를 댓글로 남깁니다. 스토리 이슈를 열어 댓글을 씁니다.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>[PO] Must로 정했습니다. 요청자가 가장 급하다고 한 요구이고(현업 요청 바라는 점 2번), 예산을 매번 따로 따지는 것이 결정이 늦어지는 큰 이유입니다.
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>@BA아이디 인수 조건 부탁드립니다. @개발자아이디 크기 정해 주세요.
+</span></code></pre></div>
+<p>대표 스토리에는 이렇게 남깁니다. 이 댓글은 6-3 이력 감사에서 "누가 Must로 정했나"의 근거가 됩니다.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>[PO] Must로 정했습니다. 현행 업무의 불편한 점 "또 김치찌개요?"를 줄이는 요구이고(docs/02_현행_업무.md), Must 중 지금 화면에 없는 유일한 스토리라서 6교시에 실제로 구현합니다. 나머지 Must 두 개(#4, #6)는 Starter에 이미 있어 인수 조건으로 확인만 합니다.
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>@BA아이디 인수 조건 ①~④ 부탁드립니다. @개발자아이디 크기 정해 주세요.
+</span></code></pre></div>
+</li>
+</ol>
+<p>확인: 모든 스토리에 <code>MoSCoW</code> 값이 있고, Must가 3개 이하이며 대표 스토리가 Must에 들어 있고, Must 스토리마다 PO 이유 댓글이 있으면 성공입니다.</p>
+<p><strong>기다리는 동안 할 일</strong></p>
+<p>BA와 개발자가 ③, ④를 하는 동안 ⑥의 README 문구를 미리 준비합니다. 아래 예시를 우리 팀 결정에 맞게 고쳐 두세요.</p>
+<h3 id="6-1-readme-mvp">⑥-1 README에 MVP 범위 쓰기<a class="headerlink" href="#6-1-readme-mvp" title="Permanent link">&para;</a></h3>
+<p>PM이 스프린트 정리를 마치고 멘션하면 시작합니다.</p>
+<div class="admonition warning">
+<p class="admonition-title">v1.0 태그는 파일만 고정합니다</p>
+<p>Release 태그가 고정하는 것은 <strong>그 시점에 커밋된 파일</strong>뿐입니다. 이슈 본문의 인수 조건, PO 결정 댓글, Projects의 MoSCoW 값은 나중에 누가 바꿔도 <code>v1.0</code>으로 되돌려 볼 수 없습니다. 그래서 v1.0을 붙이기 전에 README에 Must 목록만이 아니라 <strong>Must별 핵심 인수 조건과 결정 요약</strong>까지 적어 파일로 남깁니다.</p>
+</div>
+<ol>
+<li>팀 리포지토리 <strong>Code</strong> 탭에서 <code>README.md</code>를 클릭합니다.</li>
+<li>오른쪽 위 연필 아이콘(<strong>Edit this file</strong>, 파일 편집)을 클릭합니다.</li>
+<li>
+<p>기존 내용 아래에 MVP 범위 섹션을 추가합니다. 파일 전체는 아래처럼 됩니다. 이슈 번호는 우리 팀 번호로 바꿉니다.</p>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="gh"># 점심 메뉴 추천 서비스</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>팀원들이 점심 메뉴를 빨리 고를 수 있게 돕는 서비스입니다.
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="gu">## MVP 범위</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>목표: 점심 메뉴 결정 시간을 5분 이내로 줄인다.
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>| 구분 | 스토리 | 6교시에 할 일 |
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>|---|---|---|
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>| Must | <span class="ni">#4</span> 메뉴 목록을 카드로 보기 | Starter에 있음, 인수 조건으로 확인 |
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>| Must | <span class="ni">#6</span> 예산으로 메뉴 거르기 | Starter에 있음, 인수 조건으로 확인 |
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>| Must | <span class="ni">#10</span> 새 메뉴 2개를 추가해 선택지 늘리기 | 대표 스토리, 6교시에 구현 |
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>| Should | <span class="ni">#8</span> 버튼 하나로 메뉴 추천받기 | |
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>| Should | <span class="ni">#7</span> 가까운 메뉴만 보기 | |
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>| Could | <span class="ni">#5</span> 혼밥 가능한 메뉴 표시 보기 | |
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>| Won't | <span class="ni">#9</span> 후보 메뉴에 팀원이 투표하기 (로그인 필요, 2차 출시에서 검토) | |
+</span><span id="__span-2-18"><a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>
+</span><span id="__span-2-19"><a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="gu">### Must별 핵심 인수 조건</span>
+</span><span id="__span-2-20"><a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>
+</span><span id="__span-2-21"><a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="gs">**#4 메뉴 목록을 카드로 보기**</span>
+</span><span id="__span-2-22"><a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>
+</span><span id="__span-2-23"><a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="k">-</span><span class="w"> </span>웹페이지를 열면 메뉴마다 카드가 하나씩 보인다.
+</span><span id="__span-2-24"><a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="k">-</span><span class="w"> </span>카드에 이름, 종류, 가격(원), 거리(m)가 보인다. 예: 김치찌개, 한식, 9,000원, 300m
+</span><span id="__span-2-25"><a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>
+</span><span id="__span-2-26"><a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="gs">**#6 예산으로 메뉴 거르기**</span>
+</span><span id="__span-2-27"><a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>
+</span><span id="__span-2-28"><a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a><span class="k">-</span><span class="w"> </span>예산 칸에 10000을 넣으면 10000원이 넘는 메뉴(돈카츠, 샐러드볼)는 보이지 않는다.
+</span><span id="__span-2-29"><a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a><span class="k">-</span><span class="w"> </span>예산 칸을 비워 두면 모든 메뉴가 보인다.
+</span><span id="__span-2-30"><a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>
+</span><span id="__span-2-31"><a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a><span class="gs">**#10 새 메뉴 2개를 추가해 선택지 늘리기**</span>
+</span><span id="__span-2-32"><a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>
+</span><span id="__span-2-33"><a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a><span class="k">-</span><span class="w"> </span>웹페이지를 열면 메뉴 카드가 8개 보인다.
+</span><span id="__span-2-34"><a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a><span class="k">-</span><span class="w"> </span>새 메뉴 카드에 종류, 가격, 거리가 보이고, 비빔밥에는 "혼밥 가능"이 보인다.
+</span><span id="__span-2-35"><a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a><span class="k">-</span><span class="w"> </span>예산 칸에 10000을 넣으면 마라탕(10000원)이 보인다. (경계값)
+</span><span id="__span-2-36"><a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a><span class="k">-</span><span class="w"> </span>PR의 자동 검사가 초록 체크다.
+</span><span id="__span-2-37"><a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a>
+</span><span id="__span-2-38"><a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a><span class="gu">### 결정 요약</span>
+</span><span id="__span-2-39"><a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a>
+</span><span id="__span-2-40"><a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a>| 결정 | 내용 | 근거 |
+</span><span id="__span-2-41"><a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a>|---|---|---|
+</span><span id="__span-2-42"><a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a>| 충돌 ① 만 원 넘는 메뉴 | 목록에 남긴다. 예산을 입력하면 그 금액 이하만 보이고, 비워 두면 전부 보인다. 기본 예산 값은 없다 | PO 결정 댓글(#6), 킥오프 회의록 3장 |
+</span><span id="__span-2-43"><a id="__codelineno-2-43" name="__codelineno-2-43" href="#__codelineno-2-43"></a>| 충돌 ② 추천 방식 | "아무거나 골라 줘"는 화면에 보이는 메뉴 중 하나만 고른다. 투표는 Won't | PO 결정 댓글(#8), 킥오프 회의록 4장 |
+</span><span id="__span-2-44"><a id="__codelineno-2-44" name="__codelineno-2-44" href="#__codelineno-2-44"></a>| 비범위 | 식당 정보 자동 수집과 로그인은 하지 않는다 | 킥오프 회의록 결정 사항 |
+</span><span id="__span-2-45"><a id="__codelineno-2-45" name="__codelineno-2-45" href="#__codelineno-2-45"></a>| 범위 변경 | v1.0 이후 범위 변경은 <span class="sb">`변경요청`</span> 라벨 이슈로 관리한다 | 5교시 팀 합의 |
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>Commit changes...</strong>를 클릭합니다.</p>
+</li>
+<li>
+<p>커밋 메시지를 입력하고 <strong>Commit directly to the main branch</strong>로 <strong>Commit changes</strong>를 클릭합니다.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>README에 MVP 범위 추가
+</span></code></pre></div>
+</li>
+</ol>
+<p>확인: 리포지토리 첫 화면 README 아래에 "MVP 범위" 표, "Must별 핵심 인수 조건", "결정 요약" 표가 보이고, <code>#4</code> 같은 번호가 파란 링크로 보이면 성공입니다.</p>
+<h3 id="6-2-release-v10">⑥-2 Release v1.0 발행하기<a class="headerlink" href="#6-2-release-v10" title="Permanent link">&para;</a></h3>
+<p>지금 이 커밋이 "요구사항 확정본"입니다. 여기에 <code>v1.0</code> 이름표를 붙입니다. 이 태그에는 방금 README에 적은 Must, 인수 조건, 결정 요약이 파일로 함께 고정됩니다. 이슈와 Projects의 값은 태그에 들어가지 않습니다.</p>
+<ol>
+<li>팀 리포지토리 <strong>Code</strong> 탭 오른쪽 사이드바에서 <strong>Releases</strong>를 클릭합니다.<ul>
+<li>사이드바에 "No releases published"와 <strong>Create a new release</strong> 링크가 보이면 그 링크를 눌러도 됩니다.</li>
+</ul>
+</li>
+<li><strong>Draft a new release</strong>(새 릴리스 작성)를 클릭합니다.</li>
+<li>
+<p><strong>Choose a tag</strong>(태그 고르기)를 클릭하고 칸에 아래를 입력합니다.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>v1.0
+</span></code></pre></div>
+</li>
+<li>
+<p>아래에 나타나는 <strong>+ Create new tag: v1.0 on publish</strong>(발행할 때 새 태그 만들기)를 클릭합니다.</p>
+</li>
+<li><strong>Target</strong>(대상)이 <code>main</code>인지 확인합니다.</li>
+<li>
+<p><strong>Release title</strong>(릴리스 제목)에 아래를 입력합니다.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>요구사항 기준선 v1.0
+</span></code></pre></div>
+</li>
+<li>
+<p>설명 칸을 채웁니다. 두 방법 중 하나를 고릅니다.</p>
+<ul>
+<li><strong>Generate release notes</strong>(릴리스 노트 자동 생성)를 클릭해 GitHub가 변경 목록을 자동으로 채우게 합니다.</li>
+<li>또는 아래처럼 MVP 범위를 직접 씁니다.</li>
+</ul>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>점심 메뉴 추천 서비스의 요구사항 기준선입니다. 이후 변경은 변경 요청(CR)으로 관리합니다.
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="gu">## MVP (Must)</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="k">-</span><span class="w"> </span><span class="ni">#4</span> 메뉴 목록을 카드로 보기 (Starter에 있음, 확인만)
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="k">-</span><span class="w"> </span><span class="ni">#6</span> 예산으로 메뉴 거르기 (Starter에 있음, 확인만)
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="k">-</span><span class="w"> </span><span class="ni">#10</span> 새 메뉴 2개를 추가해 선택지 늘리기 (대표 스토리, 6교시에 구현)
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="gu">## 이번에 하지 않는 것 (Won't)</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="k">-</span><span class="w"> </span><span class="ni">#9</span> 후보 메뉴에 팀원이 투표하기
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>
+</span><span id="__span-6-11"><a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>Must별 핵심 인수 조건과 결정 요약은 이 태그에 포함된 README의 "MVP 범위"를 봅니다.
+</span></code></pre></div>
+</li>
+<li>
+<p>아래 <strong>Set as the latest release</strong>가 체크되어 있는지 확인합니다.</p>
+</li>
+<li><strong>Publish release</strong>(릴리스 발행)를 클릭합니다.</li>
+</ol>
+<p>확인: Releases 화면에 <code>요구사항 기준선 v1.0</code>과 초록색 <strong>Latest</strong> 표시가 보이면 성공입니다. 그리고 <strong>Code</strong> 탭 → 분기 선택 버튼(<code>main</code>) → <strong>Tags</strong> 탭을 누르면 <code>v1.0</code>이 보입니다.</p>
+<p>마지막으로 팀에 알립니다. 에픽 하나에 댓글을 남깁니다.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>@PM아이디 @BA아이디 @개발자아이디 MVP 범위를 README에 정리하고 요구사항 기준선 v1.0을 발행했습니다. 이후 범위 변경은 변경요청 라벨로 따로 관리합니다.
+</span></code></pre></div>
+</div>
+<div class="tabbed-block">
+<h3 id="1-projects">① 팀 Projects에 스토리 담고 필드 만들기<a class="headerlink" href="#1-projects" title="Permanent link">&para;</a></h3>
+<p><strong>스토리 전부 추가하기</strong></p>
+<ol>
+<li>팀 Projects <code>점심 메뉴 추천 팀&lt;번호&gt;</code>를 엽니다.</li>
+<li>표 아래 <strong>+ Add item</strong> 옆, 또는 오른쪽 위 <strong>...</strong> → <strong>Add items from repository</strong>를 클릭합니다.</li>
+<li>리포지토리로 <code>lunch-picker-team&lt;번호&gt;</code>를 고릅니다.</li>
+<li>스토리 이슈를 모두 체크합니다. 에픽도 함께 담아도 됩니다.</li>
+<li><strong>Add selected items</strong>를 클릭합니다.</li>
+</ol>
+<p>확인: 표에 스토리 7개(대표 스토리 포함)가 모두 보이면 성공입니다.</p>
+<p><strong>필드 3개 만들기</strong></p>
+<p>표 머리 맨 오른쪽 <strong>+</strong> → <strong>+ New field</strong>로 아래 3개를 만듭니다. 방법은 실습 4-2와 같습니다. 이름과 선택지를 <strong>그대로</strong> 입력합니다.</p>
+<table>
+<thead>
+<tr>
+<th>Field name</th>
+<th>Field type</th>
+<th>설정</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>MoSCoW</code></td>
+<td><strong>Single select</strong></td>
+<td>선택지 <code>Must</code>, <code>Should</code>, <code>Could</code>, <code>Won't</code></td>
+</tr>
+<tr>
+<td><code>크기</code></td>
+<td><strong>Single select</strong></td>
+<td>선택지 <code>S</code>, <code>M</code>, <code>L</code></td>
+</tr>
+<tr>
+<td><code>스프린트</code></td>
+<td><strong>Iteration</strong></td>
+<td><strong>Starts on</strong> 오늘, <strong>Duration</strong> <code>1</code> weeks</td>
+</tr>
+</tbody>
+</table>
+<p>필드를 다 만들면 PO를 부릅니다. 스토리 하나에 댓글을 남깁니다.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>@PO아이디 팀 Projects에 스토리를 모두 담고 MoSCoW, 크기, 스프린트 필드를 만들었습니다. MoSCoW를 정해 주세요. Must는 3개까지입니다.
+</span></code></pre></div>
+<p>확인: 표 머리에 <code>MoSCoW</code>, <code>크기</code>, <code>스프린트</code> 칸이 보이면 성공입니다.</p>
+<p><strong>기다리는 동안 할 일</strong></p>
+<ul>
+<li>팀 Projects <strong>...</strong> → <strong>Workflows</strong>에서 <strong>Item closed</strong>, <strong>Pull request merged</strong>, <strong>Item added to project</strong>가 켜져 있는지 확인합니다.</li>
+<li>스토리마다 마일스톤 <code>MVP</code>가 붙어 있는지 확인합니다. Won't 스토리는 MoSCoW가 정해진 뒤 마일스톤을 빼 둡니다.</li>
+</ul>
+<h3 id="5">⑤ 스프린트 배정과 보드 뷰 두 개 만들기<a class="headerlink" href="#5" title="Permanent link">&para;</a></h3>
+<p>개발자가 크기를 정하면 시작합니다. 보드 뷰는 쓰는 때가 다른 두 개를 만듭니다.</p>
+<table>
+<thead>
+<tr>
+<th>뷰 이름</th>
+<th>Layout</th>
+<th>Column by</th>
+<th>쓰는 때</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>MVP 보드</code></td>
+<td>Board</td>
+<td>MoSCoW</td>
+<td>5교시 범위 확인</td>
+</tr>
+<tr>
+<td><code>진행 보드</code></td>
+<td>Board</td>
+<td>Status (Todo, In Progress, Done)</td>
+<td>6교시 진행 관리. PR이 병합되면 카드가 Done으로 자동 이동</td>
+</tr>
+</tbody>
+</table>
+<p><strong>스프린트 배정</strong></p>
+<ol>
+<li>표에서 Must 스토리의 <code>스프린트</code> 칸을 클릭해 첫 번째 기간(스프린트 1)을 고릅니다.</li>
+<li>Should 스토리는 두 번째 기간을 고릅니다. Could, Won't는 비워 둡니다.</li>
+</ol>
+<p><strong><code>MVP 보드</code> 만들기</strong></p>
+<ol>
+<li><strong>+ New view</strong> → 새 뷰 탭 <strong>▼</strong> → <strong>Layout</strong> → <strong>Board</strong>를 클릭합니다.</li>
+<li>같은 <strong>▼</strong> 메뉴 → <strong>Column by</strong> → <strong>MoSCoW</strong>를 클릭합니다.</li>
+<li>
+<p>뷰 탭 이름을 더블클릭해 아래 이름으로 바꾸고 Enter를 누릅니다.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>MVP 보드
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>Save</strong>를 클릭합니다.</p>
+</li>
+</ol>
+<p><strong><code>진행 보드</code> 만들기</strong></p>
+<ol>
+<li>다시 <strong>+ New view</strong> → 새 뷰 탭 <strong>▼</strong> → <strong>Layout</strong> → <strong>Board</strong>를 클릭합니다.</li>
+<li>같은 <strong>▼</strong> 메뉴 → <strong>Column by</strong> → <strong>Status</strong>를 클릭합니다. <code>Todo</code>, <code>In Progress</code>, <code>Done</code> 칸이 생깁니다.</li>
+<li>
+<p>뷰 탭 이름을 더블클릭해 아래 이름으로 바꾸고 Enter를 누릅니다.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>진행 보드
+</span></code></pre></div>
+</li>
+<li>
+<p><strong>Save</strong>를 클릭합니다.</p>
+</li>
+<li>
+<p>PO에게 알립니다.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>@PO아이디 Must 스토리를 스프린트 1에, Should를 스프린트 2에 배정했습니다. 범위를 보는 MVP 보드(MoSCoW 기준)와 6교시 진행을 보는 진행 보드(Status 기준)를 만들었습니다. MVP 범위 확정과 v1.0 발행 부탁드립니다.
+</span></code></pre></div>
+</li>
+</ol>
+<p>확인: 뷰 탭에 <code>MVP 보드</code>와 <code>진행 보드</code>가 있습니다. <code>MVP 보드</code>에 Must, Should, Could, Won't 칸이 있고 Must 칸 카드가 3개 이하(대표 스토리 포함)이며, <code>진행 보드</code>에 Todo, In Progress, Done 칸이 있고, 표에서 Must 스토리의 스프린트가 모두 첫 번째 기간이면 성공입니다.</p>
+<div class="admonition note">
+<p class="admonition-title">Group by와 Column by</p>
+<p>표 뷰에서 묶을 때는 <strong>Group by</strong>, 보드 뷰에서 칸을 나눌 때는 <strong>Column by</strong>를 씁니다. 보드에서 <strong>Group by</strong>까지 쓰면 칸 안을 가로줄로 한 번 더 나눌 수 있습니다. 예를 들어 Column by <code>MoSCoW</code>, Group by <code>스프린트</code>.</p>
+</div>
+</div>
+<div class="tabbed-block">
+<h3 id="3-must">③ Must 스토리에 인수 조건 쓰기<a class="headerlink" href="#3-must" title="Permanent link">&para;</a></h3>
+<p>PO가 MoSCoW를 정하고 멘션하면 Must 스토리를 하나씩 엽니다. Must 스토리마다 <strong>Given-When-Then 인수 조건을 2개 이상</strong> 씁니다.</p>
+<ol>
+<li>스토리 본문 오른쪽 위 <strong>...</strong> → <strong>Edit</strong>를 클릭합니다.</li>
+<li><code>## 인수 조건</code> 아래를 고칩니다. <strong>숫자와 화면 결과</strong>로 누가 봐도 통과인지 알 수 있게 씁니다. PO의 결정 댓글 내용도 반영합니다.</li>
+<li><strong>Save</strong>를 클릭합니다.</li>
+</ol>
+<p><code>[스토리] 예산으로 메뉴 거르기</code> 예시:</p>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="gu">## 인수 조건</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="k">- [ ]</span> Given 메뉴 6개가 있을 때, When 예산 칸에 10000을 입력하면, Then 10000원이 넘는 메뉴(돈카츠 11000원, 샐러드볼 10500원)는 보이지 않는다.
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="k">- [ ]</span> Given 메뉴 6개가 있을 때, When 예산 칸에 10000을 입력하면, Then 10000원 이하 메뉴 4개(김치찌개, 짜장면, 쌀국수, 순두부찌개)가 모두 보인다.
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="k">- [ ]</span> Given 예산 칸이 비어 있을 때, When 화면을 열면, Then 메뉴 6개가 모두 보인다. (PO 결정: 만 원 넘는 메뉴도 목록에 둔다)
+</span></code></pre></div>
+<p><code>[스토리] 메뉴 목록을 카드로 보기</code> 예시:</p>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="gu">## 인수 조건</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="k">- [ ]</span> Given 메뉴 데이터에 메뉴가 있을 때, When 웹페이지를 열면, Then 메뉴마다 카드가 하나씩 보인다. (지금은 6개)
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="k">- [ ]</span> Given 김치찌개 카드를 볼 때, When 카드를 읽으면, Then "김치찌개", "한식", "9,000원", "300m"가 모두 보인다.
+</span></code></pre></div>
+<p><code>[스토리] 새 메뉴 2개를 추가해 선택지 늘리기</code>(대표 스토리) 예시. 6교시 PR 검토에서 이 ①~④를 하나씩 확인합니다.</p>
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="gu">## 인수 조건</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="k">- [ ]</span> ① Given 웹페이지를 열었을 때, When 메뉴 목록을 보면, Then 메뉴 카드가 8개 보인다.
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="k">- [ ]</span> ② Given 새 메뉴 카드에서, When 내용을 보면, Then 종류, 가격, 거리가 보이고 비빔밥에는 "혼밥 가능"이 보인다.
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="k">- [ ]</span> ③ Given 예산 칸에 10000을 넣었을 때, When 목록을 보면, Then 마라탕(10000원)이 보인다. (경계값)
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="k">- [ ]</span> ④ Given PR을 열었을 때, When 자동 검사가 끝나면, Then 초록 체크다.
+</span></code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">예산 인수 조건과 대표 스토리 ③은 이어집니다</p>
+<p>예산 스토리는 "10000원 <strong>넘는</strong> 메뉴는 안 보인다"를, 대표 스토리 ③은 "딱 10000원인 마라탕은 <strong>보인다</strong>"를 확인합니다. 둘을 함께 보면 "이하"라는 기준의 양쪽 끝을 모두 확인하게 됩니다. 경계에 있는 값을 일부러 넣어 확인하는 것을 <strong>경계값</strong> 확인이라고 합니다.</p>
+</div>
+<p>확인: Must 스토리마다 <code>## 인수 조건</code>에 Given, When, Then이 들어간 줄이 2개 이상 있으면 성공입니다.</p>
+<div class="admonition note">
+<p class="admonition-title">왜 이렇게 하나요?</p>
+<p>6교시에 개발자가 PR을 올리면, BA는 이 인수 조건을 체크리스트처럼 하나씩 확인하며 검토합니다. "잘 된다"처럼 쓰면 검토할 때 판단 기준이 없습니다. 지금 숫자로 써 두어야 6교시에 "통과", "고쳐 주세요"를 분명히 말할 수 있습니다.</p>
+</div>
+<p><strong>기다리는 동안 할 일</strong></p>
+<ul>
+<li>쓴 인수 조건을 개발자에게 보여 주고 "이대로 확인할 수 있는지" 물어봅니다. 애매하면 고칩니다.</li>
+<li>Should 스토리에도 시간이 남으면 인수 조건을 1개씩 써 둡니다.</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<h3 id="4-must">④ Must 스토리 크기 정하기<a class="headerlink" href="#4-must" title="Permanent link">&para;</a></h3>
+<p>PO가 MoSCoW를 정하고 멘션하면 팀 Projects를 엽니다.</p>
+<ol>
+<li>
+<p>표에서 Must 스토리의 <code>크기</code> 칸을 클릭해 <code>S</code>, <code>M</code>, <code>L</code> 중 하나를 고릅니다. Starter에 이미 있는 두 Must와 대표 스토리(메뉴 데이터 2줄 추가)는 모두 <code>S</code>가 자연스럽습니다.</p>
+<table>
+<thead>
+<tr>
+<th>크기</th>
+<th>기준 (오늘 실습 기준)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>S</code></td>
+<td>지금 화면에 거의 있음. 데이터나 문구만 조금 바꾸면 됨</td>
+</tr>
+<tr>
+<td><code>M</code></td>
+<td>화면이나 데이터를 몇 군데 고쳐야 함</td>
+</tr>
+<tr>
+<td><code>L</code></td>
+<td>새 기능이 필요하거나 정해지지 않은 것이 남아 있음</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>시간이 남으면 Should, Could 스토리도 크기를 정합니다.</p>
+</li>
+<li>
+<p><code>L</code>로 정한 스토리가 있으면 그 스토리에 이유 댓글을 남깁니다. 예를 들어 시간이 남아 투표 스토리(Won't)에도 크기를 매겼다면:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>@PO아이디 @PM아이디 크기를 L로 정했습니다. 투표는 지금 화면에 없는 새 기능이고, 누가 투표했는지 구분하려면 로그인이 필요합니다. 로그인은 이번 범위가 아닙니다.
+</span></code></pre></div>
+</li>
+<li>
+<p>다 정하면 PM에게 알립니다.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>@PM아이디 Must 스토리 크기를 모두 정했습니다.
+</span></code></pre></div>
+</li>
+</ol>
+<p>확인: Must 스토리 모두 <code>크기</code> 값이 있고, <code>L</code>인 스토리에는 이유 댓글이 있으면 성공입니다.</p>
+<div class="admonition note">
+<p class="admonition-title">크기를 왜 개발자가 정하나요?</p>
+<p>만드는 사람이 가장 정확하게 압니다. PO와 PM은 이 크기를 보고 스프린트 1에 다 들어가는지 판단합니다. 크기가 너무 크면 Must를 줄이거나 스토리를 더 잘게 나눕니다.</p>
+</div>
+<p><strong>기다리는 동안 할 일</strong></p>
+<ul>
+<li>BA가 쓴 인수 조건을 읽고, 실제로 확인할 수 있는지 봅니다. 애매하면 스토리에 질문 댓글을 남깁니다.</li>
+<li>6교시에 대표 스토리를 구현할 분기 이름 <code>story-&lt;이슈번호&gt;</code>를 미리 생각해 둡니다. 예: 대표 스토리가 10번이면 <code>story-10</code>. 번호는 팀마다 다릅니다.</li>
+</ul>
+</div>
+</div>
+</div>
+<h2 id="_4">완료 조건 (팀 단위)<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<ul class="task-list">
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 팀 Projects에 스토리가 모두 있고, <code>MoSCoW</code>, <code>크기</code>, <code>스프린트</code> 필드가 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 모든 스토리에 MoSCoW 값이 있고, <strong>Must는 3개 이하</strong>이며 대표 스토리가 Must에 있고, Must마다 PO의 이유 댓글이 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Must 스토리마다 Given-When-Then 인수 조건이 2개 이상 있고, 대표 스토리에는 ①~④가 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Must 스토리마다 크기가 있고, <code>L</code>이면 이유 댓글이 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Must 스토리가 모두 스프린트 1에 있고, MoSCoW로 칸이 나뉜 <code>MVP 보드</code>와 Status로 칸이 나뉜 <code>진행 보드</code>가 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <code>README.md</code>에 "## MVP 범위" 섹션이 있고, Must별 핵심 인수 조건과 결정 요약(충돌 2건 결정 포함)이 들어 있다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> Releases에 <code>요구사항 기준선 v1.0</code>이 있고, <strong>Tags</strong>에 <code>v1.0</code>이 보인다</li>
+</ul>
+<h2 id="_5">막히면<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<details class="failure">
+<summary>Add items from repository에 팀 리포지토리가 없습니다</summary>
+<p>프로젝트를 만든 PM 계정이 팀 리포지토리 협업자여야 합니다. 리포지토리 초대를 수락했는지 확인하세요. 또는 <strong>+ Add item</strong>에 <code>#</code>을 입력한 뒤 <code>lunch-picker</code>를 입력해 검색합니다.</p>
+</details>
+<details class="failure">
+<summary>팀원이 MoSCoW나 크기 값을 바꿀 수 없습니다</summary>
+<p>프로젝트 권한이 없거나 <code>Read</code>입니다. PM이 <strong>...</strong> → <strong>Settings</strong> → <strong>Manage access</strong>에서 그 팀원을 <code>Write</code>로 바꿉니다. <a href="../../class4/lab-3/">실습 4-3</a>의 PM STEP 3을 보세요.</p>
+</details>
+<details class="failure">
+<summary>Must를 3개로 줄이기 어렵습니다</summary>
+<p>정상입니다. 그 고민이 이번 미션의 핵심입니다. "이것이 없으면 정말 출시를 못 하나?"를 하나씩 물어보세요. 서비스 목적은 "메뉴 결정 시간 5분 이내"입니다. 이 목적을 시험해 보는 데 꼭 필요한 것만 Must입니다. 그래도 정하지 못하면 PO가 결정하고, 이유를 댓글로 남깁니다.</p>
+</details>
+<details class="failure">
+<summary>Choose a tag에 v1.0을 입력했는데 Create new tag가 보이지 않습니다</summary>
+<p>입력 칸에 <code>v1.0</code>을 정확히 입력했는지 확인합니다. 이미 <code>v1.0</code> 태그가 있다면 목록에서 기존 태그가 선택됩니다. 다른 팀원이 먼저 만들었는지 <strong>Tags</strong>에서 확인하세요.</p>
+</details>
+<details class="failure">
+<summary>Release를 잘못된 제목으로 발행했습니다</summary>
+<p>Releases 화면에서 그 릴리스 오른쪽 연필 아이콘(<strong>Edit</strong>)을 눌러 제목과 설명을 고치고 <strong>Update release</strong>를 클릭합니다. 태그는 그대로 둡니다.</p>
+</details>
+<details class="failure">
+<summary>README를 고쳤는데 표가 깨져 보입니다</summary>
+<p>표 바로 위에 빈 줄이 있어야 합니다. 그리고 <code>|---|---|</code> 줄의 칸 수가 머리 줄과 같아야 합니다. 연필 아이콘으로 다시 열어 <strong>Preview</strong>(미리 보기) 탭에서 확인한 뒤 저장하세요.</p>
+</details>
+<h2 id="_6">다음 교시로 넘어가기 전에<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<ul>
+<li><code>v1.0</code> 릴리스와 태그는 지우지 않습니다. 6교시에 <code>v1.1</code>과 비교합니다.</li>
+<li>6교시에는 팀 Projects의 <code>진행 보드</code>를 씁니다. PM이 대표 스토리를 In Progress로 옮기고, PR이 병합되면 카드가 Done으로 자동 이동합니다. <code>MVP 보드</code>는 범위를 다시 확인할 때 봅니다.</li>
+<li>Must 스토리의 인수 조건은 6교시 PR 검토의 기준입니다. 6교시 시작 전에 고칠 것이 있으면 지금 고치세요. v1.0 이후 범위가 바뀌면 <code>변경요청</code>으로 관리합니다.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  맨위로
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="하단/푸터" >
+        
+          
+          <a href="../mission-1/" class="md-footer__link md-footer__link--prev" aria-label="이전: 미션 5-1 요구 주고받기">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                이전
+              </span>
+              <div class="md-ellipsis">
+                미션 5-1 요구 주고받기
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../review/" class="md-footer__link md-footer__link--next" aria-label="다음: 회고">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                다음
+              </span>
+              <div class="md-ellipsis">
+                회고
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.tracking", "navigation.footer", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "content.tabs.link", "toc.follow"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,2811 @@
+
+<!doctype html>
+<html lang="ko" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="KT AX역량팀 GitHub 기초 과정 교안과 실습 가이드">
+      
+      
+        <meta name="author" content="스킬잇 김누리">
+      
+      
+        <link rel="canonical" href="https://skilleat-labs.github.io/gihub-900-lab/class4/">
+      
+      
+        <link rel="prev" href="../class3/practice/">
+      
+      
+        <link rel="next" href="lab-1/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
+    
+    
+      
+        <title>교안 - GitHub 기초 실습 가이드 (GH-900)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,300i,400,400i,700,700i%7CJetBrains+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Noto Sans KR";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#4" class="md-skip">
+          콘텐츠로 이동
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="상단/헤더">
+    <a href=".." title="GitHub 기초 실습 가이드 (GH-900)" class="md-header__button md-logo" aria-label="GitHub 기초 실습 가이드 (GH-900)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            GitHub 기초 실습 가이드 (GH-900)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              교안
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="다크 모드로 전환"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="다크 모드로 전환" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="라이트 모드로 전환"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="라이트 모드로 전환" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="검색" placeholder="검색" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="검색">
+        
+        <button type="reset" class="md-search__icon md-icon" title="지우기" aria-label="지우기" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            검색 초기화
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/skilleat-labs/gihub-900-lab" title="저장소로 이동" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    skilleat-labs/gihub-900-lab
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="탭" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  홈
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../setup/1-account/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  시작 전 준비
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../class1/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  1교시 시작하기
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../class2/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  2교시 문서와 할 일
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../class3/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  3교시 변경 관리
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+    
+  
+  4교시 계획과 팀
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../class5/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  5교시 팀 실습 ①
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../class6/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  6교시 팀 실습 ②
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../class7/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  7교시 운영과 보안
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../appendix/starter-files/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  부록
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="네비게이션" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="GitHub 기초 실습 가이드 (GH-900)" class="md-nav__button md-logo" aria-label="GitHub 기초 실습 가이드 (GH-900)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    GitHub 기초 실습 가이드 (GH-900)
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/skilleat-labs/gihub-900-lab" title="저장소로 이동" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    skilleat-labs/gihub-900-lab
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    홈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    시작 전 준비
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    시작 전 준비
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup/1-account/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1. GitHub 계정과 로그인
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup/2-screen/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2. GitHub 화면 둘러보기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup/3-troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3. 막혔을 때
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../class1/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1교시 시작하기
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_3" id="__nav_3_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    1교시 시작하기
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class1/lab-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    실습 1-1 내 연습 리포지토리 만들기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class1/lab-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    실습 1-2 웹에서 고치고 커밋하기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class1/lab-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    실습 1-3 History로 이력 보기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class1/practice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    혼자 해보기와 확인 퀴즈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../class2/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2교시 문서와 할 일
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    2교시 문서와 할 일
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class2/lab-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    실습 2-1 README 꾸미기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class2/lab-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    실습 2-2 이슈 등록과 분류
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class2/lab-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    실습 2-3 이슈 템플릿 만들기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class2/lab-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    실습 2-4 하위 이슈와 멘션
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class2/practice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    혼자 해보기와 확인 퀴즈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../class3/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    3교시 변경 관리
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_5" id="__nav_5_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    3교시 변경 관리
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class3/lab-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    실습 3-1 짝꿍 초대하기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class3/lab-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    실습 3-2 분기 만들고 PR 열기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class3/lab-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    실습 3-3 짝 리뷰와 병합
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class3/lab-4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    실습 3-4 충돌 만들고 해결하기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class3/lab-5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    실습 3-5 Revert로 되돌리기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class3/practice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    혼자 해보기와 확인 퀴즈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="./" class="md-nav__link md-nav__link--active">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    4교시 계획과 팀
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link md-nav__link--active" for="__nav_6" id="__nav_6_label" tabindex="">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    4교시 계획과 팀
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lab-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    실습 4-1 Projects 보드 만들기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lab-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    실습 4-2 필드, 보드 뷰, 자동화
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="lab-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    실습 4-3 팀 구성과 그룹 리포지토리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="practice/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    확인 퀴즈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../class5/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    5교시 팀 실습 ①
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_7" id="__nav_7_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    5교시 팀 실습 ①
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class5/mission-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    미션 5-1 요구 주고받기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class5/mission-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    미션 5-2 MVP 확정과 v1.0
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class5/review/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    회고
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../class6/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    6교시 팀 실습 ②
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_8" id="__nav_8_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    6교시 팀 실습 ②
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class6/mission-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    미션 6-1 구현과 검토
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class6/mission-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    미션 6-2 변경 요청 처리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class6/mission-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    미션 6-3 이력 감사
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class6/review/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    회고
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
+        
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../class7/" class="md-nav__link ">
+              
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    7교시 운영과 보안
+  
+
+    
+  </span>
+  
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_9" id="__nav_9_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    7교시 운영과 보안
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class7/lab-1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    실습 7-1 터미널로 Git 다루기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class7/lab-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    실습 7-2 분기 보호와 CODEOWNERS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class7/lab-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    실습 7-3 2단계 인증 켜기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../class7/wrap-up/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    오늘의 정리
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    부록
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    부록
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix/starter-files/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Starter 파일 보기
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix/glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    용어집
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../appendix/instructor/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    강사용 진행 메모
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="목차">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      목차
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#lecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        교안
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="교안">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Projects는 이슈를 모아 보는 기획판입니다
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#views" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        같은 이슈를 세 가지 모양으로 봅니다
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        필드를 직접 만들어 원하는 기준으로 관리합니다
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#automation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        상태 변경은 자동화에 맡깁니다
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mvp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Must만 모은 것이 MVP입니다
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linking" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        #번호 하나로 이슈, PR, 커밋이 연결됩니다
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#roles" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        오후에는 네 가지 역할로 협업합니다
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        요구는 PO에서 개발자까지 차례로 흐릅니다
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        이번 교시 실습
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="4">4교시. 일정, 우선순위 관리와 팀 구성<a class="headerlink" href="#4" title="Permanent link">&para;</a></h1>
+<div class="admonition abstract">
+<p class="admonition-title">이번 교시의 목표</p>
+<p>Projects로 우선순위와 일정을 관리하고, 협업 역할과 요구 흐름을 이해할 수 있다.</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">오늘의 흐름에서 지금 위치</p>
+<p>현업 요청 → 이슈 → <strong>우선순위와 인수 조건</strong> → PR → 검사와 리뷰 → 병합과 배포 → 이력 확인 → 보호 규칙</p>
+</div>
+<table>
+<thead>
+<tr>
+<th>구간</th>
+<th>시간</th>
+<th>내용</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>개념 설명</td>
+<td>10분</td>
+<td>Projects, 뷰, 필드, 자동화, MoSCoW와 MVP, #번호 연결 (<a href="#lecture">교안</a>)</td>
+</tr>
+<tr>
+<td>따라하기</td>
+<td>15분</td>
+<td><a href="lab-1/">실습 4-1 Projects 보드 만들기</a>, <a href="lab-2/">실습 4-2 필드, 보드 뷰, 자동화</a> (개인 <code>lunch-practice</code>)</td>
+</tr>
+<tr>
+<td>역할 소개</td>
+<td>5분</td>
+<td>PO, PM, BA, 개발자와 요구 흐름 (<a href="#roles">역할</a>)</td>
+</tr>
+<tr>
+<td>팀 구성</td>
+<td>20분</td>
+<td><a href="lab-3/">실습 4-3 팀 구성과 그룹 리포지토리</a></td>
+</tr>
+<tr>
+<td>확인 퀴즈</td>
+<td>남는 시간</td>
+<td><a href="practice/">확인 퀴즈</a></td>
+</tr>
+</tbody>
+</table>
+<p>오전에는 요청을 이슈로, 변경을 PR로 관리했습니다. 이제 여러 이슈 중 무엇부터 할지 정합니다. 4교시는 개인 실습의 마지막 개념인 <strong>Projects</strong>를 배우고, 바로 오후 팀을 꾸립니다. 앞부분 이론과 따라하기는 지금까지처럼 개인 연습 리포지토리 <code>lunch-practice</code>에서 하고, 마지막 20분에 팀 리포지토리 <code>lunch-picker-team&lt;번호&gt;</code>를 만듭니다.</p>
+<h2 id="lecture">교안<a class="headerlink" href="#lecture" title="Permanent link">&para;</a></h2>
+<div class="admonition question">
+<p class="admonition-title">이번 교시를 시작하며</p>
+<ul>
+<li><strong>왜 지금 하나요?</strong> 변경 한 건을 검토하고 반영하는 방법을 배웠습니다. 오전에는 요청을 이슈로, 변경을 PR로 관리했습니다. 이제 여러 이슈 중 무엇부터, 누가, 언제 할지 Projects에서 정합니다.</li>
+<li><strong>앞에서 만든 무엇을 쓰나요?</strong> <code>lunch-practice</code>에 2교시에 만든 이슈들(#1~#5와 혼자 해보기 이슈)과 라벨 <code>우선순위-상</code>, <code>우선순위-중</code>, <code>우선순위-하</code>입니다. 이 이슈들을 개인 프로젝트 <code>내 연습 보드</code>에 담습니다. 3교시에 만든 PR은 <code>Closes #번호</code>로 이슈와 묶는 방법을 볼 때 떠올립니다.</li>
+<li><strong>끝나면 무엇을 누구에게 넘기나요?</strong> 개인 보드 <code>내 연습 보드</code>는 복습용으로 남고, 팀 리포지토리 <code>lunch-picker-team&lt;번호&gt;</code>와 팀 Projects <code>점심 메뉴 추천 팀&lt;번호&gt;</code>가 새로 생깁니다. 5교시에 팀이 이 빈 공간에서 현업 요청을 이슈로 옮기고, 우선순위와 인수 조건을 정합니다.</li>
+</ul>
+</div>
+<h3 id="projects">Projects는 이슈를 모아 보는 기획판입니다<a class="headerlink" href="#projects" title="Permanent link">&para;</a></h3>
+<p>이슈가 서너 개일 때는 Issues 목록만 봐도 충분합니다. 그런데 이슈가 수십 개가 되면 목록만으로는 "무엇부터 해야 하지?", "이번 주에 끝낼 것은 뭐지?", "지금 누가 무엇을 하고 있지?"가 보이지 않습니다.</p>
+<p><strong>Projects</strong>는 흩어진 이슈를 한 화면에 모아서 우선순위, 일정, 진행 상황을 관리하는 기획판입니다. 엑셀로 할 일 표를 만들어 관리하던 일을 GitHub 안에서 한다고 보면 됩니다. 엑셀과 다른 점은 <strong>이슈와 실시간으로 연결되어 있다</strong>는 것입니다. 엑셀은 이슈가 닫혀도 누군가 손으로 "완료"라고 고쳐야 하지만, Projects는 이슈를 닫으면 자동으로 완료로 바뀝니다.</p>
+<pre class="mermaid"><code>flowchart LR
+    A["흩어진 이슈&lt;br/&gt;(리포지토리 여러 곳)"] -- 끌어오기 --&gt; B["Projects&lt;br/&gt;(한 화면에 모아서)"]
+    B -- 정리해서 보기 --&gt; C["우선순위, 일정, 진행&lt;br/&gt;(표, 보드, 로드맵)"]</code></pre>
+<p>Projects는 리포지토리 안에 있는 것이 아니라 <strong>사람(계정)이나 조직에 속합니다.</strong> 그래서 한 프로젝트에 여러 리포지토리의 이슈를 함께 담을 수 있고, 리포지토리의 <strong>Projects</strong> 탭에서 <strong>Link a project</strong>(프로젝트 연결)로 이어 두면 리포지토리에서도 바로 찾아갈 수 있습니다.</p>
+<div class="admonition tip">
+<p class="admonition-title">핵심</p>
+<p>Projects는 이슈를 모아 우선순위, 일정, 진행을 관리하는 기획판입니다. 이슈와 실시간으로 연결되어 있어 따로 손으로 맞출 필요가 없습니다.</p>
+</div>
+<h3 id="views">같은 이슈를 세 가지 모양으로 봅니다<a class="headerlink" href="#views" title="Permanent link">&para;</a></h3>
+<p>Projects는 같은 이슈들을 세 가지 모양(뷰, View)으로 보여 줍니다.</p>
+<table>
+<thead>
+<tr>
+<th>뷰</th>
+<th>모양</th>
+<th>좋을 때</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Table</strong>(표)</td>
+<td>엑셀처럼 줄과 칸</td>
+<td>한눈에 훑어보기, 필드로 정렬하고 묶기</td>
+</tr>
+<tr>
+<td><strong>Board</strong>(보드)</td>
+<td>Todo, In Progress, Done 칸에 카드</td>
+<td>매일 진행 상황 확인, 카드를 끌어서 상태 바꾸기 (칸반 방식)</td>
+</tr>
+<tr>
+<td><strong>Roadmap</strong>(로드맵)</td>
+<td>시간축 위의 막대</td>
+<td>일정 보고, 스프린트와 마일스톤 확인</td>
+</tr>
+</tbody>
+</table>
+<p>중요한 점은 <strong>데이터는 하나이고 보는 방식만 바뀐다</strong>는 것입니다. 보드에서 카드를 Done 칸으로 옮기면 표의 Status 칸도 Done으로 바뀌고, 표에서 우선순위를 고치면 보드 카드에도 바로 반영됩니다. 같은 엑셀 파일을 피벗 표로 보느냐, 차트로 보느냐의 차이와 비슷합니다.</p>
+<pre class="mermaid"><code>flowchart TB
+    D[("이슈 데이터 하나&lt;br/&gt;제목, Status, 우선순위, 스프린트")]
+    D --&gt; T["Table&lt;br/&gt;표로 보기"]
+    D --&gt; B["Board&lt;br/&gt;칸반으로 보기"]
+    D --&gt; R["Roadmap&lt;br/&gt;시간축으로 보기"]</code></pre>
+<div class="admonition tip">
+<p class="admonition-title">핵심</p>
+<p>표는 정리할 때, 보드는 매일 진행을 볼 때, 로드맵은 보고할 때 씁니다. 셋은 같은 데이터입니다.</p>
+</div>
+<h3 id="fields">필드를 직접 만들어 원하는 기준으로 관리합니다<a class="headerlink" href="#fields" title="Permanent link">&para;</a></h3>
+<p>필드(Field)는 표의 칸 하나라고 생각하면 됩니다. 기본으로 Title, Assignees, Status 같은 필드가 있고, 필요한 필드를 직접 만들 수 있습니다.</p>
+<table>
+<thead>
+<tr>
+<th>필드 종류</th>
+<th>화면 이름</th>
+<th>예시</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>단일 선택</td>
+<td><strong>Single select</strong></td>
+<td>우선순위: 상, 중, 하 중 하나 / MoSCoW: Must, Should, Could, Won't 중 하나</td>
+</tr>
+<tr>
+<td>반복</td>
+<td><strong>Iteration</strong></td>
+<td>스프린트: 1주 단위로 스프린트 1, 2, 3이 자동으로 생김</td>
+</tr>
+<tr>
+<td>숫자, 날짜, 글</td>
+<td><strong>Number</strong>, <strong>Date</strong>, <strong>Text</strong></td>
+<td>작업 크기, 마감일, 메모</td>
+</tr>
+</tbody>
+</table>
+<p><strong>스프린트</strong>(Sprint)는 일을 짧은 기간 단위로 나누어 끝내는 방식입니다. 반복 필드에 시작일과 기간(1주)만 정해 두면 GitHub가 기간을 자동으로 이어서 만들어 줍니다.</p>
+<p>필드를 만들면 그 필드로 표를 정렬하거나 묶을(Group by) 수 있습니다. 예를 들어 우선순위로 묶으면 "상" 묶음, "중" 묶음, "하" 묶음이 생겨서 무엇부터 해야 할지 바로 보입니다.</p>
+<div class="admonition tip">
+<p class="admonition-title">핵심</p>
+<p>필드는 내가 관리하고 싶은 기준입니다. 필드를 만들면 그 기준으로 정렬하고, 묶고, 보드 칸을 나눌 수 있습니다.</p>
+</div>
+<h3 id="automation">상태 변경은 자동화에 맡깁니다<a class="headerlink" href="#automation" title="Permanent link">&para;</a></h3>
+<p>Projects에는 기본 자동화(<strong>Workflows</strong>)가 들어 있습니다. 담당자가 매번 보드 카드를 손으로 옮길 필요가 없습니다.</p>
+<pre class="mermaid"><code>flowchart LR
+    A["이슈 추가"] --&gt;|"Item added to project"| T["Todo"]
+    T --&gt;|"작업 시작 (손으로)"| P["In Progress"]
+    P --&gt; M["PR 병합"]
+    M --&gt;|"Pull request merged&lt;br/&gt;Item closed"| D["Done"]</code></pre>
+<table>
+<thead>
+<tr>
+<th>자동화 이름</th>
+<th>언제</th>
+<th>무엇을</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Item added to project</strong></td>
+<td>이슈를 프로젝트에 추가하면</td>
+<td>Status를 Todo로</td>
+</tr>
+<tr>
+<td><strong>Item closed</strong></td>
+<td>이슈가 닫히면</td>
+<td>Status를 Done으로</td>
+</tr>
+<tr>
+<td><strong>Pull request merged</strong></td>
+<td>PR이 병합되면</td>
+<td>Status를 Done으로</td>
+</tr>
+</tbody>
+</table>
+<p>자동화는 프로젝트 오른쪽 위 <strong>...</strong> 메뉴의 <strong>Workflows</strong>에서 켜고 끕니다. 오후 실습에서 PR을 병합했을 때 카드가 스스로 Done으로 가는 것을 직접 보게 됩니다.</p>
+<div class="admonition tip">
+<p class="admonition-title">핵심</p>
+<p>이슈가 닫히면 보드도 알아서 Done이 됩니다. 사람은 일을 하고, 상태 정리는 자동화에 맡깁니다.</p>
+</div>
+<h3 id="mvp">Must만 모은 것이 MVP입니다<a class="headerlink" href="#mvp" title="Permanent link">&para;</a></h3>
+<p>무엇부터 할지 정할 때 <strong>MoSCoW</strong>(모스크바) 기법을 씁니다. 네 단어의 앞 글자를 딴 이름입니다.</p>
+<table>
+<thead>
+<tr>
+<th>등급</th>
+<th>뜻</th>
+<th>점심 메뉴 서비스 예</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Must</strong></td>
+<td>없으면 출시 못 함</td>
+<td>메뉴 목록 보기, 예산으로 거르기</td>
+</tr>
+<tr>
+<td><strong>Should</strong></td>
+<td>중요하지만 미룰 수 있음</td>
+<td>거리로 거르기</td>
+</tr>
+<tr>
+<td><strong>Could</strong></td>
+<td>있으면 좋음</td>
+<td>혼밥 가능 표시</td>
+</tr>
+<tr>
+<td><strong>Won't</strong></td>
+<td>이번에는 안 함</td>
+<td>팀원 투표 (로그인이 필요해서)</td>
+</tr>
+</tbody>
+</table>
+<p>이 중 <strong>Must만 모은 것이 MVP</strong>(Minimum Viable Product, 최소 기능 제품)입니다. "가치를 확인할 수 있는 가장 작은 출시"라는 뜻입니다. 킥오프 회의록의 "첫 출시는 최대한 작게 한다"가 바로 MVP 이야기입니다.</p>
+<p>주의할 점은 <strong>Must가 많아지면 MVP가 아니라는 것</strong>입니다. 요청자는 대부분 "다 급하다"고 말합니다. 모든 것이 Must면 사실상 우선순위가 없는 것과 같습니다. 오후 실습에서는 Must를 <strong>3개 이하</strong>로 제한합니다. 고르기 어렵다면 "이것이 없으면 정말 출시를 못 하나?"를 물어보세요.</p>
+<div class="admonition tip">
+<p class="admonition-title">핵심</p>
+<p>Must만 모은 것이 MVP입니다. Must가 많으면 MVP가 아닙니다.</p>
+</div>
+<h3 id="linking">#번호 하나로 이슈, PR, 커밋이 연결됩니다<a class="headerlink" href="#linking" title="Permanent link">&para;</a></h3>
+<p>GitHub에서는 <code>#12</code>처럼 샵 뒤에 번호를 쓰면 12번 이슈나 PR로 가는 링크가 자동으로 만들어집니다. <code>@아이디</code>는 사람에게, 커밋 번호 앞 7자리(예: <code>a1b2c3d</code>)는 그 커밋으로 가는 링크가 됩니다.</p>
+<p>여기서 한 걸음 더 나가, PR 본문에 <code>Closes #12</code>라고 쓰면 12번 이슈와 그 PR이 <strong>연결</strong>됩니다. 그리고 PR이 병합되는 순간 12번 이슈가 <strong>자동으로 닫힙니다.</strong> 앞에서 본 Projects 자동화(Item closed)와 합치면, PR 하나 병합으로 이슈 종료와 보드 이동이 한 번에 일어납니다.</p>
+<pre class="mermaid"><code>flowchart LR
+    I["이슈 #12&lt;br/&gt;예산으로 메뉴 거르기"] -- "#12로 연결" --&gt; P["PR 본문&lt;br/&gt;Closes #12"]
+    P -- 병합 --&gt; C["커밋 a1b2c3d"]
+    C -. "이슈 #12 자동 종료" .-&gt; I
+    I -. "Item closed" .-&gt; D["보드에서 Done"]</code></pre>
+<p><code>Closes</code> 대신 <code>Fixes</code>, <code>Resolves</code>도 같은 동작을 합니다. 이렇게 이슈, PR, 커밋이 서로 링크로 이어져 있어서 어느 하나에서 시작해도 나머지를 따라갈 수 있습니다. "이 코드는 왜 바뀌었지?"에서 커밋, PR, 리뷰 대화, 원래 요구 이슈까지 거슬러 올라갈 수 있는 것, 이것이 <strong>이력 추적</strong>의 기반입니다. 6교시 이력 감사에서 바로 이 연결을 씁니다.</p>
+<div class="admonition tip">
+<p class="admonition-title">핵심</p>
+<p>PR 본문에 <code>Closes #번호</code>를 쓰면 병합할 때 이슈가 자동으로 닫히고, 보드도 Done으로 갑니다.</p>
+</div>
+<h3 id="roles">오후에는 네 가지 역할로 협업합니다<a class="headerlink" href="#roles" title="Permanent link">&para;</a></h3>
+<p>오후 5~7교시는 3~4명이 한 팀이 되어 역할극을 합니다. 실제 회사의 서비스 기획팀처럼 역할을 나누어 요구를 주고받습니다.</p>
+<table>
+<thead>
+<tr>
+<th>역할</th>
+<th>풀어 쓰면</th>
+<th>한마디로</th>
+<th>하는 일</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>PO</strong></td>
+<td>Product Owner, 제품 책임자</td>
+<td>무엇을, 왜</td>
+<td>현업 요청을 받아 우선순위와 MVP를 정하고 최종 승인</td>
+</tr>
+<tr>
+<td><strong>PM</strong></td>
+<td>Project Manager, 프로젝트 관리자</td>
+<td>언제, 누가</td>
+<td>일정과 담당 배정, 보드와 병합 관리</td>
+</tr>
+<tr>
+<td><strong>BA</strong></td>
+<td>Business Analyst, 업무 분석가</td>
+<td>구체적으로</td>
+<td>요구를 사용자 스토리와 인수 조건으로 상세화, 결과가 요구를 충족하는지 검토</td>
+</tr>
+<tr>
+<td><strong>개발자</strong></td>
+<td>Developer</td>
+<td>만든다</td>
+<td>요구사항을 받아 질문하고 구현해 PR을 올림</td>
+</tr>
+</tbody>
+</table>
+<p><strong>3명 팀은 PO가 PM을 겸합니다.</strong> 오늘 과정의 수강생은 대부분 PM, BA, 기획 업무를 하시지만, 일부러 평소와 다른 역할을 맡아 보는 것도 좋습니다. 개발자 역할을 해 보면 "요구사항이 애매하면 무엇이 힘든지"가 바로 보입니다.</p>
+<div class="admonition tip">
+<p class="admonition-title">핵심</p>
+<p>PO는 무엇을 왜, PM은 언제 누가, BA는 구체적으로, 개발자는 만든다. 3명 팀은 PO가 PM을 겸합니다.</p>
+</div>
+<h3 id="flow">요구는 PO에서 개발자까지 차례로 흐릅니다<a class="headerlink" href="#flow" title="Permanent link">&para;</a></h3>
+<p>역할 사이에 요구가 흐르는 순서입니다. PO가 현업 요청을 받아 우선순위를 정하면, PM이 일정과 담당을 정하고, BA가 사용자 스토리와 인수 조건으로 구체화해서 개발자에게 넘깁니다. 개발자가 구현하면 BA가 요구를 충족했는지 검토하고, PO가 최종 승인해서 반영됩니다.</p>
+<pre class="mermaid"><code>flowchart LR
+    PO["PO&lt;br/&gt;현업 요청을 받아&lt;br/&gt;우선순위 결정"] -- 요구 --&gt; PM["PM&lt;br/&gt;일정과&lt;br/&gt;담당 배정"]
+    PM -- 작업 --&gt; BA["BA&lt;br/&gt;스토리와&lt;br/&gt;인수 조건"]
+    BA -- 요구사항 --&gt; DEV["개발자&lt;br/&gt;질문하고&lt;br/&gt;구현"]
+    DEV -- "PR" --&gt; R["BA 검토"]
+    R -- "승인 요청" --&gt; PO
+    PO -. "최종 승인, 반영" .-&gt; DONE["main에 반영"]</code></pre>
+<p>이 주고받기는 메신저나 구두가 아니라 <strong>이슈 댓글과 PR 리뷰</strong>로 남깁니다. 그래야 나중에 "누가, 언제, 왜 이렇게 정했지?"를 기록으로 증명할 수 있습니다.</p>
+<div class="admonition tip">
+<p class="admonition-title">핵심</p>
+<p>요구는 PO, PM, BA, 개발자 순서로 흐르고, 결과는 BA 검토와 PO 승인을 거쳐 반영됩니다. 모든 대화는 이슈와 PR에 남깁니다.</p>
+</div>
+<h2 id="_1">이번 교시 실습<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="lab-1/">실습 4-1 Projects 보드 만들기</a>: 개인 프로젝트 <code>내 연습 보드</code>를 만들고 <code>lunch-practice</code>의 이슈를 담아 리포지토리와 연결합니다.</li>
+<li><a href="lab-2/">실습 4-2 필드, 보드 뷰, 자동화</a>: 우선순위와 스프린트 필드, 보드 뷰, 로드맵, 자동화를 써 보고 세 뷰가 같은 데이터임을 확인합니다.</li>
+<li><a href="lab-3/">실습 4-3 팀 구성과 그룹 리포지토리</a>: 팀 리포지토리와 팀 Projects를 만들고 팀원 권한과 웹페이지까지 준비합니다.</li>
+<li><a href="practice/">확인 퀴즈</a>: 뷰의 차이, MVP, <code>Closes #</code>, 역할 차이를 확인합니다.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  맨위로
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="하단/푸터" >
+        
+          
+          <a href="../class3/practice/" class="md-footer__link md-footer__link--prev" aria-label="이전: 혼자 해보기와 확인 퀴즈">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                이전
+              </span>
+              <div class="md-ellipsis">
+                혼자 해보기와 확인 퀴즈
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="lab-1/" class="md-footer__link md-footer__link--next" aria-label="다음: 실습 4-1 Projects 보드 만들기">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                다음
+              </span>
+              <div class="md-ellipsis">
+                실습 4-1 Projects 보드 만들기
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.expand", "navigation.top", "navigation.tracking", "navigation.footer", "navigation.indexes", "search.suggest", "search.highlight", "content.code.copy", "content.code.annotate", "content.tabs.link", "toc.follow"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "\ud074\ub9bd\ubcf4\ub4dc\uc5d0 \ubcf5\uc0ac\ub428", "clipboard.copy": "\ud074\ub9bd\ubcf4\ub4dc\ub85c \ubcf5\uc0ac", "search.result.more.one": "\uc774 \ubb38\uc11c\uc5d0\uc11c 1\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.more.other": "\uc774 \ubb38\uc11c\uc5d0\uc11c #\uac1c\uc758 \uac80\uc0c9 \uacb0\uacfc \ub354 \ubcf4\uae30", "search.result.none": "\uac80\uc0c9\uc5b4\uc640 \uc77c\uce58\ud558\ub294 \ubb38\uc11c\uac00 \uc5c6\uc2b5\ub2c8\ub2e4", "search.result.one": "1\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.other": "#\uac1c\uc758 \uc77c\uce58\ud558\ub294 \ubb38\uc11c", "search.result.placeholder": "\uac80\uc0c9\uc5b4\ub97c \uc785\ub825\ud558\uc138\uc694", "search.result.term.missing": "\ud3ec\ud568\ub418\uc9c0 \uc54a\uc740 \uac80\uc0c9\uc5b4", "select.version": "\ubc84\uc804 \uc120\ud0dd"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.c21346df.min.js"></script>
+      
+    
+  </body>
+</html>
