@@ -904,7 +904,7 @@
   <a href="#step-3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        STEP 3. 커밋 목록에서 커밋 한 줄 읽기
+        STEP 3. 커밋 목록 읽기
       
     </span>
   </a>
@@ -2462,7 +2462,7 @@
   <a href="#step-3" class="md-nav__link">
     <span class="md-ellipsis">
       
-        STEP 3. 커밋 목록에서 커밋 한 줄 읽기
+        STEP 3. 커밋 목록 읽기
       
     </span>
   </a>
@@ -2622,12 +2622,21 @@
     B --&gt; C["웹페이지 배포 작업&lt;br/&gt;자동 실행"]
     C --&gt; D["웹페이지에&lt;br/&gt;9,500원 표시"]</code></pre>
 </div>
-<h2 id="step-3">STEP 3. 커밋 목록에서 커밋 한 줄 읽기<a class="headerlink" href="#step-3" title="Permanent link">&para;</a></h2>
+<h2 id="step-3">STEP 3. 커밋 목록 읽기<a class="headerlink" href="#step-3" title="Permanent link">&para;</a></h2>
 <ol>
 <li>위쪽 리포지토리 이름 <code>lunch-practice</code>를 클릭해 첫 화면으로 돌아갑니다.</li>
 <li>회색 줄 오른쪽 끝의 <strong>2 Commits</strong>를 클릭합니다.</li>
-<li>커밋 목록에서 맨 위 <code>김치찌개 가격 9500원으로 수정</code> 줄을 보며 아래 항목을 하나씩 찾아봅니다.</li>
-</ol>
+<li>
+<p><strong>Commits</strong> 화면이 열립니다. 위쪽에 <code>main</code> 분기 선택 상자가 있고, 아래에 <code>Commits on (날짜)</code> 묶음으로 커밋이 최신순으로 나옵니다.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>김치찌개 가격 9500원으로 수정   ···                 Verified   230f1e5   ⧉   &lt;&gt;
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>keepcraft-go authored 2 minutes ago · ✓ 1 / 1
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>─────────────────────────────────────────────────────────────────────────
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>Initial commit                                      Verified   d516c79   ⧉   &lt;&gt;
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>keepcraft-go authored 4 hours ago · ✕ 0 / 1
+</span></code></pre></div>
+</li>
+<li>
+<p>맨 위 <code>김치찌개 가격 9500원으로 수정</code> 줄에서 아래 항목을 하나씩 찾아봅니다.</p>
 <table>
 <thead>
 <tr>
@@ -2639,28 +2648,33 @@
 <tbody>
 <tr>
 <td>줄 왼쪽 굵은 글씨</td>
-<td>커밋 메시지</td>
+<td>커밋 메시지. 옆의 <code>···</code>을 누르면 Extended description이 펼쳐집니다</td>
 <td>김치찌개 가격 9500원으로 수정</td>
 </tr>
 <tr>
-<td>메시지 아래 작은 프로필 사진과 아이디</td>
-<td>작성자</td>
-<td>내 아이디 <code>committed</code></td>
+<td>메시지 아래 아이디와 <code>authored</code></td>
+<td>작성자와 시간. 시간에 마우스를 올리면 정확한 날짜와 시각이 나옵니다</td>
+<td><code>keepcraft-go authored 2 minutes ago</code></td>
 </tr>
 <tr>
-<td>아이디 옆</td>
-<td>시간</td>
-<td><code>2 minutes ago</code> (마우스를 올리면 정확한 날짜와 시각)</td>
+<td>시간 옆 <code>✓ 1 / 1</code> 또는 <code>✕ 0 / 1</code></td>
+<td>이 커밋을 계기로 돈 자동 작업(웹페이지 배포)의 결과. 1개 중 1개 성공이면 초록 체크</td>
+<td>가격 수정은 <code>✓ 1 / 1</code>, Initial commit은 Pages를 켜기 전이라 <code>✕ 0 / 1</code></td>
 </tr>
 <tr>
-<td>줄 오른쪽 7자리 영문 숫자</td>
+<td>오른쪽 초록 테두리 <code>Verified</code></td>
+<td>커밋에 서명이 있고 GitHub가 그 서명을 확인했다는 표시. 웹에서 커밋하면 GitHub가 자동으로 서명합니다</td>
+<td>Verified</td>
+</tr>
+<tr>
+<td>오른쪽 7자리 영문 숫자</td>
 <td>커밋 해시 앞 7자리</td>
-<td><code>3f9a1c2</code> (사람마다 다름)</td>
+<td><code>230f1e5</code> (사람마다 다름)</td>
 </tr>
 <tr>
 <td>해시 옆 겹친 네모 아이콘</td>
-<td>전체 해시 복사</td>
-<td>누르면 40자리 해시가 복사됩니다</td>
+<td>전체 해시 복사. 누르면 40자리 해시가 복사됩니다</td>
+<td></td>
 </tr>
 <tr>
 <td>맨 오른쪽 <code>&lt;&gt;</code> 아이콘</td>
@@ -2669,7 +2683,9 @@
 </tr>
 </tbody>
 </table>
-<p>확인: 커밋 2개(<code>김치찌개 가격 9500원으로 수정</code>, <code>Initial commit</code>)의 해시가 서로 다릅니다. 옆자리 사람과도 비교해 보세요. 같은 메시지로 커밋했어도 작성자와 시간이 달라서 해시가 전부 다릅니다.</p>
+</li>
+</ol>
+<p>확인: 커밋 2개의 해시가 서로 다릅니다. 옆자리 사람과도 비교해 보세요. 같은 메시지로 커밋했어도 작성자와 시간이 달라서 해시가 전부 다릅니다.</p>
 <div class="admonition note">
 <p class="admonition-title">왜 해시가 전부 다른가요?</p>
 <p>해시는 작성자, 시간, 메시지, 스냅샷, 앞 커밋 번호를 모두 넣어 계산한 번호입니다. 이 중 하나만 달라도 완전히 다른 번호가 나옵니다. 그래서 해시 7자리만 알려 주면 수많은 커밋 중에서 정확히 그 커밋 하나를 가리킬 수 있습니다. 교안의 <a href="../#hash">해시와 커밋 사슬</a> 그림을 다시 떠올려 보세요.</p>
@@ -2677,41 +2693,80 @@
 <h2 id="step-4">STEP 4. 커밋 하나 열어 바뀐 줄 보기<a class="headerlink" href="#step-4" title="Permanent link">&para;</a></h2>
 <ol>
 <li>커밋 목록에서 <code>김치찌개 가격 9500원으로 수정</code> 메시지를 클릭합니다.</li>
-<li>커밋 상세 화면 위쪽에 메시지와 설명(<code>식당 가격 인상 반영</code>), 작성자, 해시가 보입니다. 해시 옆의 <code>1 parent</code>와 또 다른 해시는 <strong>바로 앞 커밋</strong>(<code>Initial commit</code>)의 해시입니다.</li>
-<li>
-<p>아래로 내리면 바뀐 파일 <code>site/menus.json</code>과 바뀐 내용이 나옵니다.</p>
+<li>커밋 상세 화면이 열립니다. 아래 그림의 번호를 따라 위에서 아래로 읽어 봅니다.</li>
+</ol>
+<p><img alt="커밋 상세 화면. 번호 1 커밋 해시, 2 작성자와 시간, 3 자동 작업 결과, 4 Verified, 5 메시지와 설명, 6 앞 커밋 해시, 7 바뀐 파일 수, 8 지워진 줄, 9 새로 생긴 줄, 10 Browse files, 11 보기 방식 설정" src="../../images/class1/commit-detail.png" /></p>
 <table>
 <thead>
 <tr>
-<th>색</th>
-<th>표시</th>
+<th>번호</th>
+<th>화면에 보이는 것</th>
 <th>뜻</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>빨간 줄</td>
-<td>줄 앞에 <code>-</code></td>
-<td>지워진 줄 (예전 내용)</td>
+<td>①</td>
+<td><code>Commit 230f1e5</code></td>
+<td>이 커밋의 해시 앞 7자리. 커밋의 고유 번호입니다</td>
 </tr>
 <tr>
-<td>초록 줄</td>
-<td>줄 앞에 <code>+</code></td>
-<td>새로 생긴 줄 (지금 내용)</td>
+<td>②</td>
+<td><code>keepcraft-go authored 1 minute ago</code></td>
+<td><strong>누가, 언제</strong> 커밋했는지</td>
 </tr>
 <tr>
-<td>흰 줄</td>
-<td>표시 없음</td>
-<td>바뀌지 않은 앞뒤 줄 (위치를 알려 주려고 보여 줌)</td>
+<td>③</td>
+<td><code>✓ 1 / 1</code></td>
+<td>이 커밋을 계기로 돈 자동 작업 1개가 성공했다는 표시. 눌러 보면 <strong>웹페이지 배포</strong>가 보입니다</td>
+</tr>
+<tr>
+<td>④</td>
+<td><code>Verified</code></td>
+<td>서명이 확인된 커밋이라는 표시. 웹에서 커밋하면 GitHub가 자동으로 서명해서 붙습니다</td>
+</tr>
+<tr>
+<td>⑤</td>
+<td><code>김치찌개 가격 9500원으로 수정</code>, 아래 줄 <code>식당 가격 인상 반영</code></td>
+<td><strong>무엇을, 왜</strong>. 첫 줄은 Commit message, 둘째 줄은 Extended description입니다</td>
+</tr>
+<tr>
+<td>⑥</td>
+<td><code>1 parent d516c79 commit 230f1e5</code></td>
+<td>바로 앞 커밋(parent)이 <code>d516c79</code>(Initial commit)라는 뜻. 교안의 <strong>커밋 사슬</strong>이 여기서 보입니다. <code>d516c79</code>를 누르면 앞 커밋으로 갑니다</td>
+</tr>
+<tr>
+<td>⑦</td>
+<td><code>1 file changed</code>, 오른쪽 <code>+1 -1</code></td>
+<td>바뀐 파일 1개, 새로 생긴 줄 1개, 지워진 줄 1개</td>
+</tr>
+<tr>
+<td>⑧</td>
+<td>왼쪽 빨간 줄, 앞에 <code>-</code></td>
+<td>지워진 줄(예전 내용). <code>"price": 9000</code></td>
+</tr>
+<tr>
+<td>⑨</td>
+<td>오른쪽 초록 줄, 앞에 <code>+</code></td>
+<td>새로 생긴 줄(지금 내용). <code>"price": 9500</code>. 바뀐 글자는 더 진하게 강조됩니다</td>
+</tr>
+<tr>
+<td>⑩</td>
+<td><strong>Browse files</strong></td>
+<td>이 커밋 시점의 리포지토리 전체 보기. STEP 5에서 씁니다</td>
+</tr>
+<tr>
+<td>⑪</td>
+<td>톱니바퀴 아이콘</td>
+<td>보기 방식 바꾸기. <strong>Split</strong>은 그림처럼 왼쪽 예전, 오른쪽 지금으로 나란히, <strong>Unified</strong>는 빨간 줄과 초록 줄을 위아래로 보여 줍니다</td>
 </tr>
 </tbody>
 </table>
-</li>
-</ol>
-<p>확인: 빨간 줄 <code>"price": 9000</code>, 초록 줄 <code>"price": 9500</code>이 보입니다. 파일 이름 위쪽에 <code>1 file changed</code>, <code>+1 -1</code>이 보입니다.</p>
+<p>빨간 줄과 초록 줄 위아래의 흰 줄(짜장면, 돈카츠 등)은 바뀌지 않은 줄입니다. 어디가 바뀌었는지 위치를 알려 주려고 앞뒤 몇 줄을 함께 보여 줍니다.</p>
+<p>확인: 빨간 줄 <code>"price": 9000</code>, 초록 줄 <code>"price": 9500</code>이 보이고, ⑥에 Initial commit의 해시가 보입니다.</p>
 <div class="admonition note">
 <p class="admonition-title">diff란?</p>
-<p>두 시점의 파일을 비교해 바뀐 줄만 보여 주는 화면을 <strong>diff</strong>(차이)라고 합니다. Git은 저장할 때는 스냅샷(사진)으로 저장하지만, 보여 줄 때는 앞 커밋의 사진과 비교해서 바뀐 줄만 골라 보여 줍니다. 실습 1-1에서 README에 문장을 넣었을 때는 지운 줄이 없어서 초록 줄만 보였습니다.</p>
+<p>두 시점의 파일을 비교해 바뀐 줄만 보여 주는 화면을 <strong>diff</strong>(차이)라고 합니다. Git은 저장할 때는 스냅샷(사진)으로 저장하지만, 보여 줄 때는 앞 커밋(⑥의 parent)의 사진과 비교해서 바뀐 줄만 골라 보여 줍니다. 숫자 하나만 바꿔도 Git은 "줄 하나를 지우고 새 줄 하나를 넣었다"로 기록해서 <code>+1 -1</code>이 됩니다. 실습 1-1에서 README에 문장을 넣었을 때는 지운 줄이 없어서 초록 줄만 보였습니다.</p>
 </div>
 <h2 id="step-5">STEP 5. 고치기 전 시점의 리포지토리 보기<a class="headerlink" href="#step-5" title="Permanent link">&para;</a></h2>
 <p>스냅샷 원리 덕분에 과거 어느 커밋이든 그 순간의 리포지토리 전체를 꺼내 볼 수 있습니다. 가격을 고치기 전, <code>Initial commit</code> 시점으로 가 봅니다.</p>
@@ -2750,10 +2805,6 @@
 <details class="failure">
 <summary>커밋 상세 화면에 바뀐 줄이 안 보이고 Load diff 버튼만 있습니다</summary>
 <p><strong>Load diff</strong>를 클릭하면 바뀐 줄이 펼쳐집니다.</p>
-</details>
-<details class="failure">
-<summary>바뀐 줄 화면이 좌우로 나뉘어 보입니다</summary>
-<p>보기 방식이 Split(나란히 보기)로 되어 있는 경우입니다. 왼쪽이 예전, 오른쪽이 지금입니다. 위쪽 톱니바퀴 아이콘에서 <strong>Unified</strong>를 고르면 한 줄씩 위아래로 보입니다. 어느 쪽으로 봐도 됩니다.</p>
 </details>
 <details class="failure">
 <summary>과거 시점 화면에서 나오는 방법을 모르겠습니다</summary>
