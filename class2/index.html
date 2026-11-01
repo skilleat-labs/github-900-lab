@@ -2704,6 +2704,7 @@
 <p><strong>이슈 템플릿</strong>(issue template)을 만들어 두면 새 이슈를 열 때 항목이 미리 채워져 있습니다. 쓰는 사람은 빈칸만 채우면 되고, 읽는 사람은 늘 같은 형식으로 봅니다. 기획 부서에서 요구사항 양식을 쓰는 것과 같은 원리입니다.</p>
 <p>템플릿은 리포지토리 안의 정해진 폴더 <code>.github/ISSUE_TEMPLATE/</code>에 Markdown 파일로 만듭니다. 파일 맨 위에 템플릿 이름, 설명, 기본 제목, 자동으로 붙일 라벨을 적고, 그 아래에 본문 양식을 씁니다. 템플릿이 하나라도 있으면 <strong>New issue</strong>를 눌렀을 때 템플릿을 고르는 화면이 먼저 나옵니다.</p>
 <p>오늘 만드는 템플릿은 <strong>사용자 스토리</strong> 형식입니다. "누구로서, 무엇을 하고 싶다, 왜냐하면"으로 요구를 쓰는 방식이고, 오후 팀 실습에서 BA 역할이 이 템플릿으로 요구사항을 씁니다.</p>
+<p>템플릿 맨 아래에는 <strong>인수 조건</strong> 칸도 둡니다. 인수 조건은 "무엇이 되면 다 됐다고 받아들일지"를 화면에서 확인할 수 있는 문장으로 미리 적어 둔 체크 목록입니다. 개발자에게는 작업 범위가, 검토하는 사람에게는 확인 기준이 됩니다.</p>
 <h3 id="sub-issue">큰 요구는 하위 이슈로 쪼갭니다<a class="headerlink" href="#sub-issue" title="Permanent link">&para;</a></h3>
 <p>"메뉴 추천" 같은 큰 요구는 한 번에 끝낼 수 없습니다. 이런 큰 덩어리를 <strong>에픽</strong>(epic)이라고 부릅니다. 에픽 이슈 안에서 <strong>Create sub-issue</strong>(하위 이슈 만들기)를 누르면 작은 이슈로 쪼갤 수 있습니다.</p>
 <pre class="mermaid"><code>flowchart LR
