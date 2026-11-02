@@ -2554,6 +2554,32 @@
 <p>확인: 짝꿍의 아이디를 철자 그대로 적어 두었습니다.</p>
 <h2 id="step-2-collaborator">STEP 2. 짝꿍을 Collaborator로 초대하기<a class="headerlink" href="#step-2-collaborator" title="Permanent link">&para;</a></h2>
 <p>내 리포지토리는 Public이라 누구나 볼 수는 있지만, 고치려면 권한이 필요합니다. Collaborator로 초대하면 짝꿍이 내 리포지토리에 직접 커밋하고 PR을 리뷰할 수 있습니다.</p>
+<div class="admonition warning">
+<p class="admonition-title">두 사람 <strong>모두</strong> 초대합니다</p>
+<p>한 사람만 초대하면 안 됩니다. 리포지토리는 <strong>사람마다 하나씩</strong> 있고, 3교시에는 둘 다 각자 자기 리포지토리에 PR을 열어 서로 리뷰합니다.</p>
+<pre class="mermaid"><code>flowchart LR
+    A["나의 lunch-practice&lt;br/&gt;내 PR"] -- "짝꿍이 리뷰" --&gt; B["짝꿍"]
+    C["짝꿍의 lunch-practice&lt;br/&gt;짝꿍 PR"] -- "내가 리뷰" --&gt; D["나"]</code></pre>
+<table>
+<thead>
+<tr>
+<th>내가 할 일</th>
+<th>짝꿍이 할 일</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>내 리포지토리에 짝꿍을 초대 (STEP 2)</td>
+<td>짝꿍 리포지토리에 나를 초대 (STEP 2)</td>
+</tr>
+<tr>
+<td>짝꿍이 보낸 초대를 수락 (STEP 3)</td>
+<td>내가 보낸 초대를 수락 (STEP 3)</td>
+</tr>
+</tbody>
+</table>
+<p>한쪽만 초대하면, 초대하지 않은 쪽 리포지토리에서는 짝꿍에게 쓰기 권한이 없습니다. 그러면 3-2에서 짝꿍을 Reviewers로 지정하고 3-3에서 리뷰받는 흐름이 가이드대로 되지 않습니다. 7교시 보호 규칙에서도 <strong>쓰기 권한이 있는 사람의 승인만</strong> 인정됩니다.</p>
+</div>
 <ol>
 <li>내 <code>lunch-practice</code> 리포지토리 위쪽 탭에서 <strong>Settings</strong>(설정)를 클릭합니다.</li>
 <li>왼쪽 메뉴의 <strong>Access</strong> 묶음에서 <strong>Collaborators</strong>(공동 작업자)를 클릭합니다.<ul>
