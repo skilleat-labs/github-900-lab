@@ -2612,7 +2612,7 @@
 <p class="admonition-title">이번 실습에서 할 것</p>
 <ul>
 <li>짝꿍의 PR에 줄 단위 댓글과 <strong>변경 제안</strong>을 남기고 <strong>Request changes</strong>로 수정을 요청합니다.</li>
-<li>내 PR에 온 변경 제안을 <strong>Commit suggestion</strong>으로 반영하고 다시 리뷰를 요청합니다.</li>
+<li>내 PR에 온 변경 제안을 <strong>Apply suggestion</strong>으로 반영하고 다시 리뷰를 요청합니다.</li>
 <li>짝꿍의 <strong>Approve</strong>를 받은 뒤 <strong>Squash and merge</strong>로 <code>main</code>에 합치고 분기를 지웁니다.</li>
 </ul>
 </div>
@@ -2661,7 +2661,7 @@
     작성자-&gt;&gt;PR: PR 열기, 검토 요청 (3-2)
     검토자-&gt;&gt;PR: 변경 제안 + Request changes
     PR--&gt;&gt;작성자: 수정 요청 알림
-    작성자-&gt;&gt;PR: Commit suggestion, Re-request review
+    작성자-&gt;&gt;PR: Apply suggestion, Re-request review
     검토자-&gt;&gt;PR: Approve
     작성자-&gt;&gt;PR: Squash and merge, Delete branch</code></pre>
 <h2 id="step-1-pr">STEP 1. 짝꿍의 PR 열기 (검토자)<a class="headerlink" href="#step-1-pr" title="Permanent link">&para;</a></h2>
@@ -2790,14 +2790,15 @@
 <ol>
 <li>내 리포지토리 <strong>Pull requests</strong> 탭 → <code>메뉴 추가: 비빔밥</code> PR을 클릭합니다.</li>
 <li><strong>Conversation</strong> 탭에서 짝꿍의 리뷰와 suggestion 댓글을 찾습니다.</li>
-<li>제안 아래 <strong>Commit suggestion</strong>(제안 반영) 버튼을 클릭합니다.</li>
+<li>반영하기 전에 <code>Suggested change</code>의 빨간 줄과 초록 줄을 비교합니다. <strong>가격 숫자만</strong> 달라야 합니다. 메뉴 이름까지 바뀌어 있으면 반영하지 말고, 아래 <strong>Reply...</strong> 칸에 "메뉴 이름이 바뀌어 있어요. 가격만 고쳐 주세요."라고 남겨 짝꿍에게 제안을 고쳐 달라고 합니다.</li>
+<li>제안 상자 오른쪽 아래 <strong>Apply suggestion</strong>(제안 반영) 버튼을 클릭합니다. (예전 화면에서는 <strong>Commit suggestion</strong>입니다.) 옆의 <strong>Add suggestion to batch</strong>(여러 제안 한꺼번에 반영)는 제안이 여러 개일 때 쓰는 버튼이라 지금은 누르지 않습니다.</li>
 <li>
-<p>커밋 메시지는 기본값(<code>Update site/menus.json</code>)이나 아래 내용으로 씁니다.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>리뷰 반영: 비빔밥 가격 8500원
+<p><strong>Apply suggestion</strong> 작은 창이 열립니다. 첫 칸의 커밋 메시지 기본값 <code>Update site/menus.json</code>을 지우고 아래처럼 씁니다.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>리뷰 반영: 가격 8500원
 </span></code></pre></div>
 </li>
 <li>
-<p><strong>Commit changes</strong> 버튼을 클릭합니다.</p>
+<p>창 아래 <strong>Commit changes</strong> 버튼을 클릭합니다.</p>
 </li>
 </ol>
 <p>확인: suggestion 댓글에 <strong>Outdated</strong>(이미 바뀜) 표시가 붙고, Conversation 탭 아래에 새 커밋이 추가되었습니다. 자동 검사가 다시 돌아 초록 체크가 됩니다.</p>
@@ -2857,7 +2858,7 @@
 <h2 id="_2">성공하면<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <ul class="task-list">
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 짝꿍 PR에 변경 제안과 <strong>Request changes</strong> 리뷰를 남겼고, 이어서 <strong>Approve</strong>했다</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 내 PR에 온 변경 제안을 <strong>Commit suggestion</strong>으로 반영했다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 내 PR에 온 변경 제안을 <strong>Apply suggestion</strong>으로 반영했다</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 내 PR이 보라색 <strong>Merged</strong> 상태이고, <code>add-menu</code> 분기는 지워졌다</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> <code>main</code>의 <code>menus.json</code>에 메뉴가 N+1개(처음 메모한 N개보다 1개 많음)이고, 웹페이지에도 새 메뉴가 보인다</li>
 </ul>
@@ -2882,7 +2883,7 @@
 </span></code></pre></div>
 </details>
 <details class="failure">
-<summary>Commit suggestion 버튼이 안 보이거나 눌리지 않아요</summary>
+<summary>Apply suggestion 버튼이 안 보이거나 눌리지 않아요</summary>
 <ul>
 <li>검토자가 리뷰를 아직 <strong>Submit</strong> 하지 않았으면 작성자에게 보이지 않습니다. 짝꿍에게 STEP 3을 마쳤는지 물어보세요.</li>
 <li>이미 반영했거나 그 줄이 다른 커밋으로 바뀌었으면 <strong>Outdated</strong>가 되어 버튼이 사라집니다. 이때는 Files changed에서 직접 고치면 됩니다.</li>

@@ -2529,7 +2529,7 @@
 <tr>
 <td>④</td>
 <td>개발자</td>
-<td><strong>Commit suggestion</strong>으로 반영, 답글, 다시 리뷰 요청</td>
+<td><strong>Apply suggestion</strong>으로 반영, 답글, 다시 리뷰 요청</td>
 <td>BA</td>
 </tr>
 <tr>
@@ -2563,7 +2563,7 @@
     B --&gt; C{"자동 검사&lt;br/&gt;check"}
     C --&gt;|실패| B
     C --&gt;|통과| D["③ BA&lt;br/&gt;인수 조건 ①~④&lt;br/&gt;Request changes + 제안"]
-    D --&gt; E["④ 개발자&lt;br/&gt;Commit suggestion"]
+    D --&gt; E["④ 개발자&lt;br/&gt;Apply suggestion"]
     E --&gt; F["⑤ BA&lt;br/&gt;Approve"]
     F --&gt; G["⑥ PO&lt;br/&gt;최종 Approve"]
     G --&gt; H["⑦ PM&lt;br/&gt;Squash and merge"]
@@ -2870,7 +2870,7 @@
 <p><strong>④ 제안 반영하고 다시 리뷰 요청하기</strong> (BA가 Request changes를 하면)</p>
 <ol>
 <li>PR의 <strong>Conversation</strong> 탭에서 BA의 제안 댓글을 찾습니다.</li>
-<li>제안 아래 <strong>Commit suggestion</strong>(제안 반영) 클릭 → 커밋 메시지는 그대로 두고 <strong>Commit changes</strong> 클릭</li>
+<li>제안 아래 <strong>Apply suggestion</strong>(제안 반영) 클릭 → 커밋 메시지는 그대로 두고 <strong>Commit changes</strong> 클릭</li>
 <li>
 <p>그 댓글 스레드에 답글을 남기고 <strong>Resolve conversation</strong>(대화 해결) 클릭</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>제안대로 반영했습니다. 감사합니다.
@@ -2881,7 +2881,7 @@
 </li>
 <li>자동 검사가 다시 초록 체크인지 확인합니다.</li>
 </ol>
-<p>확인: PR에 <code>Commit suggestion</code>으로 만든 커밋이 추가되어 있고, BA 이름 옆에 다시 노란 점(리뷰 대기)이 보입니다.</p>
+<p>확인: PR에 <code>Apply suggestion</code>으로 만든 커밋이 추가되어 있고, BA 이름 옆에 다시 노란 점(리뷰 대기)이 보입니다.</p>
 <p><strong>기다리는 동안 할 일</strong></p>
 <ul>
 <li>BA가 리뷰하는 동안 PR의 <strong>Checks</strong> 탭에서 자동 검사 로그를 열어 <code>[통과] 메뉴 8개를 검사했습니다.</code> 같은 문장을 찾아봅니다.</li>
@@ -2896,7 +2896,7 @@
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 분기 <code>story-10</code>(우리 팀 번호)에서 PR이 열렸고, 본문에 <code>Closes #10</code>과 인수 조건 ①~④ 체크리스트가 있다</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> PR에 자동 검사 <code>check</code> 초록 체크가 있다</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> PR에 인수 조건과 연결된 BA의 Request changes 1회 이상, Add a suggestion 1개 이상이 있다</li>
-<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 개발자가 Commit suggestion으로 반영하고 다시 리뷰를 요청했다</li>
+<li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 개발자가 Apply suggestion으로 반영하고 다시 리뷰를 요청했다</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> BA와 PO가 Approve했다</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> PM이 Squash and merge로 병합하고 분기를 삭제했다</li>
 <li class="task-list-item"><label class="task-list-control"><input type="checkbox" disabled checked/><span class="task-list-indicator"></span></label> 이슈가 자동으로 Closed 되었다</li>
