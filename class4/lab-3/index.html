@@ -2745,11 +2745,23 @@
 <p>이슈, 라벨, 마일스톤은 Git이 아니라 GitHub 서비스가 리포지토리마다 따로 관리하는 데이터입니다(2교시 <a href="../../class2/#git-vs-github-data">Git과 GitHub가 관리하는 영역</a>). 템플릿으로 새 리포지토리를 만들면 Starter의 <strong>파일</strong>만 복사되고, 오전에 쌓은 이슈와 라벨은 따라오지 않습니다. 그래서 5교시에 라벨과 이슈 템플릿을 팀 리포지토리에 다시 만듭니다. 오전에 한 번 해 봤으니 이번에는 팀이 함께 빠르게 만들 수 있습니다.</p>
 </div>
 <h2 id="_6">역할별 할 일<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<p>아래에서 <strong>내 역할 탭</strong>을 누릅니다. 단계마다 맨 위 <strong>언제 시작하나요?</strong> 상자를 먼저 봅니다.</p>
+<ul>
+<li><strong>바로 시작합니다</strong>라고 되어 있으면 지금 시작합니다.</li>
+<li>누군가를 기다리는 단계라면 상자에 적힌 화면을 확인합니다. <strong>아직이면</strong> 앞 사람이 하는 중이니, 탭 맨 아래 <strong>기다리는 동안 할 일</strong>을 하며 기다립니다.</li>
+<li>내 단계가 끝나면 적힌 대로 다음 사람을 <code>@아이디</code>로 멘션하거나 말로 알립니다. 다음 사람은 그 알림이 시작 신호입니다.</li>
+</ul>
 <p>아래 탭에서 내 역할을 고르세요. 한 번 고르면 5교시 미션 페이지까지 같은 탭이 선택됩니다.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">PO</label><label for="__tabbed_1_2">PM</label><label for="__tabbed_1_3">BA</label><label for="__tabbed_1_4">개발자</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><strong>STEP 1. 팀 리포지토리 만들기</strong></p>
+<div class="admonition info">
+<p class="admonition-title">언제 시작하나요?</p>
+<ul>
+<li><strong>바로 시작합니다.</strong> 팀에서 가장 먼저 움직이는 사람입니다. 다른 팀원은 PO가 초대를 보낼 때까지 기다립니다.</li>
+</ul>
+</div>
 <ol>
 <li>
 <p>주소창에 Starter 템플릿 주소를 입력합니다.</p>
@@ -2772,6 +2784,12 @@
 </ol>
 <p>확인: 주소가 <code>github.com/PO아이디/lunch-picker-team&lt;번호&gt;</code>이고, <code>README.md</code>, <code>docs</code>, <code>site</code> 폴더가 보이면 성공입니다.</p>
 <p><strong>STEP 2. 팀원 초대하기</strong></p>
+<div class="admonition info">
+<p class="admonition-title">언제 시작하나요?</p>
+<ul>
+<li>STEP 1에서 <code>lunch-picker-team&lt;번호&gt;</code> 화면이 열리면 바로 합니다. 팀원 아이디를 미리 받아 둡니다.</li>
+</ul>
+</div>
 <ol>
 <li>팀 리포지토리에서 <strong>Settings</strong>(설정) 탭을 클릭합니다.</li>
 <li>왼쪽 메뉴에서 <strong>Collaborators</strong>(협업자)를 클릭합니다. 비밀번호나 인증 확인 창이 뜨면 본인이 직접 확인합니다.</li>
@@ -2782,6 +2800,12 @@
 </ol>
 <p>확인: <strong>Collaborators</strong> 목록에 팀원이 모두 <code>Pending invite</code>(초대 대기) 또는 이름으로 보이면 성공입니다.</p>
 <p><strong>STEP 3. 웹페이지(Pages) 켜기</strong></p>
+<div class="admonition info">
+<p class="admonition-title">언제 시작하나요?</p>
+<ul>
+<li>초대를 보낸 직후 바로 합니다. 팀원이 수락할 때까지 기다리지 않습니다.</li>
+</ul>
+</div>
 <p>템플릿으로 만든 리포지토리는 Pages 설정이 따라오지 않습니다. 그래서 리포지토리를 만들자마자 돈 첫 "웹페이지 배포"는 실패(빨간 X)하는 것이 정상입니다. 설정을 켜고 한 번 다시 실행합니다.</p>
 <ol>
 <li><strong>Settings</strong> → 왼쪽 메뉴 <strong>Pages</strong>를 클릭합니다.</li>
@@ -2805,6 +2829,13 @@
 </div>
 <div class="tabbed-block">
 <p><strong>STEP 1. 초대 수락하기</strong></p>
+<div class="admonition info">
+<p class="admonition-title">언제 시작하나요?</p>
+<ul>
+<li>PO가 "초대 보냈습니다"라고 말하면 시작합니다.</li>
+<li><strong>아직이면:</strong> 아래 초대 주소를 열었을 때 <strong>Accept invitation</strong> 버튼 대신 리포지토리 화면이나 404가 보이면 PO가 아직 초대하지 않은 것입니다. 1분 뒤 다시 엽니다.</li>
+</ul>
+</div>
 <ol>
 <li>
 <p>PO가 초대를 보내면 GitHub 가입 이메일을 열거나, 아래 주소로 이동합니다.</p>
@@ -2817,6 +2848,12 @@
 </ol>
 <p>확인: 팀 리포지토리가 열리고, 파일을 열었을 때 연필 아이콘(편집)이 보이면 성공입니다.</p>
 <p><strong>STEP 2. 팀 Projects 만들기</strong></p>
+<div class="admonition info">
+<p class="admonition-title">언제 시작하나요?</p>
+<ul>
+<li>초대를 수락한 직후 바로 합니다. 다른 팀원을 기다리지 않습니다.</li>
+</ul>
+</div>
 <p>팀 프로젝트는 <strong>PM 개인 계정 소유</strong>로 만듭니다. (3인 팀은 PO가 PO 계정으로 만듭니다.)</p>
 <ol>
 <li>오른쪽 위 <strong>프로필 사진</strong> → <strong>Your projects</strong>를 클릭합니다.</li>
@@ -2832,6 +2869,12 @@
 </ol>
 <p>확인: 빈 표 화면 왼쪽 위에 <code>점심 메뉴 추천 팀&lt;번호&gt;</code>가 보이면 성공입니다.</p>
 <p><strong>STEP 3. 팀원에게 프로젝트 권한 주기</strong></p>
+<div class="admonition info">
+<p class="admonition-title">언제 시작하나요?</p>
+<ul>
+<li>STEP 2에서 프로젝트를 만든 직후 바로 합니다. 팀원 아이디가 필요합니다.</li>
+</ul>
+</div>
 <p>리포지토리 초대와 프로젝트 권한은 따로입니다. 프로젝트에도 팀원을 초대해야 팀원이 카드를 옮기고 값을 바꿀 수 있습니다.</p>
 <ol>
 <li>프로젝트 오른쪽 위 <strong>...</strong> → <strong>Settings</strong>(설정)를 클릭합니다.</li>
@@ -2842,6 +2885,12 @@
 </ol>
 <p>확인: <strong>Manage access</strong> 아래 목록에 팀원이 모두 <code>Write</code>로 보이면 성공입니다.</p>
 <p><strong>STEP 4. 팀 리포지토리에 프로젝트 연결하기</strong></p>
+<div class="admonition info">
+<p class="admonition-title">언제 시작하나요?</p>
+<ul>
+<li>STEP 3 직후 바로 합니다. 끝나면 팀원에게 "프로젝트 권한 줬습니다"라고 말로 알립니다.</li>
+</ul>
+</div>
 <ol>
 <li>팀 리포지토리 <code>lunch-picker-team&lt;번호&gt;</code>로 이동합니다.</li>
 <li><strong>Projects</strong> 탭 → <strong>Link a project</strong>를 클릭합니다.</li>
@@ -2856,6 +2905,13 @@
 </div>
 <div class="tabbed-block">
 <p><strong>STEP 1. 초대 수락하기</strong></p>
+<div class="admonition info">
+<p class="admonition-title">언제 시작하나요?</p>
+<ul>
+<li>PO가 "초대 보냈습니다"라고 말하면 시작합니다.</li>
+<li><strong>아직이면:</strong> 아래 초대 주소를 열었을 때 <strong>Accept invitation</strong> 버튼 대신 리포지토리 화면이나 404가 보이면 PO가 아직 초대하지 않은 것입니다. 1분 뒤 다시 엽니다.</li>
+</ul>
+</div>
 <ol>
 <li>
 <p>PO가 초대를 보내면 GitHub 가입 이메일을 열거나, 아래 주소로 이동합니다.</p>
@@ -2868,6 +2924,13 @@
 </ol>
 <p>확인: 팀 리포지토리가 열리고, 파일을 열었을 때 연필 아이콘이 보이면 성공입니다.</p>
 <p><strong>STEP 2. 프로젝트 권한 확인하기</strong></p>
+<div class="admonition info">
+<p class="admonition-title">언제 시작하나요?</p>
+<ul>
+<li>PM이 "프로젝트 권한 줬습니다"라고 말하면 시작합니다.</li>
+<li><strong>아직이면:</strong> 팀 리포지토리 <strong>Projects</strong> 탭이 비어 있거나 보드가 열리지 않으면 PM이 아직 권한을 주지 않은 것입니다. <strong>기다리는 동안 할 일</strong>을 하며 기다립니다.</li>
+</ul>
+</div>
 <ol>
 <li>PM이 프로젝트 권한을 주면 알림이 옵니다. 팀 리포지토리 <strong>Projects</strong> 탭에서 <code>점심 메뉴 추천 팀&lt;번호&gt;</code>를 엽니다.</li>
 <li>표 아래 <strong>+ Add item</strong>이 보이는지 확인합니다. (아직 아무것도 추가하지 않습니다.)</li>
@@ -2881,6 +2944,13 @@
 </div>
 <div class="tabbed-block">
 <p><strong>STEP 1. 초대 수락하기</strong></p>
+<div class="admonition info">
+<p class="admonition-title">언제 시작하나요?</p>
+<ul>
+<li>PO가 "초대 보냈습니다"라고 말하면 시작합니다.</li>
+<li><strong>아직이면:</strong> 아래 초대 주소를 열었을 때 <strong>Accept invitation</strong> 버튼 대신 리포지토리 화면이나 404가 보이면 PO가 아직 초대하지 않은 것입니다. 1분 뒤 다시 엽니다.</li>
+</ul>
+</div>
 <ol>
 <li>
 <p>PO가 초대를 보내면 GitHub 가입 이메일을 열거나, 아래 주소로 이동합니다.</p>
@@ -2893,6 +2963,13 @@
 </ol>
 <p>확인: 팀 리포지토리가 열리고, 파일을 열었을 때 연필 아이콘이 보이면 성공입니다.</p>
 <p><strong>STEP 2. 프로젝트 권한 확인하기</strong></p>
+<div class="admonition info">
+<p class="admonition-title">언제 시작하나요?</p>
+<ul>
+<li>PM이 "프로젝트 권한 줬습니다"라고 말하면 시작합니다.</li>
+<li><strong>아직이면:</strong> 팀 리포지토리 <strong>Projects</strong> 탭이 비어 있거나 보드가 열리지 않으면 PM이 아직 권한을 주지 않은 것입니다. <strong>기다리는 동안 할 일</strong>을 하며 기다립니다.</li>
+</ul>
+</div>
 <ol>
 <li>팀 리포지토리 <strong>Projects</strong> 탭에서 <code>점심 메뉴 추천 팀&lt;번호&gt;</code>를 엽니다.</li>
 <li>표 아래 <strong>+ Add item</strong>이 보이는지 확인합니다.</li>

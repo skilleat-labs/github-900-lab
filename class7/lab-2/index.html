@@ -2564,10 +2564,22 @@
     D --&gt; E["④ BA 승인&lt;br/&gt;Code owner review required"]
     E --&gt; F["PO 승인&lt;br/&gt;병합 가능"]</code></pre>
 <h2 id="_3">역할별 할 일<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>아래에서 <strong>내 역할 탭</strong>을 누릅니다. 단계마다 맨 위 <strong>언제 시작하나요?</strong> 상자를 먼저 봅니다.</p>
+<ul>
+<li><strong>바로 시작합니다</strong>라고 되어 있으면 지금 시작합니다.</li>
+<li>누군가를 기다리는 단계라면 상자에 적힌 화면을 확인합니다. <strong>아직이면</strong> 앞 사람이 하는 중이니, 탭 맨 아래 <strong>기다리는 동안 할 일</strong>을 하며 기다립니다.</li>
+<li>내 단계가 끝나면 적힌 대로 다음 사람을 <code>@아이디</code>로 멘션하거나 말로 알립니다. 다음 사람은 그 알림이 시작 신호입니다.</li>
+</ul>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">PO</label><label for="__tabbed_1_2">PM</label><label for="__tabbed_1_3">BA</label><label for="__tabbed_1_4">개발자</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><strong>① CODEOWNERS 파일 만들기</strong></p>
+<div class="admonition info">
+<p class="admonition-title">언제 시작하나요?</p>
+<ul>
+<li><strong>바로 시작합니다.</strong> 7-2에서 가장 먼저 움직이는 사람입니다.</li>
+</ul>
+</div>
 <ol>
 <li><strong>Code</strong> 탭 → <strong>Add file</strong> ▼ → <strong>Create new file</strong>(새 파일 만들기) 클릭</li>
 <li>
@@ -2593,8 +2605,21 @@
 <p>CODEOWNERS는 아래쪽 규칙이 우선합니다. <code>*</code>를 맨 아래에 두면 모든 파일이 PO 담당이 되어 <code>docs/</code>, <code>site/</code> 줄이 무시됩니다. <a href="../#codeowners">교안의 CODEOWNERS</a>를 참고하세요.</p>
 </div>
 <p><strong>② Ruleset 만들기</strong> (PM이 순서를 불러 줍니다)</p>
+<div class="admonition info">
+<p class="admonition-title">언제 시작하나요?</p>
+<ul>
+<li>①을 커밋한 직후, PM이 내 자리로 오면 시작합니다.</li>
+</ul>
+</div>
 <p>PM 탭의 순서대로 클릭합니다. PM이 "확인"이라고 하면 다음으로 넘어가세요.</p>
 <p><strong>④ Code Owner로 승인하기</strong> (BA가 승인한 뒤)</p>
+<div class="admonition info">
+<p class="admonition-title">언제 시작하나요?</p>
+<ul>
+<li>BA가 승인하고 "그래도 막혀요"라고 알리면 시작합니다.</li>
+<li><strong>아직이면:</strong> PR <strong>Reviewers</strong>에 BA의 승인이 없으면 기다립니다.</li>
+</ul>
+</div>
 <ol>
 <li>
 <p>개발자의 PR → <strong>Files changed</strong> → <strong>Review changes</strong> → <strong>Approve</strong> → <strong>Submit review</strong></p>
@@ -2612,6 +2637,13 @@
 </div>
 <div class="tabbed-block">
 <p><strong>② Ruleset <code>main 보호</code> 만들기</strong> (PO 화면에서 순서를 불러 줍니다)</p>
+<div class="admonition info">
+<p class="admonition-title">언제 시작하나요?</p>
+<ul>
+<li>PO가 CODEOWNERS를 커밋하면 PO 자리로 가서 시작합니다.</li>
+<li><strong>아직이면:</strong> 팀 리포지토리 <code>.github</code> 폴더에 <code>CODEOWNERS</code> 파일이 없으면 PO가 아직 만드는 중입니다.</li>
+</ul>
+</div>
 <p>PO 옆에서 아래 순서를 하나씩 읽어 주고, PO가 클릭하면 화면을 같이 확인합니다.</p>
 <ol>
 <li>리포지토리 <strong>Settings</strong> 탭 → 왼쪽 <strong>Code and automation</strong> 아래 <strong>Rules</strong> → <strong>Rulesets</strong> 클릭</li>
@@ -2666,6 +2698,13 @@
 <p>최근 7일 안에 리포지토리에서 한 번 이상 실행된 검사만 목록에 나옵니다. 6교시 PR에서 <code>check</code>가 돌았다면 보입니다. 안 보이면 <strong>Actions</strong> → <strong>메뉴 데이터 검사</strong> → <strong>Run workflow</strong>로 한 번 실행한 뒤 다시 검색하세요.</p>
 </div>
 <p><strong>④ 병합하기</strong> (PO가 승인한 뒤)</p>
+<div class="admonition info">
+<p class="admonition-title">언제 시작하나요?</p>
+<ul>
+<li>PO가 Code Owner로 승인하면 시작합니다.</li>
+<li><strong>아직이면:</strong> PR 병합 상자에 <code>Code owner review required</code> 같은 표시가 남아 있으면 기다립니다.</li>
+</ul>
+</div>
 <ol>
 <li>개발자의 PR → <strong>Squash and merge</strong> → <strong>Confirm squash and merge</strong> → <strong>Delete branch</strong></li>
 </ol>
@@ -2676,10 +2715,24 @@
 </div>
 <div class="tabbed-block">
 <p><strong>① CODEOWNERS 확인</strong></p>
+<div class="admonition info">
+<p class="admonition-title">언제 시작하나요?</p>
+<ul>
+<li>PO가 CODEOWNERS를 커밋하면 시작합니다.</li>
+<li><strong>아직이면:</strong> 팀 리포지토리 <code>.github</code> 폴더에 <code>CODEOWNERS</code> 파일이 없으면 기다립니다.</li>
+</ul>
+</div>
 <ol>
 <li>PO가 만든 <code>.github/CODEOWNERS</code>를 열어 <code>docs/</code> 줄에 내 아이디가 맞게 들어갔는지 확인합니다.</li>
 </ol>
 <p><strong>④ 승인하고 그래도 막히는지 보기</strong> (개발자가 PR을 열면)</p>
+<div class="admonition info">
+<p class="admonition-title">언제 시작하나요?</p>
+<ul>
+<li>개발자가 PR을 열고 나를 리뷰어로 지정하면 시작합니다.</li>
+<li><strong>아직이면:</strong> <strong>Pull requests</strong> 탭에 개발자의 PR이 없으면 기다립니다.</li>
+</ul>
+</div>
 <ol>
 <li>
 <p>개발자의 PR → <strong>Files changed</strong> → <strong>Review changes</strong> → <strong>Approve</strong> → <strong>Submit review</strong></p>
@@ -2699,6 +2752,13 @@
 </div>
 <div class="tabbed-block">
 <p><strong>③ main을 직접 고쳐 보기</strong> (PM이 규칙을 만들었다고 하면)</p>
+<div class="admonition info">
+<p class="admonition-title">언제 시작하나요?</p>
+<ul>
+<li>PM이 "규칙 만들었습니다"라고 말하면 시작합니다.</li>
+<li><strong>아직이면:</strong> 규칙이 만들어지기 전에 고치면 막히지 않고 그대로 커밋되어 버립니다. 꼭 PM의 신호를 기다립니다.</li>
+</ul>
+</div>
 <ol>
 <li><strong>Code</strong> 탭 → 분기가 <code>main</code>인지 확인 → <code>README.md</code> 클릭 → 연필 아이콘</li>
 <li>

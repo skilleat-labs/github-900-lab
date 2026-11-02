@@ -2569,15 +2569,34 @@
     G --&gt; H["⑦ PM&lt;br/&gt;Squash and merge"]
     H --&gt; I["⑧ PO&lt;br/&gt;배포된 화면에서&lt;br/&gt;①~③ 확인"]</code></pre>
 <h2 id="_3">역할별 할 일<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p>아래에서 <strong>내 역할 탭</strong>을 누릅니다. 단계마다 맨 위 <strong>언제 시작하나요?</strong> 상자를 먼저 봅니다.</p>
+<ul>
+<li><strong>바로 시작합니다</strong>라고 되어 있으면 지금 시작합니다.</li>
+<li>누군가를 기다리는 단계라면 상자에 적힌 화면을 확인합니다. <strong>아직이면</strong> 앞 사람이 하는 중이니, 탭 맨 아래 <strong>기다리는 동안 할 일</strong>을 하며 기다립니다.</li>
+<li>내 단계가 끝나면 적힌 대로 다음 사람을 <code>@아이디</code>로 멘션하거나 말로 알립니다. 다음 사람은 그 알림이 시작 신호입니다.</li>
+</ul>
 <p>입력 예시는 그대로 써도 되고, 팀 상황에 맞게 고쳐도 됩니다. <code>#10</code>, <code>story-10</code> 같은 번호는 여러분 팀 대표 스토리의 실제 이슈 번호로 바꾸세요.</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:4"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><input id="__tabbed_1_4" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">PO</label><label for="__tabbed_1_2">PM</label><label for="__tabbed_1_3">BA</label><label for="__tabbed_1_4">개발자</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <p><strong>① 대표 스토리 확인</strong></p>
+<div class="admonition info">
+<p class="admonition-title">언제 시작하나요?</p>
+<ul>
+<li>미션 시작과 동시에 합니다. PM이 보드를 옮기는 동안 함께 봅니다.</li>
+</ul>
+</div>
 <ol>
 <li>PM이 <code>진행 보드</code>에서 대표 스토리를 In Progress로 옮길 때 함께 봅니다. 5교시에 내가 Must로 정한 이유 댓글이 스토리에 있는지 확인합니다.</li>
 </ol>
 <p><strong>⑥ 최종 승인</strong> (BA가 Approve한 뒤)</p>
+<div class="admonition info">
+<p class="admonition-title">언제 시작하나요?</p>
+<ul>
+<li>BA가 Approve하고 나를 멘션하면 시작합니다.</li>
+<li><strong>아직이면:</strong> PR 병합 상자에 BA의 승인(초록 체크와 <code>approved</code>)이 없으면 BA가 아직 검토 중입니다.</li>
+</ul>
+</div>
 <ol>
 <li>리포지토리 위쪽 <strong>Pull requests</strong> 탭 → 개발자가 연 PR 클릭</li>
 <li><strong>Conversation</strong>(대화) 탭에서 BA의 리뷰와 개발자의 답글을 읽고, 변경 내용이 스토리의 의도("늘 가던 곳 말고 새 메뉴도 후보로")와 맞는지 봅니다.</li>
@@ -2595,6 +2614,13 @@
 </ol>
 <p>확인: PR의 <strong>Conversation</strong> 탭에 <code>&lt;PO아이디&gt; approved these changes</code>가 보입니다.</p>
 <p><strong>⑧ 배포된 웹페이지에서 인수 조건 확인</strong> (PM이 병합한 뒤)</p>
+<div class="admonition info">
+<p class="admonition-title">언제 시작하나요?</p>
+<ul>
+<li>PM이 병합하고, <strong>Actions</strong> 탭의 <strong>웹페이지 배포</strong>가 초록 체크가 되면 시작합니다.</li>
+<li><strong>아직이면:</strong> PR 제목 아래 표시가 보라색 <strong>Merged</strong>가 아니거나, 배포가 노란 점이면 기다립니다.</li>
+</ul>
+</div>
 <p>자동 검사와 BA 리뷰는 PR 안에서 본 것입니다. 사용자가 실제로 보는 화면에서 정말 되는지는 PO가 배포된 웹페이지에서 확인합니다.</p>
 <ol>
 <li>리포지토리 위쪽 <strong>Actions</strong> 탭 클릭</li>
@@ -2652,6 +2678,12 @@
 </div>
 <div class="tabbed-block">
 <p><strong>① 대표 스토리 배정하기</strong></p>
+<div class="admonition info">
+<p class="admonition-title">언제 시작하나요?</p>
+<ul>
+<li><strong>바로 시작합니다.</strong> 6-1에서 가장 먼저 움직이는 사람입니다.</li>
+</ul>
+</div>
 <p>이번 미션에서 구현할 스토리는 5교시에 정한 <strong>대표 스토리</strong> <code>[스토리] 새 메뉴 2개를 추가해 선택지 늘리기</code>입니다. 다른 Must 두 개는 Starter에 이미 있으므로 구현하지 않습니다.</p>
 <ol>
 <li>리포지토리 위쪽 <strong>Projects</strong> 탭 → <code>점심 메뉴 추천 팀&lt;번호&gt;</code> 클릭 → 뷰 탭에서 <code>진행 보드</code> 클릭</li>
@@ -2667,6 +2699,13 @@
 </ol>
 <p>확인: <code>진행 보드</code>에서 대표 스토리 카드가 <code>In Progress</code> 열에 있고 개발자 프로필 사진이 붙어 있습니다.</p>
 <p><strong>⑦ 병합하기</strong> (PO가 최종 승인한 뒤)</p>
+<div class="admonition info">
+<p class="admonition-title">언제 시작하나요?</p>
+<ul>
+<li>PO가 최종 승인하고 나를 멘션하면 시작합니다.</li>
+<li><strong>아직이면:</strong> PR 병합 상자에 승인이 BA와 PO 두 개가 보이지 않으면 기다립니다.</li>
+</ul>
+</div>
 <ol>
 <li><strong>Pull requests</strong> 탭 → 해당 PR 클릭</li>
 <li>아래쪽에 BA와 PO의 승인, 자동 검사 <code>check</code> 통과(초록 체크)가 모두 보이는지 확인합니다.</li>
@@ -2690,6 +2729,13 @@
 </div>
 <div class="tabbed-block">
 <p><strong>③ 인수 조건 ①~④ 기준으로 검토하기</strong> (개발자가 리뷰를 요청하면)</p>
+<div class="admonition info">
+<p class="admonition-title">언제 시작하나요?</p>
+<ul>
+<li>개발자가 PR을 열고 나를 리뷰어로 지정하면 시작합니다.</li>
+<li><strong>아직이면:</strong> <strong>Pull requests</strong> 탭이 비어 있거나, PR의 자동 검사가 아직 노란 점이면 기다립니다. <strong>기다리는 동안 할 일</strong>을 하며 기다립니다.</li>
+</ul>
+</div>
 <ol>
 <li>리뷰 요청 알림이 오거나 개발자가 알려 주면 <strong>Pull requests</strong> 탭 → 해당 PR 클릭</li>
 <li><strong>Conversation</strong> 탭에서 PR 본문의 <code>Closes #10</code>을 눌러 대표 스토리 이슈를 새 탭으로 열고, <strong>인수 조건 ①~④</strong>를 확인합니다.</li>
@@ -2753,6 +2799,13 @@
 </ol>
 <p>확인: PR의 <strong>Conversation</strong> 탭에 빨간 아이콘과 함께 <code>&lt;BA아이디&gt; requested changes</code>가 보입니다.</p>
 <p><strong>⑤ 다시 검토하고 승인하기</strong> (개발자가 다시 리뷰를 요청하면)</p>
+<div class="admonition info">
+<p class="admonition-title">언제 시작하나요?</p>
+<ul>
+<li>개발자가 제안을 반영하고 다시 리뷰를 요청하면 시작합니다.</li>
+<li><strong>아직이면:</strong> PR 오른쪽 <strong>Reviewers</strong>에서 내 이름 옆에 노란 점(리뷰 대기)이 없으면 개발자가 아직 반영하는 중입니다.</li>
+</ul>
+</div>
 <ol>
 <li><strong>Files changed</strong> 탭에서 제안이 반영됐는지 확인합니다. 위쪽에 <strong>Changes since your last review</strong>(지난 리뷰 이후 바뀐 것)를 누르면 바뀐 부분만 보입니다.</li>
 <li>
@@ -2778,6 +2831,13 @@
 </div>
 <div class="tabbed-block">
 <p><strong>② 분기에서 대표 스토리 구현하고 PR 열기</strong></p>
+<div class="admonition info">
+<p class="admonition-title">언제 시작하나요?</p>
+<ul>
+<li>PM이 대표 스토리(#10)에서 나를 멘션하면 시작합니다.</li>
+<li><strong>아직이면:</strong> <code>진행 보드</code>에서 대표 스토리 카드가 <code>In Progress</code>에 없거나, <strong>Assignees</strong>에 내 아이디가 없으면 PM이 아직 배정하지 않은 것입니다.</li>
+</ul>
+</div>
 <ol>
 <li>배정받은 대표 스토리 이슈 번호를 확인합니다. 아래에서는 <code>#10</code>으로 설명합니다. 팀마다 번호가 다르니 우리 팀 번호로 바꿔 쓰세요.</li>
 <li>
@@ -2868,6 +2928,13 @@
 <p><code>true</code>, <code>false</code>는 따옴표 없이 씁니다. <code>"true"</code>처럼 따옴표를 붙이면 자동 검사에서 실패합니다.</p>
 </details>
 <p><strong>④ 제안 반영하고 다시 리뷰 요청하기</strong> (BA가 Request changes를 하면)</p>
+<div class="admonition info">
+<p class="admonition-title">언제 시작하나요?</p>
+<ul>
+<li>BA가 Request changes를 남기면 시작합니다.</li>
+<li><strong>아직이면:</strong> PR <strong>Conversation</strong> 탭에 BA의 리뷰가 없으면 BA가 아직 검토 중입니다.</li>
+</ul>
+</div>
 <ol>
 <li>PR의 <strong>Conversation</strong> 탭에서 BA의 제안 댓글을 찾습니다.</li>
 <li>제안 아래 <strong>Apply suggestion</strong>(제안 반영) 클릭 → 커밋 메시지는 그대로 두고 <strong>Commit changes</strong> 클릭</li>
