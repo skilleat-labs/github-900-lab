@@ -1922,8 +1922,6 @@
       
         
       
-        
-      
     
     
     
@@ -1996,34 +1994,6 @@
     
   
     실습 7-1 터미널로 Git 다루기
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../lab-2/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    실습 7-2 분기 보호와 CODEOWNERS
   
 
     
@@ -2494,7 +2464,7 @@
     end
     subgraph PM["오후: 팀 실습 lunch-picker-team"]
         direction LR
-        C5["5교시&lt;br/&gt;요구 주고받기"] --&gt; C6["6교시&lt;br/&gt;검토와 변경"] --&gt; C7["7교시&lt;br/&gt;권한과 보안"]
+        C5["5교시&lt;br/&gt;요구 주고받기"] --&gt; C6["6교시&lt;br/&gt;검토와 변경"] --&gt; C7["7교시&lt;br/&gt;터미널 Git과 보안"]
     end
     AM --&gt; PM</code></pre>
 <table>
@@ -2538,8 +2508,8 @@
 </tr>
 <tr>
 <td>7</td>
-<td>Git 명령, Fork, 인증, 권한, 분기 보호, CODEOWNERS, .gitignore</td>
-<td>터미널 Git, <code>main 보호</code> Ruleset, 2단계 인증</td>
+<td>Git 명령, Fork, 인증, 권한, .gitignore, 보안 기능</td>
+<td>터미널 Git(분기, add, commit, push, pull), .gitignore, 2단계 인증</td>
 </tr>
 </tbody>
 </table>
@@ -2632,14 +2602,14 @@
 </tr>
 <tr>
 <td><code>lunch-picker-team&lt;번호&gt;</code></td>
-<td>이슈, PR과 리뷰, Release <code>v1.0</code>, <code>v1.1</code>, Ruleset, CODEOWNERS</td>
+<td>이슈, PR과 리뷰, Release <code>v1.0</code>, <code>v1.1</code></td>
 <td>없음. PO가 소유자이므로 팀원은 계속 협력자로 볼 수 있습니다</td>
 </tr>
 </tbody>
 </table>
 <div class="admonition note">
 <p class="admonition-title">Public 리포지토리입니다</p>
-<p>두 리포지토리 모두 Public이라 누구나 볼 수 있습니다. 회사 내부 정보, 실명이 들어간 자료, 비밀번호는 올리지 마세요. 공개가 부담되면 <strong>Settings</strong> → 맨 아래 <strong>Danger Zone</strong> → <strong>Change repository visibility</strong>로 Private으로 바꿀 수 있습니다. 단, Private으로 바꾸면 무료 계정에서는 Pages와 Ruleset 일부가 동작하지 않을 수 있습니다.</p>
+<p>두 리포지토리 모두 Public이라 누구나 볼 수 있습니다. 회사 내부 정보, 실명이 들어간 자료, 비밀번호는 올리지 마세요. 공개가 부담되면 <strong>Settings</strong> → 맨 아래 <strong>Danger Zone</strong> → <strong>Change repository visibility</strong>로 Private으로 바꿀 수 있습니다. 단, Private으로 바꾸면 무료 계정에서는 Pages가 동작하지 않을 수 있습니다.</p>
 </div>
 <h2 id="_4">다음 단계<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <table>
@@ -2719,7 +2689,7 @@
 </tr>
 <tr>
 <td>데이터 상태</td>
-<td>팀 <code>menus.json</code> 메뉴 8개, 모든 메뉴에 <code>delivery</code> 항목. Release <code>v1.0</code>, <code>v1.1</code>. <code>main 보호</code> 규칙과 CODEOWNERS 적용</td>
+<td>팀 <code>menus.json</code> 메뉴 8개, 모든 메뉴에 <code>delivery</code> 항목. Release <code>v1.0</code>, <code>v1.1</code></td>
 </tr>
 <tr>
 <td>계정</td>
