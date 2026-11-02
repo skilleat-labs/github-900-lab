@@ -2600,7 +2600,7 @@
 <ol>
 <li>리포지토리 위쪽 <strong>Pull requests</strong> 탭 → 개발자가 연 PR 클릭</li>
 <li><strong>Conversation</strong>(대화) 탭에서 BA의 리뷰와 개발자의 답글을 읽고, 변경 내용이 스토리의 의도("늘 가던 곳 말고 새 메뉴도 후보로")와 맞는지 봅니다.</li>
-<li><strong>Files changed</strong> 탭 → 오른쪽 위 <strong>Review changes</strong>(리뷰 남기기) 클릭</li>
+<li><strong>Files changed</strong> 탭 → 오른쪽 위 초록 <strong>Submit review</strong>(리뷰 제출, 화면에 따라 <strong>Review changes</strong>) 클릭 → <strong>Finish your review</strong> 창이 열립니다</li>
 <li>
 <p>댓글 칸에 아래 예시를 입력합니다.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>BA가 인수 조건 ①~④로 검토하고 수정 요청이 반영된 것을 확인했습니다. 스토리 의도와 맞습니다.
@@ -2787,10 +2787,10 @@
 </span></code></pre></div>
 </li>
 <li>
-<p><strong>Start a review</strong>(리뷰 시작) 클릭. 의견이 더 있으면 5~8을 반복합니다.</p>
+<p>댓글 창 오른쪽 아래 <strong>Add review comment</strong>(리뷰 댓글 추가, 예전 화면은 <strong>Start a review</strong>) 클릭. 댓글에 노란 <strong>Pending</strong>이 붙으면 됩니다. 의견이 더 있으면 5~8을 반복합니다.</p>
 </li>
 <li>
-<p>오른쪽 위 <strong>Review changes</strong> 클릭 → 전체 의견 입력 → <strong>Request changes</strong>(수정 요청) 선택 → <strong>Submit review</strong></p>
+<p>오른쪽 위 초록 <strong>Submit review</strong>(리뷰 제출, 화면에 따라 <strong>Review changes</strong>) 클릭 → <strong>Finish your review</strong> 창에서 <strong>Leave a comment</strong> 칸에 전체 의견 입력 → 기본값 <strong>Comment</strong> 대신 <strong>Request changes</strong>(수정 요청) 선택 → 창 아래 <strong>Submit review</strong>. (창 모양은 <a href="../../class3/lab-3/#step-3-request-changes">실습 3-3 STEP 3 그림</a> 참고)</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>인수 조건 ①~④ 기준으로 검토했습니다.
 </span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>① 통과, ② 미통과(비빔밥 solo), ③ 통과, ④ 통과(자동 검사 초록 체크)
 </span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>②에 제안 1건 남겼습니다. 반영되면 다시 확인하고 승인하겠습니다.
@@ -2809,7 +2809,7 @@
 <ol>
 <li><strong>Files changed</strong> 탭에서 제안이 반영됐는지 확인합니다. 위쪽에 <strong>Changes since your last review</strong>(지난 리뷰 이후 바뀐 것)를 누르면 바뀐 부분만 보입니다.</li>
 <li>
-<p><strong>Review changes</strong> → 아래 예시 입력 → <strong>Approve</strong> 선택 → <strong>Submit review</strong></p>
+<p><strong>Files changed</strong> 탭 → 오른쪽 위 초록 <strong>Submit review</strong>(리뷰 제출, 화면에 따라 <strong>Review changes</strong>) 클릭 → <strong>Finish your review</strong> 창 → 아래 예시 입력 → <strong>Approve</strong> 선택 → <strong>Submit review</strong></p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>제안 반영 확인했습니다. 인수 조건 ①~④를 모두 만족합니다.
 </span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>① 메뉴 8줄, ② 비빔밥 solo true와 종류, 가격, 거리, ③ 마라탕 price 10000, ④ check 초록 체크. 승인합니다.
 </span></code></pre></div>
@@ -2976,7 +2976,7 @@
 </details>
 <details class="failure">
 <summary>BA나 PO 화면에 Approve 선택지가 없어요</summary>
-<p>자기가 연 PR에는 승인할 수 없습니다. PR을 연 사람이 개발자인지 확인하세요. 또는 <strong>Files changed</strong> 탭에 들어가야 <strong>Review changes</strong> 버튼이 보입니다.</p>
+<p>자기가 연 PR에는 승인할 수 없습니다. PR을 연 사람이 개발자인지 확인하세요. 또는 <strong>Files changed</strong> 탭에 들어가야 <strong>Submit review</strong>(화면에 따라 <strong>Review changes</strong>) 버튼이 보입니다.</p>
 </details>
 <details class="failure">
 <summary>Add a suggestion 아이콘이 안 보여요</summary>
