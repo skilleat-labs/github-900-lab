@@ -2546,7 +2546,7 @@
 </div>
 <h3 id="github-flow">GitHub flow: 분기에서 고치고 검토받아 합칩니다<a class="headerlink" href="#github-flow" title="Permanent link">&para;</a></h3>
 <p>GitHub에서 변경을 반영하는 표준 흐름을 <strong>GitHub flow</strong>라고 합니다. 다섯 단계입니다.</p>
-<pre class="mermaid"><code>flowchart LR
+<pre class="mermaid"><code>flowchart TB
     A["① 분기 만들기&lt;br/&gt;작업용 갈래"] --&gt; B["② 고치고 커밋&lt;br/&gt;몇 번이든"]
     B --&gt; C["③ PR 열기&lt;br/&gt;검토 요청"]
     C --&gt; D["④ 리뷰&lt;br/&gt;의견, 승인"]
@@ -2768,7 +2768,7 @@
 <h3 id="conflict">같은 줄을 둘이 다르게 고치면 충돌이 납니다<a class="headerlink" href="#conflict" title="Permanent link">&para;</a></h3>
 <p><strong>충돌</strong>(conflict)은 같은 파일의 <strong>같은 줄</strong>을 두 분기에서 <strong>다르게</strong> 고쳤을 때 생깁니다.</p>
 <p>원래 김치찌개 가격이 9000원이었는데, 영희는 자기 분기에서 8000원으로, 철수는 자기 분기에서 9500원으로 고쳤다고 해 봅시다.</p>
-<pre class="mermaid"><code>flowchart LR
+<pre class="mermaid"><code>flowchart TB
     O["원래 내용&lt;br/&gt;&amp;quot;price&amp;quot;: 9000"] --&gt; A["영희의 분기&lt;br/&gt;&amp;quot;price&amp;quot;: 8000"]
     O --&gt; B["철수의 분기&lt;br/&gt;&amp;quot;price&amp;quot;: 9500"]
     A -- "먼저 병합됨" --&gt; M["main"]

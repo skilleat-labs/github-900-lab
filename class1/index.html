@@ -2664,7 +2664,7 @@
 <p>여기서부터는 Git이 속에서 어떻게 동작하는지 원리를 봅니다.</p>
 <p>Git은 커밋할 때마다 그 순간 <strong>프로젝트 전체의 사진</strong>을 찍습니다. 이 사진을 <strong>스냅샷</strong>(snapshot)이라고 합니다. 그런데 매번 모든 파일을 새로 복사하면 용량이 금방 커지겠죠. 그래서 Git은 <strong>바뀐 파일만 새로 저장하고, 안 바뀐 파일은 이전에 저장한 것을 그대로 가리킵니다.</strong></p>
 <p>아래 그림에서 파란 칸은 그 커밋에서 새로 저장한 파일, 회색 칸은 이전 것을 그대로 가리키는 파일입니다.</p>
-<pre class="mermaid"><code>flowchart LR
+<pre class="mermaid"><code>flowchart TB
     subgraph C1["커밋 1"]
         A1["README.md v1"]:::new
         B1["menus.json v1"]:::new
@@ -2889,7 +2889,7 @@
 <p>가격과 세부 한도는 자주 바뀌므로, 실제 도입할 때는 github.com/pricing에서 확인하시면 됩니다.</p>
 <h3 id="commit-to-save">고친 내용은 커밋해야 기록됩니다<a class="headerlink" href="#commit-to-save" title="Permanent link">&para;</a></h3>
 <p>GitHub 웹 화면에서 파일을 고쳤다고 바로 저장되는 것이 아닙니다. 연필 아이콘으로 고친 다음 <strong>Commit changes</strong> 버튼을 눌러야 비로소 커밋, 즉 기록이 됩니다. 웹 화면에서는 이 버튼이 <strong>저장 버튼</strong>이라고 생각하면 됩니다.</p>
-<pre class="mermaid"><code>flowchart LR
+<pre class="mermaid"><code>flowchart TB
     A["① 파일 고치기&lt;br/&gt;연필 아이콘"] --&gt;|저장 버튼| B["② Commit changes&lt;br/&gt;메시지를 쓰고 저장"]
     B --&gt;|기록| C["③ 이력에 기록&lt;br/&gt;누가, 언제, 왜"]
     A -.-&gt;|커밋 안 하고 닫으면| D["저장되지 않음"]</code></pre>

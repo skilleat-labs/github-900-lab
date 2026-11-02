@@ -2671,7 +2671,7 @@
 </tr>
 </tbody>
 </table>
-<pre class="mermaid"><code>flowchart LR
+<pre class="mermaid"><code>flowchart TB
     I["이슈&lt;br/&gt;예산으로 메뉴 거르기"] --&gt; L["Labels&lt;br/&gt;기능, 우선순위-상"]
     I --&gt; A["Assignees&lt;br/&gt;@lee"]
     I --&gt; M["Milestone&lt;br/&gt;MVP"]
@@ -2707,7 +2707,7 @@
 <p>템플릿 맨 아래에는 <strong>인수 조건</strong> 칸도 둡니다. 인수 조건은 "무엇이 되면 다 됐다고 받아들일지"를 화면에서 확인할 수 있는 문장으로 미리 적어 둔 체크 목록입니다. 개발자에게는 작업 범위가, 검토하는 사람에게는 확인 기준이 됩니다.</p>
 <h3 id="sub-issue">큰 요구는 하위 이슈로 쪼갭니다<a class="headerlink" href="#sub-issue" title="Permanent link">&para;</a></h3>
 <p>"메뉴 추천" 같은 큰 요구는 한 번에 끝낼 수 없습니다. 이런 큰 덩어리를 <strong>에픽</strong>(epic)이라고 부릅니다. 에픽 이슈 안에서 <strong>Create sub-issue</strong>(하위 이슈 만들기)를 누르면 작은 이슈로 쪼갤 수 있습니다.</p>
-<pre class="mermaid"><code>flowchart LR
+<pre class="mermaid"><code>flowchart TB
     E["에픽&lt;br/&gt;메뉴 추천"] --&gt; S1["하위 이슈&lt;br/&gt;예산으로 거르기"]
     E --&gt; S2["하위 이슈&lt;br/&gt;거리로 거르기"]
     E --&gt; S3["하위 이슈&lt;br/&gt;랜덤으로 하나 뽑기"]</code></pre>

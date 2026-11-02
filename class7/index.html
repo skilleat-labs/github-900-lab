@@ -2534,7 +2534,7 @@
 </div>
 <h3 id="four-stages">명령어로는 네 단계를 거쳐 GitHub에 도착합니다<a class="headerlink" href="#four-stages" title="Permanent link">&para;</a></h3>
 <p>명령어로 작업할 때는 파일이 네 곳을 거쳐 GitHub에 도착합니다.</p>
-<pre class="mermaid"><code>flowchart LR
+<pre class="mermaid"><code>flowchart TB
     A["작업 폴더&lt;br/&gt;파일을 고침"] --&gt;|git add| B["스테이징&lt;br/&gt;커밋할 것만 담음"]
     B --&gt;|git commit| C["로컬 리포지토리&lt;br/&gt;내 컴퓨터의 기록"]
     C --&gt;|git push| D["원격 GitHub&lt;br/&gt;팀이 함께 보는 곳"]
@@ -2722,7 +2722,7 @@
 <h3 id="branch-protection">분기 보호를 걸면 검토 없이는 main을 못 바꿉니다<a class="headerlink" href="#branch-protection" title="Permanent link">&para;</a></h3>
 <p>6교시에 "병합이 곧 배포"라는 것을 봤습니다. 그런데 지금 팀 리포지토리에서는 누구나 main을 직접 고칠 수 있습니다. 검토를 건너뛰는 것이 기술적으로 가능한 상태입니다.</p>
 <p><strong>분기 보호</strong>는 main 같은 중요한 분기에 규칙을 거는 기능입니다. GitHub에서는 <strong>Rulesets</strong>(규칙 묶음)로 설정합니다. 규칙을 걸면 main을 직접 고치는 것이 막히고, 반드시 분기에서 고치고 PR을 열어야 하며, 승인과 자동 검사 통과가 있어야 병합할 수 있습니다.</p>
-<pre class="mermaid"><code>flowchart LR
+<pre class="mermaid"><code>flowchart TB
     X["main 직접 수정"] --&gt;|막힘| Z["차단"]
     A["분기에서 수정"] --&gt; B["PR 필수"]
     B --&gt; C["승인 1명&lt;br/&gt;리뷰 통과"]

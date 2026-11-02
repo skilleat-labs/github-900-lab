@@ -2617,7 +2617,7 @@
 <p>확인: 김치찌개 카드의 가격이 <strong>9,500원</strong>으로 바뀌어 있습니다.</p>
 <div class="admonition note">
 <p class="admonition-title">커밋 하나가 웹페이지까지 가는 길</p>
-<pre class="mermaid"><code>flowchart LR
+<pre class="mermaid"><code>flowchart TB
     A["웹에서 menus.json 수정"] --&gt; B["Commit changes&lt;br/&gt;(main에 커밋)"]
     B --&gt; C["웹페이지 배포 작업&lt;br/&gt;자동 실행"]
     C --&gt; D["웹페이지에&lt;br/&gt;9,500원 표시"]</code></pre>
