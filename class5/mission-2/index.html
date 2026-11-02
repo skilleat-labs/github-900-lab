@@ -2972,10 +2972,54 @@
 </span></code></pre></div>
 <p>확인: 표 머리에 <code>MoSCoW</code>, <code>크기</code>, <code>스프린트</code> 칸이 보이면 성공입니다.</p>
 <p><strong>기다리는 동안 할 일</strong></p>
-<ul>
-<li>팀 Projects <strong>...</strong> → <strong>Workflows</strong>에서 <strong>Item closed</strong>, <strong>Pull request merged</strong>, <strong>Item added to project</strong>가 켜져 있는지 확인합니다.</li>
-<li>스토리마다 마일스톤 <code>MVP</code>가 붙어 있는지 확인합니다. Won't 스토리는 MoSCoW가 정해진 뒤 마일스톤을 빼 둡니다.</li>
-</ul>
+<p>PO가 MoSCoW를 정하는 동안 두 가지를 점검합니다.</p>
+<p><strong>1. 자동화가 켜져 있는지 보기</strong></p>
+<ol>
+<li>팀 Projects <code>점심 메뉴 추천 팀&lt;번호&gt;</code> 화면 오른쪽 위의 <strong>Workflows</strong> 버튼을 클릭합니다. (옆에 숫자가 붙어 있을 수 있습니다. 화면이 좁으면 <strong>...</strong> 메뉴 안에 있습니다.)</li>
+<li>
+<p>왼쪽에 자동화 목록이 나옵니다. 아래 세 개를 하나씩 클릭합니다.</p>
+<table>
+<thead>
+<tr>
+<th>자동화</th>
+<th>하는 일</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Item closed</strong></td>
+<td>이슈를 닫으면 Status를 <code>Done</code>으로</td>
+</tr>
+<tr>
+<td><strong>Pull request merged</strong></td>
+<td>PR을 병합하면 Status를 <code>Done</code>으로</td>
+</tr>
+<tr>
+<td><strong>Item added to project</strong></td>
+<td>보드에 새로 담기면 Status를 <code>Todo</code>로</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>각각 오른쪽 위에 초록색 <strong>On</strong> 표시가 있으면 켜진 것입니다. 꺼져 있으면 <strong>Edit</strong> → <strong>Save and turn on workflow</strong>로 켭니다. 방법은 실습 4-2 STEP 7과 같습니다.</p>
+</li>
+</ol>
+<p>확인: 세 자동화가 모두 On입니다. 6교시에 PR을 병합하면 보드 카드가 저절로 Done으로 옮겨지는 것이 이 설정 덕분입니다.</p>
+<p><strong>2. 스토리마다 마일스톤 MVP가 붙어 있는지 보기</strong></p>
+<ol>
+<li>팀 리포지토리 <strong>Issues</strong> 탭을 엽니다.</li>
+<li>
+<p>검색창 내용을 모두 지우고 아래를 입력한 뒤 Enter를 누릅니다. 마일스톤이 <strong>없는</strong> 스토리만 걸러 줍니다.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>is:issue is:open label:스토리 no:milestone
+</span></code></pre></div>
+</li>
+<li>
+<p>결과가 <strong>0개</strong>면 모든 스토리에 마일스톤이 있는 것입니다. 나오는 스토리가 있으면 열어서 오른쪽 <strong>Milestone</strong> 톱니바퀴 → <code>MVP</code>를 고릅니다.</p>
+</li>
+<li>PO가 MoSCoW를 정한 뒤 <strong>Won't</strong> 스토리(예: 투표)는 이번 출시에서 빼는 것이므로, 그 이슈를 열어 <strong>Milestone</strong> 톱니바퀴 → 체크된 <code>MVP</code>를 한 번 더 눌러 해제합니다.</li>
+</ol>
+<p>확인: <code>is:issue label:스토리 milestone:MVP</code>로 검색하면 Won't를 뺀 스토리만 나옵니다.</p>
 <h3 id="5">⑤ 스프린트 배정과 보드 뷰 두 개 만들기<a class="headerlink" href="#5" title="Permanent link">&para;</a></h3>
 <p>개발자가 크기를 정하면 시작합니다. 보드 뷰는 쓰는 때가 다른 두 개를 만듭니다.</p>
 <table>
@@ -3013,7 +3057,7 @@
 <li>같은 <strong>View options</strong> → <strong>Column by</strong> → <strong>MoSCoW</strong>를 클릭합니다.</li>
 <li>
 <p>뷰 탭 이름을 더블클릭해 아래 이름으로 바꾸고 Enter를 누릅니다.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>MVP 보드
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>MVP 보드
 </span></code></pre></div>
 </li>
 <li>
@@ -3026,7 +3070,7 @@
 <li>같은 <strong>View options</strong> → <strong>Column by</strong> → <strong>Status</strong>를 클릭합니다. <code>Todo</code>, <code>In Progress</code>, <code>Done</code> 칸이 생깁니다.</li>
 <li>
 <p>뷰 탭 이름을 더블클릭해 아래 이름으로 바꾸고 Enter를 누릅니다.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>진행 보드
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>진행 보드
 </span></code></pre></div>
 </li>
 <li>
@@ -3034,7 +3078,7 @@
 </li>
 <li>
 <p>PO에게 알립니다.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>@PO아이디 Must 스토리를 스프린트 1에, Should를 스프린트 2에 배정했습니다. 범위를 보는 MVP 보드(MoSCoW 기준)와 6교시 진행을 보는 진행 보드(Status 기준)를 만들었습니다. MVP 범위 확정과 v1.0 발행 부탁드립니다.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>@PO아이디 Must 스토리를 스프린트 1에, Should를 스프린트 2에 배정했습니다. 범위를 보는 MVP 보드(MoSCoW 기준)와 6교시 진행을 보는 진행 보드(Status 기준)를 만들었습니다. MVP 범위 확정과 v1.0 발행 부탁드립니다.
 </span></code></pre></div>
 </li>
 </ol>
@@ -3053,22 +3097,22 @@
 <li><strong>Save</strong>를 클릭합니다.</li>
 </ol>
 <p><code>[스토리] 예산으로 메뉴 거르기</code> 예시:</p>
-<div class="language-markdown highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="gu">## 인수 조건</span>
-</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="k">- [ ]</span> Given 메뉴 6개가 있을 때, When 예산 칸에 10000을 입력하면, Then 10000원이 넘는 메뉴(돈카츠 11000원, 샐러드볼 10500원)는 보이지 않는다.
-</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="k">- [ ]</span> Given 메뉴 6개가 있을 때, When 예산 칸에 10000을 입력하면, Then 10000원 이하 메뉴 4개(김치찌개, 짜장면, 쌀국수, 순두부찌개)가 모두 보인다.
-</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="k">- [ ]</span> Given 예산 칸이 비어 있을 때, When 화면을 열면, Then 메뉴 6개가 모두 보인다. (PO 결정: 만 원 넘는 메뉴도 목록에 둔다)
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="gu">## 인수 조건</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="k">- [ ]</span> Given 메뉴 6개가 있을 때, When 예산 칸에 10000을 입력하면, Then 10000원이 넘는 메뉴(돈카츠 11000원, 샐러드볼 10500원)는 보이지 않는다.
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="k">- [ ]</span> Given 메뉴 6개가 있을 때, When 예산 칸에 10000을 입력하면, Then 10000원 이하 메뉴 4개(김치찌개, 짜장면, 쌀국수, 순두부찌개)가 모두 보인다.
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="k">- [ ]</span> Given 예산 칸이 비어 있을 때, When 화면을 열면, Then 메뉴 6개가 모두 보인다. (PO 결정: 만 원 넘는 메뉴도 목록에 둔다)
 </span></code></pre></div>
 <p><code>[스토리] 메뉴 목록을 카드로 보기</code> 예시:</p>
-<div class="language-markdown highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="gu">## 인수 조건</span>
-</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="k">- [ ]</span> Given 메뉴 데이터에 메뉴가 있을 때, When 웹페이지를 열면, Then 메뉴마다 카드가 하나씩 보인다. (지금은 6개)
-</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="k">- [ ]</span> Given 김치찌개 카드를 볼 때, When 카드를 읽으면, Then "김치찌개", "한식", "9,000원", "300m"가 모두 보인다.
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="gu">## 인수 조건</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="k">- [ ]</span> Given 메뉴 데이터에 메뉴가 있을 때, When 웹페이지를 열면, Then 메뉴마다 카드가 하나씩 보인다. (지금은 6개)
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="k">- [ ]</span> Given 김치찌개 카드를 볼 때, When 카드를 읽으면, Then "김치찌개", "한식", "9,000원", "300m"가 모두 보인다.
 </span></code></pre></div>
 <p><code>[스토리] 새 메뉴 2개를 추가해 선택지 늘리기</code>(대표 스토리) 예시. 6교시 PR 검토에서 이 ①~④를 하나씩 확인합니다.</p>
-<div class="language-markdown highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="gu">## 인수 조건</span>
-</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="k">- [ ]</span> ① Given 웹페이지를 열었을 때, When 메뉴 목록을 보면, Then 메뉴 카드가 8개 보인다.
-</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="k">- [ ]</span> ② Given 새 메뉴 카드에서, When 내용을 보면, Then 종류, 가격, 거리가 보이고 비빔밥에는 "혼밥 가능"이 보인다.
-</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="k">- [ ]</span> ③ Given 예산 칸에 10000을 넣었을 때, When 목록을 보면, Then 마라탕(10000원)이 보인다. (경계값)
-</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="k">- [ ]</span> ④ Given PR을 열었을 때, When 자동 검사가 끝나면, Then 초록 체크다.
+<div class="language-markdown highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="gu">## 인수 조건</span>
+</span><span id="__span-15-2"><a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="k">- [ ]</span> ① Given 웹페이지를 열었을 때, When 메뉴 목록을 보면, Then 메뉴 카드가 8개 보인다.
+</span><span id="__span-15-3"><a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="k">- [ ]</span> ② Given 새 메뉴 카드에서, When 내용을 보면, Then 종류, 가격, 거리가 보이고 비빔밥에는 "혼밥 가능"이 보인다.
+</span><span id="__span-15-4"><a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="k">- [ ]</span> ③ Given 예산 칸에 10000을 넣었을 때, When 목록을 보면, Then 마라탕(10000원)이 보인다. (경계값)
+</span><span id="__span-15-5"><a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a><span class="k">- [ ]</span> ④ Given PR을 열었을 때, When 자동 검사가 끝나면, Then 초록 체크다.
 </span></code></pre></div>
 <div class="admonition note">
 <p class="admonition-title">예산 인수 조건과 대표 스토리 ③은 이어집니다</p>
@@ -3119,12 +3163,12 @@
 </li>
 <li>
 <p><code>L</code>로 정한 스토리가 있으면 그 스토리에 이유 댓글을 남깁니다. 예를 들어 시간이 남아 투표 스토리(Won't)에도 크기를 매겼다면:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>@PO아이디 @PM아이디 크기를 L로 정했습니다. 투표는 지금 화면에 없는 새 기능이고, 누가 투표했는지 구분하려면 로그인이 필요합니다. 로그인은 이번 범위가 아닙니다.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>@PO아이디 @PM아이디 크기를 L로 정했습니다. 투표는 지금 화면에 없는 새 기능이고, 누가 투표했는지 구분하려면 로그인이 필요합니다. 로그인은 이번 범위가 아닙니다.
 </span></code></pre></div>
 </li>
 <li>
 <p>다 정하면 PM에게 알립니다.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>@PM아이디 Must 스토리 크기를 모두 정했습니다.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>@PM아이디 Must 스토리 크기를 모두 정했습니다.
 </span></code></pre></div>
 </li>
 </ol>
