@@ -2801,6 +2801,32 @@
 </div>
 <h2 id="step-5">STEP 5. 자동 검사 결과 보기<a class="headerlink" href="#step-5" title="Permanent link">&para;</a></h2>
 <p>PR을 만들면 Starter에 들어 있는 <strong>메뉴 데이터 검사</strong>가 자동으로 실행됩니다.</p>
+<div class="admonition note">
+<p class="admonition-title">자동 검사는 GitHub 기능인가요, 누가 만든 건가요?</p>
+<p>둘 다입니다. <strong>검사 내용은 우리가 만든 코드</strong>이고, <strong>그 코드를 정해진 때에 자동으로 돌려 주는 것이 GitHub 기능</strong>(GitHub Actions)입니다. 템플릿으로 리포지토리를 만들 때 아래 두 파일이 함께 복사되어 왔습니다.</p>
+<table>
+<thead>
+<tr>
+<th>파일</th>
+<th>누가 만들었나</th>
+<th>하는 일</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.github/workflows/check.yml</code></td>
+<td>강사가 Starter에 넣어 둔 설정</td>
+<td>"PR이 열리거나 바뀌면 <code>node scripts/check-menus.js</code>를 실행하라"는 지시서. 이 폴더에 파일을 두면 GitHub가 읽고 따릅니다</td>
+</tr>
+<tr>
+<td><code>scripts/check-menus.js</code></td>
+<td>강사가 Starter에 넣어 둔 검사 프로그램</td>
+<td><code>menus.json</code>이 JSON 형식이 맞는지, 가격과 거리가 숫자인지, 메뉴 이름이 겹치지 않는지 확인</td>
+</tr>
+</tbody>
+</table>
+<p>그래서 회사마다 검사 내용은 다릅니다. 맞춤법 검사, 문서 형식 검사, 보안 검사 등 원하는 검사를 코드로 만들어 같은 방식으로 붙입니다. 1교시에 본 <strong>웹페이지 배포</strong>(<code>pages.yml</code>)도 같은 원리로 돌아가는 자동 작업입니다.</p>
+</div>
 <ol>
 <li>
 <p>PR 화면(<strong>Conversation</strong> 탭)을 아래로 내려, <strong>Merge pull request</strong> 버튼 위의 큰 상자(병합 상자)를 봅니다. 아래 그림처럼 생겼습니다.</p>
