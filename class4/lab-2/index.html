@@ -2674,18 +2674,19 @@
 <h2 id="step-4">STEP 4. 보드 뷰 만들기<a class="headerlink" href="#step-4" title="Permanent link">&para;</a></h2>
 <p>같은 이슈를 칸반 보드 모양으로 봅니다.</p>
 <ol>
-<li>위쪽 뷰 탭(지금은 <code>View 1</code>) 오른쪽의 <strong>+ New view</strong>(새 뷰)를 클릭합니다.<ul>
-<li>또는 뷰 탭 이름 옆 <strong>▼</strong>를 눌러 <strong>Layout</strong>(레이아웃)에서 바꿀 수도 있습니다. 이 방법은 지금 보던 표 뷰 자체가 보드로 바뀝니다.</li>
-</ul>
-</li>
-<li>새 뷰가 열리면 뷰 탭의 <strong>▼</strong> → <strong>Layout</strong> → <strong>Board</strong>(보드)를 클릭합니다.</li>
-<li>화면에 <code>Todo</code>, <code>In Progress</code>, <code>Done</code> 세 칸이 보입니다. 보드 칸은 <strong>Status</strong> 필드 값으로 나뉩니다.<ul>
-<li>담긴 카드가 <code>No Status</code> 칸에 있다면 카드를 <code>Todo</code> 칸으로 끌어 옮기세요.</li>
-</ul>
-</li>
-<li><code>Todo</code> 칸의 카드 하나를 마우스로 끌어서 <code>In Progress</code> 칸에 놓습니다.</li>
 <li>
-<p>뷰 탭 이름을 더블클릭해서 아래 이름으로 바꾸고 Enter를 누릅니다.</p>
+<p>위쪽 뷰 탭(지금은 <code>View 1</code>) 오른쪽의 <strong>+ New view</strong>(새 뷰)를 클릭합니다. 뷰 탭이 <code>View 1</code>, <code>View 2</code> 두 개가 됩니다.</p>
+<div class="admonition warning">
+<p class="admonition-title">View 1의 ▼에서 Layout을 바꾸지 않습니다</p>
+<p><code>View 1</code> 옆 <strong>▼</strong> → <strong>Layout</strong>으로 바꾸면 표가 보드로 <strong>바뀌어 버려서</strong> 표 뷰가 없어집니다. 그러면 STEP 5(표에서 묶기)를 할 수 없습니다. 반드시 <strong>+ New view</strong>로 뷰를 하나 <strong>더</strong> 만듭니다.</p>
+</div>
+<ol>
+<li>새로 생긴 <code>View 2</code> 탭이 선택된 상태에서, 그 탭 이름 옆 <strong>▼</strong> → <strong>Layout</strong> → <strong>Board</strong>(보드)를 클릭합니다. (<strong>+ New view</strong>를 누르자마자 Table, Board, Roadmap 고르는 메뉴가 뜨는 화면이라면 거기서 바로 <strong>Board</strong>를 고르면 됩니다.)</li>
+<li>화면에 <code>Todo</code>, <code>In Progress</code>, <code>Done</code> 세 칸이 보입니다. 보드 칸은 <strong>Status</strong> 필드 값으로 나뉩니다.</li>
+<li>담긴 카드가 <code>No Status</code> 칸에 있다면 카드를 <code>Todo</code> 칸으로 끌어 옮기세요.</li>
+<li>지금은 <code>In Progress</code> 칸이 비어 있는 것이 정상입니다. 아직 아무 이슈도 "진행 중"으로 바꾸지 않았기 때문입니다. <code>Todo</code> 칸의 카드 하나(예: <strong>예산으로 메뉴 거르기</strong>)를 마우스로 꾹 눌러 끌어서 <code>In Progress</code> 칸에 놓습니다. 이렇게 옮기는 것이 곧 그 이슈의 <strong>Status</strong> 값을 <code>In Progress</code>로 바꾸는 일입니다.</li>
+<li>뷰 탭 이름을 더블클릭해서 아래 이름으로 바꾸고 Enter를 누릅니다.</li>
+</ol>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>진행 보드
 </span></code></pre></div>
 </li>
@@ -2696,7 +2697,10 @@
 <p>확인: <code>진행 보드</code> 탭에 세 칸이 보이고, 옮긴 카드가 <code>In Progress</code> 칸에 있으면 성공입니다.</p>
 <h2 id="step-5-group-by">STEP 5. 표에서 우선순위로 묶기 (Group by)<a class="headerlink" href="#step-5-group-by" title="Permanent link">&para;</a></h2>
 <ol>
-<li>첫 번째 표 뷰 탭(<code>View 1</code>)을 클릭합니다.</li>
+<li>첫 번째 표 뷰 탭(<code>View 1</code>)을 클릭합니다.<ul>
+<li>뷰 탭이 <code>진행 보드</code> 하나뿐이라면 STEP 4에서 표 뷰를 보드로 바꿔 버린 경우입니다. <strong>+ New view</strong>를 눌러 새 뷰를 만들고, 그 탭의 <strong>▼</strong> → <strong>Layout</strong> → <strong>Table</strong>(표)을 고른 뒤 이어서 합니다.</li>
+</ul>
+</li>
 <li>뷰 탭 이름 옆 <strong>▼</strong>를 클릭합니다.</li>
 <li><strong>Group by</strong>(묶기) → <strong>우선순위</strong>를 클릭합니다.</li>
 <li><strong>Save</strong>를 클릭합니다.</li>
