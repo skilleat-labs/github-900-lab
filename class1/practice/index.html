@@ -2502,6 +2502,7 @@
 <ul>
 <li>메뉴 이름, 종류, 가격, 거리, 혼밥 가능 여부는 마음대로 정합니다.</li>
 <li>기존 6개 메뉴와 <strong>이름이 겹치면 안 됩니다.</strong></li>
+<li><code>비빔밥</code>은 고르지 않습니다. 3교시 실습 3-2에서 모두 함께 추가할 메뉴라서, 지금 넣으면 그때 이름이 겹칩니다.</li>
 <li>커밋 메시지는 무엇을 했는지 알 수 있게 씁니다.</li>
 <li>커밋 후 1~2분 뒤 웹페이지에 내 메뉴 카드가 보여야 합니다.</li>
 </ul>
@@ -2520,7 +2521,7 @@
 <td><code>name</code></td>
 <td>메뉴 이름</td>
 <td>큰따옴표로 감싼 글자</td>
-<td><code>"비빔밥"</code></td>
+<td><code>"칼국수"</code></td>
 </tr>
 <tr>
 <td><code>category</code></td>
@@ -2579,9 +2580,9 @@
 </details>
 <details class="tip">
 <summary>힌트 3</summary>
-<p>순두부찌개 줄부터 끝까지가 이렇게 되면 됩니다. <code>비빔밥</code> 줄을 내 메뉴로 바꿔 쓰세요.</p>
+<p>순두부찌개 줄부터 끝까지가 이렇게 되면 됩니다. <code>칼국수</code> 줄을 내 메뉴로 바꿔 쓰세요.</p>
 <div class="language-json highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"순두부찌개"</span><span class="p">,</span><span class="w"> </span><span class="nt">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"한식"</span><span class="p">,</span><span class="w"> </span><span class="nt">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">8500</span><span class="p">,</span><span class="w"> </span><span class="nt">"distance"</span><span class="p">:</span><span class="w"> </span><span class="mi">350</span><span class="p">,</span><span class="w"> </span><span class="nt">"solo"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">},</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"비빔밥"</span><span class="p">,</span><span class="w"> </span><span class="nt">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"한식"</span><span class="p">,</span><span class="w"> </span><span class="nt">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">8000</span><span class="p">,</span><span class="w"> </span><span class="nt">"distance"</span><span class="p">:</span><span class="w"> </span><span class="mi">250</span><span class="p">,</span><span class="w"> </span><span class="nt">"solo"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"칼국수"</span><span class="p">,</span><span class="w"> </span><span class="nt">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"한식"</span><span class="p">,</span><span class="w"> </span><span class="nt">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">8000</span><span class="p">,</span><span class="w"> </span><span class="nt">"distance"</span><span class="p">:</span><span class="w"> </span><span class="mi">400</span><span class="p">,</span><span class="w"> </span><span class="nt">"solo"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">]</span>
 </span></code></pre></div>
 <p>해시는 History 목록에서 <code>김치찌개 가격 9500원으로 수정</code> 줄 오른쪽의 7자리입니다. 그 옆 복사 아이콘을 누르면 40자리 전체가 복사되니, 붙여 넣은 뒤 앞 7자리만 남깁니다.</p>
@@ -2589,7 +2590,7 @@
 </details>
 <details class="success">
 <summary>정답 예시</summary>
-<p><strong>과제 1</strong> <code>site/menus.json</code> 전체 (비빔밥을 추가한 경우)</p>
+<p><strong>과제 1</strong> <code>site/menus.json</code> 전체 (칼국수를 추가한 경우)</p>
 <div class="language-json highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">[</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"김치찌개"</span><span class="p">,</span><span class="w"> </span><span class="nt">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"한식"</span><span class="p">,</span><span class="w"> </span><span class="nt">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">9500</span><span class="p">,</span><span class="w"> </span><span class="nt">"distance"</span><span class="p">:</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w"> </span><span class="nt">"solo"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">},</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"짜장면"</span><span class="p">,</span><span class="w"> </span><span class="nt">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"중식"</span><span class="p">,</span><span class="w"> </span><span class="nt">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">8000</span><span class="p">,</span><span class="w"> </span><span class="nt">"distance"</span><span class="p">:</span><span class="w"> </span><span class="mi">450</span><span class="p">,</span><span class="w"> </span><span class="nt">"solo"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">},</span>
@@ -2597,11 +2598,11 @@
 </span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"샐러드볼"</span><span class="p">,</span><span class="w"> </span><span class="nt">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"양식"</span><span class="p">,</span><span class="w"> </span><span class="nt">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">10500</span><span class="p">,</span><span class="w"> </span><span class="nt">"distance"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="nt">"solo"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">},</span>
 </span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"쌀국수"</span><span class="p">,</span><span class="w"> </span><span class="nt">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"아시안"</span><span class="p">,</span><span class="w"> </span><span class="nt">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">9500</span><span class="p">,</span><span class="w"> </span><span class="nt">"distance"</span><span class="p">:</span><span class="w"> </span><span class="mi">700</span><span class="p">,</span><span class="w"> </span><span class="nt">"solo"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w"> </span><span class="p">},</span>
 </span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"순두부찌개"</span><span class="p">,</span><span class="w"> </span><span class="nt">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"한식"</span><span class="p">,</span><span class="w"> </span><span class="nt">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">8500</span><span class="p">,</span><span class="w"> </span><span class="nt">"distance"</span><span class="p">:</span><span class="w"> </span><span class="mi">350</span><span class="p">,</span><span class="w"> </span><span class="nt">"solo"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">},</span>
-</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"비빔밥"</span><span class="p">,</span><span class="w"> </span><span class="nt">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"한식"</span><span class="p">,</span><span class="w"> </span><span class="nt">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">8000</span><span class="p">,</span><span class="w"> </span><span class="nt">"distance"</span><span class="p">:</span><span class="w"> </span><span class="mi">250</span><span class="p">,</span><span class="w"> </span><span class="nt">"solo"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">  </span><span class="p">{</span><span class="w"> </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"칼국수"</span><span class="p">,</span><span class="w"> </span><span class="nt">"category"</span><span class="p">:</span><span class="w"> </span><span class="s2">"한식"</span><span class="p">,</span><span class="w"> </span><span class="nt">"price"</span><span class="p">:</span><span class="w"> </span><span class="mi">8000</span><span class="p">,</span><span class="w"> </span><span class="nt">"distance"</span><span class="p">:</span><span class="w"> </span><span class="mi">400</span><span class="p">,</span><span class="w"> </span><span class="nt">"solo"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">}</span>
 </span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="p">]</span>
 </span></code></pre></div>
 <p>커밋 메시지:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>메뉴에 비빔밥 추가
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>메뉴에 칼국수 추가
 </span></code></pre></div>
 <p><strong>과제 2</strong> 새 파일 <code>docs/my-note.md</code> 내용 (해시는 사람마다 다릅니다)</p>
 <div class="language-markdown highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="gh"># 내 메모</span>
@@ -2633,7 +2634,7 @@
 </tr>
 <tr>
 <td>따옴표, 중괄호를 빠뜨림</td>
-<td><code>"name": 비빔밥</code> (따옴표 없음)</td>
+<td><code>"name": 칼국수</code> (따옴표 없음)</td>
 </tr>
 </tbody>
 </table>
