@@ -3131,10 +3131,59 @@
 </div>
 <div class="tabbed-block">
 <h3 id="4-must">④ Must 스토리 크기 정하기<a class="headerlink" href="#4-must" title="Permanent link">&para;</a></h3>
-<p>PO가 MoSCoW를 정하고 멘션하면 팀 Projects를 엽니다.</p>
+<p>PO가 MoSCoW를 정하고 나를 멘션하면 시작합니다. 알림(오른쪽 위 받은편지함 아이콘)을 누르면 PO의 댓글로 바로 갑니다.</p>
+<p><strong>팀 Projects 열기</strong></p>
+<ol>
+<li>팀 리포지토리 <code>lunch-picker-team&lt;번호&gt;</code> 위쪽 <strong>Projects</strong> 탭을 클릭합니다.</li>
+<li>목록에서 <code>점심 메뉴 추천 팀&lt;번호&gt;</code>를 클릭합니다.</li>
+<li>뷰 탭에서 <code>View 1</code>(표)을 클릭합니다. 에픽 아래에 스토리가 들여쓰기로 묶여 있고, 오른쪽에 <code>MoSCoW</code>, <code>크기</code>, <code>스프린트</code> 칸이 있습니다.</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Projects 탭에 보드가 없거나 열리지 않으면</p>
+<p>PM이 4-3에서 팀 Projects의 <strong>Manage access</strong>에 나를 추가하지 않은 경우입니다. PM에게 추가해 달라고 요청합니다. 리포지토리 초대와 Projects 권한은 따로입니다.</p>
+</div>
+<p><strong>Must 스토리 찾기</strong></p>
 <ol>
 <li>
-<p>표에서 Must 스토리의 <code>크기</code> 칸을 클릭해 <code>S</code>, <code>M</code>, <code>L</code> 중 하나를 고릅니다. Starter에 이미 있는 두 Must와 대표 스토리(메뉴 데이터 2줄 추가)는 모두 <code>S</code>가 자연스럽습니다.</p>
+<p><code>MoSCoW</code> 칸을 위에서 아래로 훑어 <code>Must</code>인 줄을 찾습니다. 줄이 많으면 표 위 검색창(<strong>Filter by keyword or by field</strong>)에 아래를 입력하면 Must만 남습니다.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>MoSCoW:Must
+</span></code></pre></div>
+<p><code>MoSCoW</code> 칸이 모두 비어 있으면 PO가 아직 정하지 않은 것입니다. 기다립니다.</p>
+</li>
+</ol>
+<p>PO가 가이드 예시대로 정했다면 Must는 아래 세 개입니다. 팀마다 다를 수 있으니 실제 화면의 <code>MoSCoW</code> 값을 기준으로 합니다.</p>
+<table>
+<thead>
+<tr>
+<th>스토리</th>
+<th>지금 화면</th>
+<th>추천 크기</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[스토리] 메뉴 목록을 카드로 보기</code></td>
+<td>메뉴 카드가 이미 있음</td>
+<td><code>S</code></td>
+</tr>
+<tr>
+<td><code>[스토리] 예산으로 메뉴 거르기</code></td>
+<td>예산 칸이 이미 있음</td>
+<td><code>S</code></td>
+</tr>
+<tr>
+<td><code>[스토리] 새 메뉴 2개를 추가해 선택지 늘리기</code> (대표 스토리)</td>
+<td><code>menus.json</code>에 메뉴 2줄만 추가하면 됨</td>
+<td><code>S</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>크기 넣기</strong></p>
+<ol>
+<li>Must 스토리 줄에서 <code>크기</code> 칸을 클릭합니다. 작은 목록이 열립니다.</li>
+<li><code>S</code>, <code>M</code>, <code>L</code> 중 하나를 클릭합니다. 따로 저장 버튼은 없습니다. 고르는 즉시 저장됩니다.</li>
+<li>
+<p>나머지 Must 스토리도 같은 방법으로 정합니다. 에픽 줄은 비워 둡니다.</p>
 <table>
 <thead>
 <tr>
@@ -3163,12 +3212,12 @@
 </li>
 <li>
 <p><code>L</code>로 정한 스토리가 있으면 그 스토리에 이유 댓글을 남깁니다. 예를 들어 시간이 남아 투표 스토리(Won't)에도 크기를 매겼다면:</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>@PO아이디 @PM아이디 크기를 L로 정했습니다. 투표는 지금 화면에 없는 새 기능이고, 누가 투표했는지 구분하려면 로그인이 필요합니다. 로그인은 이번 범위가 아닙니다.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>@PO아이디 @PM아이디 크기를 L로 정했습니다. 투표는 지금 화면에 없는 새 기능이고, 누가 투표했는지 구분하려면 로그인이 필요합니다. 로그인은 이번 범위가 아닙니다.
 </span></code></pre></div>
 </li>
 <li>
-<p>다 정하면 PM에게 알립니다.</p>
-<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>@PM아이디 Must 스토리 크기를 모두 정했습니다.
+<p>다 정하면 PM에게 알립니다. 대표 스토리 <code>[스토리] 새 메뉴 2개를 추가해 선택지 늘리기</code>(#10)에 댓글을 남깁니다.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>@PM아이디 Must 스토리 크기를 모두 정했습니다.
 </span></code></pre></div>
 </li>
 </ol>
