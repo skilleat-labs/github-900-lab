@@ -2802,10 +2802,51 @@
 <h2 id="step-5">STEP 5. 자동 검사 결과 보기<a class="headerlink" href="#step-5" title="Permanent link">&para;</a></h2>
 <p>PR을 만들면 Starter에 들어 있는 <strong>메뉴 데이터 검사</strong>가 자동으로 실행됩니다.</p>
 <ol>
-<li>PR 화면(<strong>Conversation</strong> 탭) 아래쪽, <strong>Merge pull request</strong> 버튼 위의 검사 상자를 봅니다.</li>
-<li>처음에는 노란 점과 함께 <strong>Some checks haven't completed yet</strong>(아직 끝나지 않은 검사가 있습니다)이 보입니다. 20~40초 기다립니다.</li>
-<li>초록 체크와 함께 <strong>All checks have passed</strong>(모든 검사 통과)로 바뀌면, 그 아래 <strong>메뉴 데이터 검사 / check (pull_request)</strong> 줄 오른쪽의 <strong>Details</strong>(자세히)를 클릭합니다.</li>
-<li>로그에서 <code>Run node scripts/check-menus.js</code> 단계를 클릭해 펼칩니다.</li>
+<li>
+<p>PR 화면(<strong>Conversation</strong> 탭)을 아래로 내려, <strong>Merge pull request</strong> 버튼 위의 큰 상자(병합 상자)를 봅니다. 아래 그림처럼 생겼습니다.</p>
+<p><img alt="PR 병합 상자. 1 Review requested, 2 All checks have passed, 3 메뉴 데이터 검사 줄, 4 더 보기 메뉴, 5 Merge pull request 버튼" src="../../images/class3/pr-checks.png" /></p>
+<table>
+<thead>
+<tr>
+<th>번호</th>
+<th>화면</th>
+<th>뜻</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>①</td>
+<td><strong>Review requested</strong></td>
+<td>짝꿍에게 리뷰를 요청해 둔 상태. 아래에 <code>1 pending review</code>(리뷰 1건 대기 중)와 짝꿍 아이디가 보입니다</td>
+</tr>
+<tr>
+<td>②</td>
+<td><strong>All checks have passed</strong></td>
+<td>자동 검사가 모두 통과했다는 뜻. 처음 20~40초는 노란 점과 <strong>Some checks haven't completed yet</strong>(아직 끝나지 않은 검사가 있습니다)이 보입니다</td>
+</tr>
+<tr>
+<td>③</td>
+<td><strong>메뉴 데이터 검사 / check (pull_request)</strong></td>
+<td>검사 하나. Starter의 <code>check.yml</code>이 실행한 검사입니다</td>
+</tr>
+<tr>
+<td>④</td>
+<td><strong>...</strong></td>
+<td>이 검사의 더 보기 메뉴</td>
+</tr>
+<tr>
+<td>⑤</td>
+<td><strong>Merge pull request</strong></td>
+<td>병합 버튼. <strong>아직 누르지 않습니다.</strong> 짝꿍 리뷰를 받은 뒤 3-3에서 누릅니다</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>②가 초록 체크로 바뀔 때까지 기다립니다.</p>
+</li>
+<li>③의 검사 이름 <strong>메뉴 데이터 검사 / check (pull_request)</strong>를 클릭합니다. (화면에 따라 줄 오른쪽에 <strong>Details</strong> 링크가 보이면 그것을 눌러도 되고, ④ <strong>...</strong>를 눌러 나오는 메뉴에서 들어가도 됩니다.)</li>
+<li>검사 실행 화면(Actions 로그)이 열립니다. 단계 목록에서 <code>Run node scripts/check-menus.js</code>를 클릭해 펼칩니다.</li>
 </ol>
 <p>확인: 로그에 아래 문장이 보입니다. 숫자는 처음 메모한 N보다 1 큰 <strong>N+1</strong>입니다(6개로 시작했으면 7, 7개로 시작했으면 8). 숫자는 사람마다 다릅니다.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>[통과] 메뉴 N+1개를 검사했습니다. 문제가 없습니다.
@@ -2826,7 +2867,7 @@
 <p>PR의 <strong>Conversation</strong> 탭으로 돌아와 검사 상자를 봅니다.</p>
 </li>
 </ol>
-<p>확인: 잠시 뒤 빨간 X와 함께 <strong>All checks have failed</strong>(모든 검사 실패)가 보입니다. <strong>Details</strong>를 누르면 로그에 아래 문장이 있습니다.</p>
+<p>확인: 잠시 뒤 빨간 X와 함께 <strong>All checks have failed</strong>(모든 검사 실패)가 보입니다. STEP 5처럼 검사 이름을 클릭해 로그를 열면 아래 문장이 있습니다.</p>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>[실패] site/menus.json이 올바른 JSON 형식이 아닙니다.
 </span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>       쉼표, 따옴표, 괄호가 빠지지 않았는지 확인하세요.
 </span></code></pre></div>
@@ -2919,7 +2960,7 @@
 </details>
 <details class="failure">
 <summary>쉼표를 다시 넣었는데도 빨간 X예요</summary>
-<p>Details 로그의 <code>[실패]</code> 문장을 읽어 봅니다.</p>
+<p>검사 로그의 <code>[실패]</code> 문장을 읽어 봅니다.</p>
 <ul>
 <li><code>올바른 JSON 형식이 아닙니다</code>: 비빔밥 줄 <strong>뒤</strong>에 쉼표가 붙어 있거나, 따옴표나 <code>}</code>가 빠졌습니다. 위 STEP 2의 전체 내용과 한 줄씩 비교하세요.</li>
 <li><code>메뉴 이름이 겹칩니다</code>: 이미 있는 메뉴 이름을 썼습니다. 1교시에 비빔밥을 추가했다면 이 경우입니다. 다른 이름(예: <code>김밥</code>)으로 바꾸세요.</li>
