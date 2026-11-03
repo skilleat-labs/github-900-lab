@@ -2873,6 +2873,18 @@
 <p class="admonition-title">핵심</p>
 <p>지우지 말고, 취소하는 기록을 남긴다.</p>
 </div>
+<div class="admonition note">
+<p class="admonition-title">더 알아보기: 기록 지우기를 아예 막아 두기 (Block force pushes)</p>
+<p>reset으로 지운 기록을 GitHub에 올리려면 <strong>force push</strong>(강제로 덮어쓰기)가 필요합니다. 리포지토리 관리자는 이것을 main에서 못 하게 막아 둘 수 있습니다. 오늘 실습에서는 하지 않고, 위치만 알아 둡니다.</p>
+<ol>
+<li>리포지토리 <strong>Settings</strong> → 왼쪽 메뉴 <strong>Rules</strong> → <strong>Rulesets</strong>를 클릭합니다.</li>
+<li><strong>New ruleset</strong> → <strong>New branch ruleset</strong>을 클릭합니다.</li>
+<li><strong>Ruleset Name</strong>에 이름(예: <code>protect-main</code>)을 입력하고, <strong>Enforcement status</strong>를 <strong>Active</strong>로 바꿉니다. Disabled로 두면 동작하지 않습니다.</li>
+<li><strong>Target branches</strong>에서 <strong>Add target</strong> → <strong>Include default branch</strong>를 골라 main을 대상으로 정합니다.</li>
+<li>아래 <strong>Branch rules</strong> 목록에서 <strong>Block force pushes</strong>가 체크되어 있는지 확인하고 <strong>Create</strong>를 클릭합니다.</li>
+</ol>
+<p>같은 목록의 <strong>Require a pull request before merging</strong>을 함께 체크하면 main에 직접 커밋하지 못하고 PR로만 합치게 됩니다. 예전 화면(<strong>Settings</strong> → <strong>Branches</strong> → <strong>Add classic branch protection rule</strong>)에서는 이름이 <strong>Allow force pushes</strong>이고, 체크하지 않은 상태가 막힌 상태입니다.</p>
+</div>
 <h3 id="blame">Blame은 줄마다 누가 언제 바꿨는지 보여 줍니다<a class="headerlink" href="#blame" title="Permanent link">&para;</a></h3>
 <p><strong>Blame</strong>은 파일의 줄마다 <strong>마지막으로</strong> 누가, 언제, 어떤 커밋으로 바꿨는지 보여 주는 화면입니다. 파일을 연 뒤 위쪽의 <strong>Blame</strong> 버튼을 누르면 됩니다. 이름이 "탓하기"라서 무섭게 들리지만, 실제로는 "이 줄은 누구에게 물어보면 되지?"를 찾는 기능입니다.</p>
 <table>
